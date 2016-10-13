@@ -67,8 +67,6 @@ session_start();
         <paper-dialog id="modal-password" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>Spiacente</h2>
   			<p>La password da lei inserita non è corretta, ne controlli la correttezza e in caso di problemi clicchi il pulsante AIUTO</p>
-  			<br/>
-  			<p id="tentativi"></p>
   			<div class="buttons">
     			<paper-button dialog-confirm autofocus>OK</paper-button>
   			</div>

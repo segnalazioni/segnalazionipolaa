@@ -40,12 +40,8 @@ function login($user, $password, $mysqli){
                     // We record this attempt in the databas
                     
                     $mysqli->query("INSERT INTO login_attempts (user_id, times) VALUES ('$user_id', 1) ON DUPLICATE KEY UPDATE times = times+1;");
-                    
-                    $result = $mysqli->query("SELECT user_id, times FROM login_attempts WHERE user_id = '$user_id' LIMIT 1")
-                    
-                    $row = $result->fetch-array(MYSQLI_ASSOC);
                         
-                    return "pass|".$row["times"];
+                    return "pass";
                 }
         } else {
             // No user exists.
