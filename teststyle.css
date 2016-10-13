@@ -1,0 +1,132 @@
+.dropbtna {
+    background-color: #e1382d;
+	position:relative;
+	width:400px;
+	height:50px;
+    color: white;
+    font-size: 16px;
+	margin-left:20px;
+	border-radius:30px;
+    border: none;
+    cursor: pointer;
+	position: relative;
+    display: inline-block;
+	margin-top:-25px;
+}
+
+textarea{
+	margin:0 auto, 0 auto;
+	resize:none;
+	font-size:20px;
+	border:none;
+	width:99%;
+	height:20%
+}
+
+.dropmenu{
+	position:absolute;
+	margin-top:-3px;
+}
+
+.segdialog{
+	width:80%;
+	height:80%;
+	margin:0;
+	padding:0;
+}
+
+.tipobig{
+	display:block;
+}
+
+.tiposmall{
+	display:none;
+}
+
+.dropdown{
+	width:400px;
+}
+
+.dropbtna:hover, .dropbtna:focus {
+    background-color: #d0271c;
+    outline: none;
+}
+
+.dropbtna {
+
+}
+
+/* Dropdown Content (Hidden by Default)
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+	left:50px;
+    min-width: 160px;
+	height:150px;
+	overflow:scroll;
+	z-index:10;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+*/
+/* Links inside the dropdown
+.dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+*/
+/* Change color of dropdown links on hover
+.dropdown-content p:hover {background-color: #f1f1f1}
+*/
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button)
+.show {display:block;}
+*/
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px){
+	.dropbtna{
+		width:200px;
+	}
+
+	.dropdown{
+		width:200px;
+	}
+
+	.tipobig{
+		display:none;
+	}
+
+	.tiposmall{
+		display:block;
+	}
+
+	textarea{
+		margin:0 auto, 0 auto;
+		resize:none;
+		font-size:30px;
+		border:none;
+		width:99%;
+		height:20%;
+	}
+
+	.segdialog{
+		width:100%;
+		height:100%;
+		margin:0;
+		padding:0;
+	}
+}
+
+/*@media only screen and (max-width: 400px), only screen and (max-device-width: 400px){
+	.dropbtn{
+		width:120px;
+	}
+
+	.dropdown{
+		width:120px;
+	}
+
+	.gpsfab{
+
+	}
+}*/

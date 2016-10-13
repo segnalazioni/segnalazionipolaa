@@ -1,0 +1,145 @@
+<link rel="impport" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="bower_components/google-map/google-map.html">
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="bower_components/iron-icons/device-icons.html">
+<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="bower_components/paper-item/paper-item.html">
+<link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="bower_components/iron-list/iron-list.html">
+
+<dom-module id="my-menu">
+<style>
+.dropbtna {
+    background-color: #e1382d;
+	position:relative;
+	width:400px;
+	height:50px;
+    color: white;
+    font-size: 16px;
+	margin-left:20px;
+	border-radius:30px;
+    border: none;
+    cursor: pointer;
+	position: relative;
+    display: inline-block;
+}
+
+.dropmenu{
+	position:absolute;
+	margin-top:3px;
+}
+
+paper-dropdown-menu {
+	margin-left:30px;
+	--paper-input-container-underline: {
+		display: none;
+	};
+
+	--paper-input-container-underline-focus:{
+		display:none;
+	};
+
+	--paper-input-container-label: {
+		text-align:center;
+		color:white;
+	}
+
+	--paper-input-container:{
+		width:350px;
+		color:white;
+		text-transform: uppercase;
+	};
+
+	--paper-dropdown-menu-icon:{
+		color:white;
+	};
+
+	--paper-input-container-input:{
+		text-align:center;
+		text-transform: uppercase;
+	};
+
+	--paper-dropdown-menu-ripple:{
+		display:none;
+	};
+
+	--paper-input-container-input-color:white;
+}
+
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px){
+
+	.dropbtna{
+		width:200px;
+	}
+
+	paper-dropdown-menu {
+
+		margin-left:10px;
+		width:180px;
+
+		--paper-input-container:{
+			width:180px;
+		};
+	}
+}
+
+</style>
+<template>
+	<div class="dropbtna">
+        <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
+            <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
+            	<template is="dom-repeat" items="{{menuItems}}">
+                    <paper-item name="{{item.name}}">{{item.name}}</paper-item>
+                </template>
+            </paper-listbox>
+        </paper-dropdown-menu>
+	</div>
+</template>
+
+</dom-module>
+<script>
+	Polymer({
+		is: 'my-menu',
+
+		properties:{
+			admin: String
+		},
+
+		ready: function() {
+			if(this.admin === "is"){
+				this.menuItems = [
+					{name: 'BUCHE'},
+					{name: 'SICUREZZA URBANA'},
+					{name: 'RIFIUTI'},
+					{name: 'PROTEZIONE CIVILE'},
+					{name: 'INCIDENTI STRADALI'},
+					{name: 'CAMPI NOMADI'}
+				];
+			}else{
+				this.menuItems = [
+					{name: 'BUCHE'},
+					{name: 'RIFIUTI'},
+					{name: 'PROTEZIONE CIVILE'}
+				];
+			}
+      	},
+
+		listeners: {
+        	'iron-select': 'selected'
+      	},
+
+		selected: function(event, data){
+			this.selectedItem = event.target.selected;
+		},
+
+		getSelectedElement: function() {
+      		return this.selectedItem;
+    	}
+	});
+</script>
