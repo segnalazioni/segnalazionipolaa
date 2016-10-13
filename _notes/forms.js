@@ -1,6 +1,6 @@
 function formhash(user, password) {
     // Create a new element input, this will be our hashed password field.
-	if(user.value !== "" && password.value !== ""){
+	if(user.value != "" && password.value != ""){
 		var pas = hex_sha512(password.value);
 		var use = user.value;
 
@@ -10,16 +10,16 @@ function formhash(user, password) {
 			data: {'p': pas, 'user': use},
 			success: function(data){
                 alert(data.substring(0, 4)+"    "+data.substring(5,6));
-					if(data == "user"){
-						document.getElementById('modal-user').open();
-					}else if(data.substring(0,4) == "pass"){
-						document.getElementById('modal-password').open();
-                        document.getElementById('tentativi').innerHTML = "Ti restano "+5 - Number(data.substring(5, 6))+" tentativi!";
-					}else if(data == "succ"){
-						window.location="protected_page.php";
-					}
-				 }
-			});
+                if(data == "user"){
+                    document.getElementById('modal-user').open();
+                }else if(data == "pass"){
+                    document.getElementById('modal-password').open();
+                    //document.getElementById('tentativi').innerHTML = "Ti restano "+5 - Number(data.substring(5, 6))+" tentativi!";
+                }else if(data == "succ"){
+                    window.location="protected_page.php";
+                }
+            }
+        });
 	}else{
 		document.getElementById('modal-compile').open();
 	}
