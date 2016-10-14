@@ -13,7 +13,7 @@ if (isset($_POST['user'], $_POST['p'])) {
         $times = $row["times"];
     }
 
-    if($times <= 5) {
+    if($times < 5) {
         $loggato = login($user, $password, $mysqli);
 
         echo $loggato;
