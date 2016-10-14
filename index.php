@@ -16,6 +16,7 @@ session_start();
         <script src="includes/forms.js"></script>
         <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
         <script src="jquery-3.1.0.min.js"></script>
+        <!--<script src="main.js"></script>-->
 
         <link rel="stylesheet" type="text/css" href="style.css"/>
     	<link rel="import" href="bower_components/paper-button/paper-button.html">
@@ -42,12 +43,12 @@ session_start();
             	<p id="titolo" align="center" class="hide-on-mobile roboto" style="font-size:28px;">Accesso</p>
                 <div class="card-content">
                 <form is"iron-form" action="protected-page.php" id="form" method="post" name="login_form" class="vertical center center-justified layout">
-            		<paper-input required auto-validate class="input-mobile" error-message="Compila questo campo!" id="user_input" spellcheck="false" style="--paper-input-container-color: red;" type="text" label="USERNAME">
+            		<paper-input required auto-validate class="input-mobile" error-message="Compila questo campo!" id="user_input" spellcheck="false" style="--paper-input-container-color: red;" type="text" label="USERNAME" tabindex="1">
                     	<iron-icon icon="social:person" prefix></iron-icon>
                         <paper-icon-button suffix onclick="document.getElementById('user_input').value = '';" icon="clear" style="color:#e1382d;" alt="clear" title="clear"></paper-icon-button>
                     </paper-input>
                     <br/>
-                    <paper-input required auto-validate class="input-mobile" error-message="Compila questo campo!" style="margin-bottom:40px;" id="pass_input" spellcheck="false" type="password" label="PASSWORD">
+                    <paper-input required auto-validate class="input-mobile" error-message="Compila questo campo!" style="margin-bottom:40px;" id="pass_input" spellcheck="false" type="password" label="PASSWORD" tabindex="2">
                     	<iron-icon icon="lock" prefix></iron-icon>
                         <paper-icon-button suffix onclick="document.getElementById('pass_input').value = '';" icon="clear" style="color:#e1382d;" alt="clear" title="clear"></paper-icon-button>
                     </paper-input>
