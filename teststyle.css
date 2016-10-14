@@ -15,8 +15,8 @@
 }
 
 textarea{
-	margin-left:20px auto;
-	margin-right:20px auto;
+	margin-left:auto;
+	margin-right:auto;
 	resize:none;
 	width:99.5%;
 	font-size:20px;
@@ -102,7 +102,7 @@ textarea{
 	}
 
 	textarea{
-		margin:0 auto, 0 auto;
+		margin:0 auto 0 auto;
 		resize:none;
 		font-size:30px;
 		border:none;
@@ -116,6 +116,10 @@ textarea{
 		margin:0;
 		padding:0;
 	}
+
+    iron-pages{
+        top:59px;
+    }
 }
 
 /*@media only screen and (max-width: 400px), only screen and (max-device-width: 400px){

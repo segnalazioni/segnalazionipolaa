@@ -301,7 +301,7 @@ include_once 'includes/functions.php';
 
 
             	<style>
-					.gmnoprint a, .gmnoprint spancc {
+					.gmnoprint a, .gmnoprint span {
 						display:none;
 					}
 					.gm-style-cc{
@@ -317,7 +317,7 @@ include_once 'includes/functions.php';
             		</paper-tabs>
         		</paper-toolbar>
 
-                <iron-pages selected="{{selected}}" style="position:absolute; top:60px;left:0px;right:0px;bottom:0px;">
+                <iron-pages selected="{{selected}}" style="position:absolute; top:60px; left:0px; right:0px; bottom:0px;">
                 	<div style="height:100%">
                     	<div id="map" style="height:100%"></div>
         				<paper-fab icon="add" onclick="openDialog();" style="position:absolute; bottom:30px; right:30px; background-color:#e1382d;"></paper-fab>
