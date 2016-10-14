@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icon/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/svg-sample-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/svg-sample-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/iron-iconset-svg.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/iron-iconset-svg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/iron-iconset-svg.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/iron-iconset-svg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-input/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/README.md" afterPath="$PROJECT_DIR$/bower_components/iron-input/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-input/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/iron-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/iron-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/test/iron-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/test/iron-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-meta/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-button/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/README.md" afterPath="$PROJECT_DIR$/bower_components/paper-button/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-button/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/paper-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/paper-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/test/paper-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/test/paper-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-material/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-styles/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/.bower.json" afterPath="$PROJECT_DIR$/bower_components/polymer/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="segnalazionipolaa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,17 +31,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="55" column="101" selection-start-line="55" selection-start-column="101" selection-end-line="55" selection-end-column="101" />
+            <state relative-caret-position="66">
+              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agg-segn.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="agg-segn.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/agg-segn.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="693">
@@ -151,9 +116,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$PROJECT_DIR$/includes/forms.js" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -280,12 +245,12 @@
       <updated>1476403391533</updated>
       <workItem from="1476403394382" duration="1382000" />
       <workItem from="1476407781340" duration="3264000" />
-      <workItem from="1476411074077" duration="815000" />
+      <workItem from="1476411074077" duration="1418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5461000" />
+    <option name="totallyTimeSpent" value="6064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -441,14 +406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="55" column="101" selection-start-line="55" selection-start-column="101" selection-end-line="55" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agg-segn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -456,6 +413,14 @@
           <folding>
             <marker date="1476374732000" expanded="true" signature="496:660" ph="INSERT INTO segnalazioni... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
