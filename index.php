@@ -83,5 +83,12 @@ session_start();
     			<paper-button dialog-confirm autofocus>OK</paper-button>
   			</div>
 		</paper-dialog>
+        <paper-dialog id="modal-over" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
+            <h2>Spiacente</h2>
+            <p>Hai esaurito i tentativi di accesso, contatta l'amministratore per la riattivazione!</p>
+            <div class="buttons">
+                <paper-button dialog-confirm autofocus>OK</paper-button>
+            </div>
+        </paper-dialog>
     </body>
 </html>

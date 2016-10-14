@@ -16,6 +16,8 @@ function formhash(user, password) {
                     document.getElementById('tries').innerHTML = "Hai ancora "+String(5-Number(data.substring(5,6)))+" tentativi";
                 }else if(data == "succ"){
                     window.location="protected_page.php";
+                }else if(data == "over"){
+                    document.getElementById('modal-over').open();
                 }
             }
         });
