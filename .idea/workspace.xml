@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected_page.php" afterPath="$PROJECT_DIR$/protected_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teststyle.css" afterPath="$PROJECT_DIR$/teststyle.css" />
     </list>
@@ -45,15 +46,15 @@
       <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="319" column="85" selection-start-line="319" selection-start-column="78" selection-end-line="319" selection-end-column="87" />
+            <state relative-caret-position="156">
+              <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1476470062685" expanded="true" signature="3757:3776" ph="..." />
-                <marker date="1476470062685" expanded="true" signature="4707:4744" ph="..." />
-                <marker date="1476470062685" expanded="true" signature="8331:8350" ph="..." />
-                <marker date="1476470062685" expanded="true" signature="8412:8449" ph="..." />
+                <marker date="1476470239479" expanded="true" signature="3757:3776" ph="..." />
+                <marker date="1476470239479" expanded="true" signature="4707:4744" ph="..." />
+                <marker date="1476470239479" expanded="true" signature="8331:8350" ph="..." />
+                <marker date="1476470239479" expanded="true" signature="8412:8449" ph="..." />
               </folding>
             </state>
           </provider>
@@ -62,8 +63,8 @@
       <file leaf-file-name="teststyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/teststyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1072">
-              <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+            <state relative-caret-position="775">
+              <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -172,8 +173,8 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/my-menu.html" />
-        <option value="$PROJECT_DIR$/protected_page.php" />
         <option value="$PROJECT_DIR$/teststyle.css" />
+        <option value="$PROJECT_DIR$/protected_page.php" />
       </list>
     </option>
   </component>
@@ -320,15 +321,15 @@
       <workItem from="1476407781340" duration="3264000" />
       <workItem from="1476411074077" duration="3882000" />
       <workItem from="1476440576346" duration="2471000" />
-      <workItem from="1476444520282" duration="10941000" />
+      <workItem from="1476444520282" duration="11144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21940000" />
+    <option name="totallyTimeSpent" value="22143000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="-16" width="3232" height="1732" extended-state="7" />
+    <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2516129" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -678,23 +679,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="319" column="85" selection-start-line="319" selection-start-column="78" selection-end-line="319" selection-end-column="87" />
+        <state relative-caret-position="156">
+          <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
           <folding>
             <element signature="n#style#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1476470062685" expanded="true" signature="3757:3776" ph="..." />
-            <marker date="1476470062685" expanded="true" signature="4707:4744" ph="..." />
-            <marker date="1476470062685" expanded="true" signature="8331:8350" ph="..." />
-            <marker date="1476470062685" expanded="true" signature="8412:8449" ph="..." />
+            <marker date="1476470239479" expanded="true" signature="3757:3776" ph="..." />
+            <marker date="1476470239479" expanded="true" signature="4707:4744" ph="..." />
+            <marker date="1476470239479" expanded="true" signature="8331:8350" ph="..." />
+            <marker date="1476470239479" expanded="true" signature="8412:8449" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/teststyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1072">
-          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+        <state relative-caret-position="775">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
           <folding />
         </state>
       </provider>
