@@ -13,7 +13,7 @@ function formhash(user, password) {
                     document.getElementById('modal-user').open();
                 }else if(data.substring(0,4) == "pass"){
                     document.getElementById('modal-password').open();
-                    document.getElementById('times').innerHTML = "Hai ancora "+String(5-Number(data.substring(5,6)))+" tentativi";
+                    document.getElementById('tries').innerHTML = "Hai ancora "+String(5-Number(data.substring(5,6)))+" tentativi";
                 }else if(data == "succ"){
                     window.location="protected_page.php";
                 }
