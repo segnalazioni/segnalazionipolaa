@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teststyle.css" afterPath="$PROJECT_DIR$/teststyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-menu.html" afterPath="$PROJECT_DIR$/my-menu.html" />
     </list>
     <ignored path="segnalazionipolaa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,21 +57,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teststyle.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teststyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teststyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="-1023">
               <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-menu.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my-menu.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="741">
+              <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -168,8 +169,8 @@
         <option value="$PROJECT_DIR$/includes/forms.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/my-menu.html" />
         <option value="$PROJECT_DIR$/teststyle.css" />
+        <option value="$PROJECT_DIR$/my-menu.html" />
       </list>
     </option>
   </component>
@@ -316,12 +317,12 @@
       <workItem from="1476407781340" duration="3264000" />
       <workItem from="1476411074077" duration="3882000" />
       <workItem from="1476440576346" duration="2471000" />
-      <workItem from="1476444520282" duration="6646000" />
+      <workItem from="1476444520282" duration="7701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17645000" />
+    <option name="totallyTimeSpent" value="18700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -656,14 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1056">
@@ -687,8 +680,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/teststyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="-1023">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
           <folding />
         </state>
       </provider>

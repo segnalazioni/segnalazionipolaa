@@ -7,6 +7,7 @@
 <link rel="import" href="bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="bower_components/iron-icons/device-icons.html">
+<link rel="import" href="bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="bower_components/paper-item/paper-item.html">
 <link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
@@ -72,34 +73,47 @@ paper-dropdown-menu {
 	--paper-input-container-input-color:white;
 }
 
-@media only screen and (max-width: 800px), only screen and (max-device-width: 800px){
+.smalldropbtna{
+    width:200px;
+}
 
-	.dropbtna{
-		width:200px;
-	}
+.smalldropbtna paper-dropdown-menu {
 
-	paper-dropdown-menu {
+    margin-left:10px;
+    width:180px;
 
-		margin-left:10px;
-		width:180px;
-
-		--paper-input-container:{
-			width:180px;
-		};
-	}
+    --paper-input-container:{
+        width:180px;
+    };
 }
 
 </style>
 <template>
-	<div class="dropbtna">
-        <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
-            <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
-            	<template is="dom-repeat" items="{{menuItems}}">
-                    <paper-item name="{{item.name}}">{{item.name}}</paper-item>
-                </template>
-            </paper-listbox>
-        </paper-dropdown-menu>
-	</div>
+    <iron-media-query query="max-width: 800px" queryMatches="{{smallScreen}}"></iron-media-query>
+    <template if="{{smallScreen}}">
+
+        <div class="smalldropbtna">
+            <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
+                <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
+                    <template is="dom-repeat" items="{{menuItems}}">
+                        <paper-item name="{{item.name}}">{{item.name}}</paper-item>
+                    </template>
+                </paper-listbox>
+            </paper-dropdown-menu>
+        </div>
+
+    </template>
+    <template if="{{!smallScreen}}">
+        <div class="dropbtna">
+            <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
+                <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
+                    <template is="dom-repeat" items="{{menuItems}}">
+                        <paper-item name="{{item.name}}">{{item.name}}</paper-item>
+                    </template>
+                </paper-listbox>
+            </paper-dropdown-menu>
+        </div>
+    </template>
 </template>
 
 </dom-module>

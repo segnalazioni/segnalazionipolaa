@@ -41,6 +41,7 @@
     "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#1.0.0",
     "paper-item": "PolymerElements/paper-item#1.0.0",
     "paper-listbox": "polymerelements/paper-listbox#1.0.0",
-    "paper-menu": "PolymerElements/paper-menu#1.0.0"
+    "paper-menu": "PolymerElements/paper-menu#1.0.0",
+    "iron-media-query": "PolymerElements/iron-media-query#^1.0.8"
   }
 }
