@@ -8,494 +8,387 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
+
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>paper-tooltip tests</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-  <script src="../../web-component-tester/browser.js"></script>
-  <script src="../../test-fixture/test-fixture-mocha.js"></script>
-  <script src="../../iron-test-helpers/mock-interactions.js"></script>
-
-  <link rel="import" href="../../test-fixture/test-fixture.html">
-  <link rel="import" href="../paper-tooltip.html">
-  <link rel="import" href="test-button.html">
-
-</head>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  #target {
-    width: 100px;
-    height: 20px;
-    background-color: red;
-  }
-  paper-tooltip {
-    width: 70px;
-    height: 30px;
-  }
-
-  .wide {
-    width: 200px;
-  }
-
-  [hidden] {
-    display: none;
-  }
-</style>
-
-<body>
-
-  <test-fixture id="basic">
-    <template>
-      <div>
-        <div id="target"></div>
-        <paper-tooltip for="target" animation-delay="0">Tooltip text</paper-tooltip>
-      </div>
-    </template>
-  </test-fixture>
-
-  <test-fixture id="fitted">
-    <template>
-      <div>
-        <div id="target" style="position:absolute"></div>
-        <paper-tooltip for="target" class="wide" fit-to-visible-bounds>Tooltip text</paper-tooltip>
-      </div>
-    </template>
-  </test-fixture>
-
-  <test-fixture id="no-text">
-    <template>
-      <div>
-        <div id="target"></div>
-        <paper-tooltip for="target"></paper-tooltip>
-      </div>
-    </template>
-  </test-fixture>
-
-  <test-fixture id="dynamic">
-    <template>
-      <div>
-        <div id="target"></div>
-        <paper-tooltip>Tooltip text</paper-tooltip>
-      </div>
-    </template>
-  </test-fixture>
-
-  <test-fixture id="custom">
-    <template>
-      <test-button></test-button>
-    </template>
-  </test-fixture>
-
-  <test-fixture id="no-offset-parent">
-    <template>
-      <div>
-        <div id="target"></div>
-        <paper-tooltip for="target" animation-delay="0" hidden></paper-tooltip>
-      </div>
-    </template>
-  </test-fixture>
-  
-  <test-fixture id="manual-mode">
-    <template>
-      <div>
-        <div id="target"></div>
-        <paper-tooltip for="target" manual-mode>Text</paper-tooltip>
-      </div>
-    </template>
-  </test-fixture>
-
-  <script>
-    function isHidden(element) {
-      var rect = element.getBoundingClientRect();
-      return (rect.width == 0 && rect.height == 0);
-    }
-
-    suite('basic', function() {
-      test('tooltip is shown when target is focused', function() {
-        var f = fixture('no-text');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isTrue(isHidden(actualTooltip));
-      });
-
-      test('tooltip is not shown if empty', function() {
-        var f = fixture('basic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-      });
-
-      test('tooltip doesn\'t throw an exception if it has no offsetParent', function() {
-        var f = fixture('no-offset-parent');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-        tooltip.updatePosition();
-        tooltip.show();
-
-        // Doesn't get shown since there's no position computed.
-        assert.isTrue(isHidden(actualTooltip));
-      });
-
-      test('tooltip is positioned correctly (bottom)', function() {
-        var f = fixture('basic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-
-        var divRect = target.getBoundingClientRect();
-        expect(divRect.width).to.be.equal(100);
-        expect(divRect.height).to.be.equal(20);
-
-        var contentRect = tooltip.getBoundingClientRect();
-        expect(contentRect.width).to.be.equal(70);
-        expect(contentRect.height).to.be.equal(30);
-
-        // The target div width is 100, and the tooltip width is 70, and
-        // it's centered. The height of the target div is 20, and the
-        // tooltip is 14px below.
-        expect(contentRect.left).to.be.equal((100 - 70)/2);
-        expect(contentRect.top).to.be.equal(20 + 14);
-
-        // Also check the math, just in case.
-        expect(contentRect.left).to.be.equal((divRect.width - contentRect.width)/2);
-        expect(contentRect.top).to.be.equal(divRect.height + tooltip.offset);
-      });
-
-      test('tooltip is positioned correctly (top)', function() {
-        var f = fixture('basic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-        tooltip.position = 'top';
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-
-        var divRect = target.getBoundingClientRect();
-        expect(divRect.width).to.be.equal(100);
-        expect(divRect.height).to.be.equal(20);
-
-        var contentRect = tooltip.getBoundingClientRect();
-        expect(contentRect.width).to.be.equal(70);
-        expect(contentRect.height).to.be.equal(30);
-
-        // The target div width is 100, and the tooltip width is 70, and
-        // it's centered. The height of the tooltip is 30, and the
-        // tooltip is 14px above the target.
-        expect(contentRect.left).to.be.equal((100 - 70)/2);
-        expect(contentRect.top).to.be.equal(0 - 30 - 14);
-
-        // Also check the math, just in case.
-        expect(contentRect.left).to.be.equal((divRect.width - contentRect.width)/2);
-        expect(contentRect.top).to.be.equal(0 - contentRect.height - tooltip.offset);
-      });
-
-      test('tooltip is positioned correctly (right)', function() {
-        var f = fixture('basic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-        tooltip.position = 'right';
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-
-        var divRect = target.getBoundingClientRect();
-        expect(divRect.width).to.be.equal(100);
-        expect(divRect.height).to.be.equal(20);
-
-        var contentRect = tooltip.getBoundingClientRect();
-        expect(contentRect.width).to.be.equal(70);
-        expect(contentRect.height).to.be.equal(30);
-
-        // The target div width is 100, and the tooltip is 14px to the right.
-        // The target div height is 20, the height of the tooltip is 20px, and
-        // the tooltip is centered.
-        expect(contentRect.left).to.be.equal(100 + 14);
-        expect(contentRect.top).to.be.equal((20 - 30)/2);
-
-        // Also check the math, just in case.
-        expect(contentRect.left).to.be.equal(divRect.width + tooltip.offset);
-        expect(contentRect.top).to.be.equal((divRect.height - contentRect.height)/2);
-      });
-
-      test('tooltip is positioned correctly (left)', function() {
-        var f = fixture('basic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-        tooltip.position = 'left';
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-
-        var divRect = target.getBoundingClientRect();
-        expect(divRect.width).to.be.equal(100);
-        expect(divRect.height).to.be.equal(20);
-
-        var contentRect = tooltip.getBoundingClientRect();
-        expect(contentRect.width).to.be.equal(70);
-        expect(contentRect.height).to.be.equal(30);
-
-        // The tooltip width is 70px, and the tooltip is 14px to the left of the target.
-        // The target div height is 20, the height of the tooltip is 20px, and
-        // the tooltip is centered.
-        expect(contentRect.left).to.be.equal(0 - 70 - 14);
-        expect(contentRect.top).to.be.equal((20 - 30)/2);
-
-        // Also check the math, just in case.
-        expect(contentRect.left).to.be.equal(0 - contentRect.width - tooltip.offset);
-        expect(contentRect.top).to.be.equal((divRect.height - contentRect.height)/2);
-      });
-
-      test('tooltip is fitted correctly if out of bounds', function() {
-        var f = fixture('fitted');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-        target.style.top = 0;
-        target.style.left = 0;
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-
-        var contentRect = tooltip.getBoundingClientRect();
-        var divRect = target.getBoundingClientRect();
-
-        // Should be fitted on the left side.
-        expect(contentRect.left).to.be.equal(0);
-        expect(contentRect.top).to.be.equal(divRect.height + tooltip.offset);
-      });
-
-      test('tooltip is positioned correctly after being dynamically set', function() {
-        var f = fixture('dynamic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        // Skip animations in this test, which means we'll show and hide
-        // the tooltip manually, instead of calling focus and blur.
-
-        // The tooltip is shown because it's a sibling of the target,
-        // but it's positioned incorrectly
-        tooltip.toggleClass('hidden', false, actualTooltip);
-        assert.isFalse(isHidden(actualTooltip));
-
-        var contentRect = tooltip.getBoundingClientRect();
-        expect(contentRect.left).to.not.be.equal((100 - 70)/2);
-
-        tooltip.for = 'target';
-
-        // The tooltip needs to hide before it gets repositioned.
-        tooltip.toggleClass('hidden', true, actualTooltip);
-        tooltip.updatePosition();
-        tooltip.toggleClass('hidden', false, actualTooltip);
-        assert.isFalse(isHidden(actualTooltip));
-
-        // The target div width is 100, and the tooltip width is 70, and
-        // it's centered. The height of the target div is 20, and the
-        // tooltip is 14px below.
-        contentRect = tooltip.getBoundingClientRect();
-        expect(contentRect.left).to.be.equal((100 - 70)/2);
-        expect(contentRect.top).to.be.equal(20 + 14);
-      });
-
-      test('tooltip is hidden after target is blurred', function(done) {
-        var f = fixture('basic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
-
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-        // Simulate but don't actually run the entry animation.
-        tooltip.toggleClass('hidden', false, actualTooltip);
-        tooltip._showing = true;
-        assert.isFalse(isHidden(actualTooltip));
-
-        tooltip.addEventListener('neon-animation-finish', function() {
-          assert.isTrue(isHidden(actualTooltip));
-          done();
+  <head>
+
+    <title>paper-tabs-basic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../paper-tabs.html">
+    <link rel="import" href="../../iron-test-helpers/iron-test-helpers.html">
+    
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <paper-tabs>
+          <paper-tab>ITEM ONE</paper-tab>
+          <paper-tab>ITEM TWO</paper-tab>
+          <paper-tab>ITEM THREE</paper-tab>
+        </paper-tabs>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="HiddenTabs">
+      <template>
+        <paper-tabs hidden>
+          <paper-tab>ITEM ONE</paper-tab>
+          <paper-tab>ITEM TWO</paper-tab>
+        </paper-tabs>
+      </template>
+    </test-fixture>
+
+    <script>
+
+      function ensureDocumentHasFocus() {
+        window.top && window.top.focus();
+      }
+
+      function checkSelectionBar(tabs, tab) {
+        var tabRect = tab.getBoundingClientRect();
+        var rect = Polymer.dom(tabs.root).querySelector('#selectionBar').getBoundingClientRect();
+        assert.equal(Math.round(tabRect.left), Math.round(rect.left));
+      }
+
+      suite('defaults', function() {
+
+        var tabs;
+
+        setup(function () {
+          tabs = fixture('basic');
         });
-        MockInteractions.blur(target);
+
+        test('to nothing selected', function() {
+          assert.equal(tabs.selected, undefined);
+        });
+
+        test('no tabs have iron-selected class', function() {
+          Array.prototype.forEach.call(tabs.querySelectorAll('paper-tab'), function(tab) {
+            assert.isFalse(tab.classList.contains('iron-selected'));
+          });
+        });
+
+        test('to false as noink', function() {
+          assert.equal(tabs.noink, false);
+        });
+
+        test('to false as noBar', function() {
+          assert.equal(tabs.noBar, false);
+        });
+
+        test('to false as noSlide', function() {
+          assert.equal(tabs.noSlide, false);
+        });
+
+        test('to false as scrollable', function() {
+          assert.equal(tabs.scrollable, false);
+        });
+
+        test('to false as disableDrag', function() {
+          assert.equal(tabs.disableDrag, false);
+        });
+
+        test('to false as hideScrollButtons', function() {
+          assert.equal(tabs.hideScrollButtons, false);
+        });
+
+        test('to false as alignBottom', function() {
+          assert.equal(tabs.alignBottom, false);
+        });
       });
 
-      test('tooltip unlistens to target on detach', function(done) {
-        var f = fixture('basic');
-        var target = f.querySelector('#target');
-        var tooltip = f.querySelector('paper-tooltip');
+      suite('hidden tabs', function() {
+        var tabs;
 
-        sinon.spy(tooltip, 'show');
+        setup(function() {
+          tabs = fixture('HiddenTabs');
+        });
 
-        MockInteractions.focus(target);
-        expect(tooltip.show.callCount).to.be.equal(1);
-
-        MockInteractions.focus(target);
-        expect(tooltip.show.callCount).to.be.equal(2);
-
-        f.removeChild(tooltip);
-
-        setTimeout(function() {
-          // No more listener means no more calling show.
-          MockInteractions.focus(target);
-          expect(tooltip.show.callCount).to.be.equal(2);
-          done();
-        }, 200);
-      });
-      
-      test('tooltip ignores events in manual-mode', function() {
-        var f = fixture('manual-mode');
-        
-        var tooltip = f.querySelector('paper-tooltip');
-        assert.isTrue(tooltip.manualMode);
-        
-        tooltip.show();
-        assert.isTrue(tooltip._showing);
-        
-        sinon.spy(tooltip, 'hide');
-        
-        tooltip.fire('mouseenter');
-        
-        var target = f.querySelector('#target');
-        target.dispatchEvent(new CustomEvent('mouseenter'));
-        target.dispatchEvent(new CustomEvent('focus'));
-        target.dispatchEvent(new CustomEvent('mouseleave'));
-        target.dispatchEvent(new CustomEvent('blur'));
-        target.dispatchEvent(new CustomEvent('tap'));
-        
-        expect(tooltip.hide.callCount).to.be.equal(0);
+        test('choose the correct bar position once made visible', function() {
+          tabs.removeAttribute('hidden');
+          tabs.selected = 0;
+          expect(tabs._width).to.be.greaterThan(0);
+          expect(tabs._left).to.be.equal(0);
+        });
       });
 
-      test('changing manual-mode toggles event listeners', function() {
-        var f = fixture('manual-mode');
+      suite('set the selected attribute', function() {
 
-        var tooltip = f.querySelector('paper-tooltip');
-        assert.isTrue(tooltip.manualMode);
+        var tabs, index = 0;
 
-        sinon.spy(tooltip, '_addListeners');
-        sinon.spy(tooltip, '_removeListeners');
-        expect(tooltip._addListeners.callCount).to.be.equal(0);
-        expect(tooltip._removeListeners.callCount).to.be.equal(0);
+        setup(function () {
+          tabs = fixture('basic');
+          tabs.selected = index;
+        });
 
-        tooltip.manualMode = false;
-        expect(tooltip._addListeners.callCount).to.be.equal(1);
-        expect(tooltip._removeListeners.callCount).to.be.equal(0);
+        test('selected value', function() {
+          assert.equal(tabs.selected, index);
+        });
 
-        tooltip.manualMode = true;
-        expect(tooltip._addListeners.callCount).to.be.equal(1);
-        expect(tooltip._removeListeners.callCount).to.be.equal(1);
+        test('selected tab has iron-selected class', function() {
+          var tab = tabs.querySelectorAll('paper-tab')[index];
+          assert.isTrue(tab.classList.contains('iron-selected'));
+        });
+
+        test('selected tab has selection bar position at the bottom of the tab', function(done) {
+          setTimeout(function() {
+            checkSelectionBar(tabs, tabs.querySelectorAll('paper-tab')[index]);
+            done();
+          }, 1000);
+        });
+
       });
 
-      test('changing for= re-targets event listeners', function() {
-        var f = fixture('dynamic');
-        var tooltip = f.querySelector('paper-tooltip');
+      suite('select tab via click', function() {
 
-        sinon.spy(tooltip, '_addListeners');
-        sinon.spy(tooltip, '_removeListeners');
+        var tabs, index = 1;
+        var tab;
 
-        expect(tooltip._removeListeners.callCount).to.be.equal(0);
-        expect(tooltip._addListeners.callCount).to.be.equal(0);
+        setup(function () {
+          tabs = fixture('basic');
+          tab = tabs.querySelectorAll('paper-tab')[index];
+          tab.dispatchEvent(new CustomEvent('click', {bubbles: true}));
+        });
 
-        tooltip.for = 'target';
+        test('selected value', function() {
+          assert.equal(tabs.selected, index);
+        });
 
-        expect(tooltip._removeListeners.callCount).to.be.equal(1);
-        expect(tooltip._addListeners.callCount).to.be.equal(1);
-      });
-    });
+        test('selected tab has iron-selected class', function() {
+          var tab = tabs.querySelectorAll('paper-tab')[index];
+          assert.isTrue(tab.classList.contains('iron-selected'));
+        });
 
-    suite('tooltip is inside a custom element', function() {
-      var f, tooltip, target;
+        test('selected tab has selection bar position at the bottom of the tab', function(done) {
+          setTimeout(function() {
+            checkSelectionBar(tabs, tabs.querySelectorAll('paper-tab')[index]);
+            done();
+          }, 1000);
+        });
 
-      setup(function() {
-        f = fixture('custom');
-        target = f.$.button;
-        tooltip = f.$.buttonTooltip;
-      });
+        test('pressing enter on tab causes a click', function(done) {
+          var clickCount = 0;
+          tab.addEventListener('click', function onTabClick() {
+            clickCount++;
+            tab.removeEventListener('click', onTabClick);
 
-      test('tooltip is shown when target is focused', function() {
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
+            expect(clickCount).to.be.equal(1);
+            done();
+          });
 
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-      });
-
-      test('tooltip is positioned correctly', function() {
-        var actualTooltip = Polymer.dom(tooltip.root).querySelector('#tooltip');
-        assert.isTrue(isHidden(actualTooltip));
-
-        MockInteractions.focus(target);
-        assert.isFalse(isHidden(actualTooltip));
-
-        var divRect = target.getBoundingClientRect();
-        expect(divRect.width).to.be.equal(100);
-        expect(divRect.height).to.be.equal(20);
-
-        var contentRect = tooltip.getBoundingClientRect();
-        expect(contentRect.width).to.be.equal(70);
-        expect(contentRect.height).to.be.equal(30);
-
-        // The target div width is 100, and the tooltip width is 70, and
-        // it's centered. The height of the target div is 20, and the
-        // tooltip is 14px below.
-        expect(contentRect.left).to.be.equal((100 - 70)/2);
-        expect(contentRect.top).to.be.equal(20 + 14);
-
-        // Also check the math, just in case.
-        expect(contentRect.left).to.be.equal((divRect.width - contentRect.width)/2);
-        expect(contentRect.top).to.be.equal(divRect.height + tooltip.offset);
-      });
-    });
-
-    suite('a11y', function() {
-      test('has aria role "tooltip"', function() {
-        var f = fixture('basic');
-        var tooltip = f.querySelector('paper-tooltip');
-
-        assert.isTrue(tooltip.getAttribute('role') == 'tooltip');
+          MockInteractions.pressEnter(tab);
+        });
       });
 
-      var ignoredRules = ['roleTooltipRequiresDescribedby'];
+      suite('noink attribute', function() {
+        var tabs;
 
-      a11ySuite('basic', ignoredRules);
-      a11ySuite('fitted', ignoredRules);
-      a11ySuite('no-text', ignoredRules);
-      a11ySuite('dynamic', ignoredRules);
-      a11ySuite('custom', ignoredRules);
-    });
-  </script>
-</body>
+        setup(function () {
+          tabs = fixture('basic');
+        });
+
+        test('noink attribute propagates to all descendant tabs', function() {
+          tabs.noink = true;
+          Array.prototype.slice.apply(tabs.querySelectorAll('paper-tab')).forEach(function(tab) {
+            assert.isTrue(tab.noink);
+          });
+
+          tabs.noink = false;
+          Array.prototype.slice.apply(tabs.querySelectorAll('paper-tab')).forEach(function(tab) {
+            assert.isFalse(tab.noink);
+          });
+        });
+      });
+
+      suite('accessibility', function() {
+        var LEFT = 37;
+        var RIGHT = 39;
+        var tabs;
+
+        setup(function () {
+          tabs = fixture('basic');
+          Polymer.dom.flush();
+        });
+
+        test('paper-tabs has role tablist', function() {
+          assert.equal(tabs.getAttribute('role'), 'tablist');
+        });
+
+        test('paper-tab has role tab', function() {
+          tabs.items.forEach(function(tab) {
+            assert.equal(tab.getAttribute('role'), 'tab');
+          });
+        });
+
+        test('without autoselect, tabs are not automatically selected',
+          function(done) {
+            ensureDocumentHasFocus();
+            Polymer.Base.async(function() {
+              tabs.select(0);
+              MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, RIGHT);
+              Polymer.Base.async(function() {
+                assert.equal(tabs.selected, 0);
+
+                MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, LEFT);
+                Polymer.Base.async(function() {
+                  assert.equal(tabs.selected, 0);
+
+                  MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, LEFT);
+                  Polymer.Base.async(function() {
+                    assert.equal(tabs.selected, 0);
+                    done();
+                  }, 100);
+                }, 100);
+              }, 100);
+            });
+          });
+
+        test('with autoselect, tabs are selected when moved to using arrow ' +
+          'keys', function(done) {
+            ensureDocumentHasFocus();
+            Polymer.Base.async(function() {
+              tabs.autoselect = true;
+              tabs.select(0);
+              MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, RIGHT);
+              Polymer.Base.async(function() {
+                assert.equal(tabs.selected, 1);
+
+                MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, RIGHT);
+                Polymer.Base.async(function() {
+                  assert.equal(tabs.selected, 2);
+
+                  MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, LEFT);
+                  Polymer.Base.async(function() {
+                    assert.equal(tabs.selected, 1);
+                    done();
+                  }, 100);
+                }, 100);
+              }, 100);
+            });
+          });
+
+        test('with autoselect, tabs are selected when moved to using arrow ' +
+          'keys (RTL)',function(done) {
+            ensureDocumentHasFocus();
+            Polymer.Base.async(function() {
+              tabs.setAttribute('dir', 'rtl');
+
+              tabs.autoselect = true;
+              tabs.select(0);
+              MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, LEFT);
+              Polymer.Base.async(function() {
+                assert.equal(tabs.selected, 1);
+
+                MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, LEFT);
+                Polymer.Base.async(function() {
+                  assert.equal(tabs.selected, 2);
+
+                  MockInteractions.pressAndReleaseKeyOn(tabs.selectedItem, RIGHT);
+                  Polymer.Base.async(function() {
+                    assert.equal(tabs.selected, 1);
+                    done();
+                  }, 100);
+                }, 100);
+              }, 100);
+            });
+          });
+
+        test('with autoselect-delay zero, tabs are selected with ' +
+          'microtask timing after the keyup', function(done) {
+            ensureDocumentHasFocus();
+            Polymer.Base.async(function() {
+              tabs.autoselect = true;
+              tabs.autoselectDelay = 0;
+              tabs.select(0);
+
+              MockInteractions.keyDownOn(tabs.selectedItem, RIGHT);
+              Polymer.Base.async(function() {
+                assert.equal(tabs.selected, 0);
+                assert.equal(tabs.items.indexOf(tabs.focusedItem), 1);
+
+                // No keyup between keydown events: the key is being held.
+                MockInteractions.keyDownOn(tabs.selectedItem, RIGHT);
+                Polymer.Base.async(function() {
+                  assert.equal(tabs.selected, 0);
+                  assert.equal(tabs.items.indexOf(tabs.focusedItem), 2);
+
+                  MockInteractions.keyUpOn(tabs.selectedItem, RIGHT);
+                  assert.equal(tabs.selected, 0);
+                  Polymer.Base.async(function() {
+                    assert.equal(tabs.selected, 2);
+                    assert.equal(tabs.items.indexOf(tabs.focusedItem), 2);
+
+                    MockInteractions.keyDownOn(tabs.selectedItem, LEFT);
+                    Polymer.Base.async(function() {
+                      assert.equal(tabs.selected, 2);
+                      assert.equal(tabs.items.indexOf(tabs.focusedItem), 1);
+
+                      MockInteractions.keyUpOn(tabs.selectedItem, LEFT);
+                      assert.equal(tabs.selected, 2);
+                      Polymer.Base.async(function() {
+                        assert.equal(tabs.selected, 1);
+                        done();
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+
+        test('with autoselect-delay positive, tabs are selected with ' +
+          'microtask timing after the keyup and delay', function(done) {
+            ensureDocumentHasFocus();
+            Polymer.Base.async(function() {
+              var DELAY = 100;
+
+              tabs.autoselect = true;
+              tabs.autoselectDelay = DELAY;
+              tabs.select(0);
+
+              MockInteractions.keyDownOn(tabs.selectedItem, RIGHT);
+              Polymer.Base.async(function() {
+                assert.equal(tabs.selected, 0);
+                assert.equal(tabs.items.indexOf(tabs.focusedItem), 1);
+
+                // No keyup between keydown events: the key is being held.
+                MockInteractions.keyDownOn(tabs.selectedItem, RIGHT);
+                Polymer.Base.async(function() {
+                  assert.equal(tabs.selected, 0);
+                  assert.equal(tabs.items.indexOf(tabs.focusedItem), 2);
+
+                  MockInteractions.keyUpOn(tabs.selectedItem, RIGHT);
+                  assert.equal(tabs.selected, 0);
+                  Polymer.Base.async(function() {
+                    assert.equal(tabs.selected, 2);
+                    assert.equal(tabs.items.indexOf(tabs.focusedItem), 2);
+
+                    MockInteractions.keyDownOn(tabs.selectedItem, LEFT);
+                    Polymer.Base.async(function() {
+                      assert.equal(tabs.selected, 2);
+                      assert.equal(tabs.items.indexOf(tabs.focusedItem), 1);
+
+                      MockInteractions.keyUpOn(tabs.selectedItem, LEFT);
+                      assert.equal(tabs.selected, 2);
+                      Polymer.Base.async(function() {
+                        assert.equal(tabs.selected, 1);
+                        done();
+                      }, DELAY + 100);
+                    });
+                  }, DELAY + 100);
+                });
+              });
+            });
+          });
+      });
+
+    </script>
+
+  </body>
 </html>

@@ -8,175 +8,145 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-
 <html>
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <title>iron-checked-element-behavior basic tests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <title>iron-collapse-basic</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../webcomponentsjs/webcomponents.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <script src="../../test-fixture/test-fixture-mocha.js"></script>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
-    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+  <link href="../../test-fixture/test-fixture.html" rel="import">
+  <link href="../../iron-meta/iron-meta.html" rel="import">
+  <link href="simple-checkbox.html" rel="import">
 
-    <link rel="import" href="../../test-fixture/test-fixture.html">
-    <link rel="import" href="../iron-collapse.html">
+</head>
+<body>
 
-  </head>
-  <body>
-
-    <test-fixture id="test">
-      <template>
-        <iron-collapse id="collapse" opened>
-          <div style="height:100px;">
-            Lorem ipsum
-          </div>
-        </iron-collapse>
-      </template>
-    </test-fixture>
-
-    <test-fixture id="test-empty">
+  <test-fixture id="basic">
     <template>
-        <iron-collapse id="collapse" opened>
-        </iron-collapse>
-      </template>
-    </test-fixture>
+      <simple-checkbox></simple-checkbox>
+    </template>
+  </test-fixture>
 
-    <script>
+  <test-fixture id="checked">
+    <template>
+      <simple-checkbox checked></simple-checkbox>
+    </template>
+  </test-fixture>
 
-      suite('basic', function() {
+  <test-fixture id="with-value">
+    <template>
+      <simple-checkbox value="batman"></simple-checkbox>
+    </template>
+  </test-fixture>
 
-        var collapse;
-        var collapseHeight;
+  <script>
 
-        setup(function() {
-          collapse = fixture('test');
-          collapseHeight = getComputedStyle(collapse).height;
-        });
-
-        test('opened attribute', function() {
-          assert.equal(collapse.opened, true);
-        });
-
-        test('animated by default', function() {
-          assert.isTrue(!collapse.noAnimation, '`noAnimation` is falsy');
-        });
-
-        test('horizontal attribute', function() {
-          assert.equal(collapse.horizontal, false);
-        });
-
-        test('default opened height', function() {
-          assert.equal(collapse.style.maxHeight, '');
-        });
-
-        test('set opened to false triggers animation', function(done) {
-          collapse.opened = false;
-          // Animation got enabled.
-          assert.notEqual(collapse.style.transitionDuration, '0s');
-          collapse.addEventListener('transitionend', function() {
-            // Animation disabled.
-            assert.equal(collapse.style.transitionDuration, '0s');
-            done();
-          });
-        });
-
-        test('enableTransition(false) disables animations', function() {
-          collapse.enableTransition(false);
-          assert.isTrue(collapse.noAnimation, '`noAnimation` is true');
-          // trying to animate the size update
-          collapse.updateSize('0px', true);
-          // Animation immediately disabled.
-          assert.equal(collapse.style.maxHeight, '0px');
-        });
-
-        test('set opened to false, then to true', function(done) {
-          // this listener will be triggered twice (every time `opened` changes)
-          collapse.addEventListener('transitionend', function() {
-            if (collapse.opened) {
-              // Check finalSize after animation is done.
-              assert.equal(collapse.style.height, '');
-              done();
-            } else {
-              // Check if size is still 0px.
-              assert.equal(collapse.style.maxHeight, '0px');
-              // Trigger 2nd toggle.
-              collapse.opened = true;
-              // Size should be immediately set.
-              assert.equal(collapse.style.maxHeight, collapseHeight);
-            }
-          });
-          // Trigger 1st toggle.
-          collapse.opened = false;
-          // Size should be immediately set.
-          assert.equal(collapse.style.maxHeight, '0px');
-        });
-
-        test('opened changes trigger iron-resize', function() {
-          var spy = sinon.stub();
-          collapse.addEventListener('iron-resize', spy);
-          // No animations for faster test.
-          collapse.noAnimation = true;
-          collapse.opened = false;
-          assert.isTrue(spy.calledOnce, 'iron-resize was fired');
-        });
-
-        test('overflow is hidden while animating', function(done) {
-          collapse.addEventListener('transitionend', function() {
-            // Should still be hidden.
-            assert.equal(getComputedStyle(collapse).overflow, 'hidden');
-            done();
-          });
-          assert.equal(getComputedStyle(collapse).overflow, 'visible');
-          collapse.opened = false;
-          // Immediately updated style.
-          assert.equal(getComputedStyle(collapse).overflow, 'hidden');
-        });
-
-        test('toggle horizontal updates size', function() {
-          collapse.horizontal = false;
-          assert.equal(collapse.style.width, '');
-          assert.equal(collapse.style.maxHeight, '');
-          assert.equal(collapse.style.transitionProperty, 'max-height');
-
-          collapse.horizontal = true;
-          assert.equal(collapse.style.maxWidth, '');
-          assert.equal(collapse.style.height, '');
-          assert.equal(collapse.style.transitionProperty, 'max-width');
-        });
-
-        test('change size with updateSize', function(done) {
-          collapse.addEventListener('transitionend', function() {
-            // size should be kept after transition
-            assert.equal(collapse.style.maxHeight, "123px");
-            done();
-          });
-          collapse.updateSize("123px", true);
-        });
-
+    suite('basic', function() {
+      test('can be checked', function() {
+        var c = fixture('basic');
+        assert.isFalse(c.checked);
+        c.checked = true;
+        assert.isTrue(c.checked);
       });
 
-      suite('empty', function() {
-
-        var collapse;
-
-        setup(function() {
-          collapse = fixture('test-empty');
-        });
-
-        test('empty&opened shows dynamically loaded content', function(done) {
-          flush(function () {
-            collapse.toggle();
-            collapse.toggle();
-            assert.equal(collapse.style.maxHeight, "");
-            done();
-          });
-        });
-
+      test('can be unchecked', function() {
+        var c = fixture('checked');
+        assert.isTrue(c.checked);
+        c.checked = false;
+        assert.isFalse(c.checked);
       });
 
-    </script>
+      test('invalid if required and not checked', function() {
+        var c = fixture('basic');
+        c.required = true;
+        assert.isFalse(c.checked);
+        assert.isFalse(c.validate());
+        assert.isTrue(c.invalid);
+      });
 
-  </body>
+      test('valid if required and checked', function() {
+        var c = fixture('basic');
+        c.required = true;
+        c.checked = true;
+        assert.isTrue(c.checked);
+        assert.isTrue(c.validate());
+        assert.isFalse(c.invalid);
+      });
+
+      test('valid if not required and not checked', function() {
+        var c = fixture('basic');
+        assert.isFalse(c.checked);
+        assert.isTrue(c.validate());
+        assert.isFalse(c.invalid);
+      });
+
+      test('has a default value of "on", always', function() {
+        var c = fixture('basic');
+
+        assert.isTrue(c.value === 'on');
+
+        c.checked = true;
+        assert.isTrue(c.value === 'on');
+      });
+
+      test('does not stomp over user defined value when checked', function() {
+        var c = fixture('with-value');
+        assert.isTrue(c.value === 'batman');
+
+        c.checked = true;
+        assert.isTrue(c.value === 'batman');
+      });
+
+      test('value returns "on" when no explicit value is specified', function() {
+        var c = fixture('basic');
+
+        assert.equal(c.value, 'on', 'returns "on"');
+      });
+
+      test('value returns the value when an explicit value is set', function() {
+        var c = fixture('basic');
+
+        c.value = 'abc';
+        assert.equal(c.value, 'abc', 'returns "abc"');
+
+        c.value = '123';
+        assert.equal(c.value, '123', 'returns "123"');
+      });
+
+      test('value returns "on" when value is set to undefined', function() {
+        var c = fixture('basic');
+
+        c.value = 'abc';
+        assert.equal(c.value, 'abc', 'returns "abc"');
+
+        c.value = undefined;
+        assert.equal(c.value, 'on', 'returns "on"');
+      });
+    });
+
+    suite('a11y', function() {
+      test('setting `required` sets `aria-required=true`', function() {
+        var c = fixture('basic');
+        c.required = true;
+        assert.equal(c.getAttribute('aria-required'), 'true');
+        c.required = false;
+        assert.isFalse(c.hasAttribute('aria-required'));
+      });
+
+      test('setting `invalid` sets `aria-invalid=true`', function() {
+        var c = fixture('basic');
+        c.invalid = true;
+        assert.equal(c.getAttribute('aria-invalid'), 'true');
+        c.invalid = false;
+        assert.isFalse(c.hasAttribute('aria-invalid'));
+      });
+    });
+
+  </script>
+
+</body>
 </html>

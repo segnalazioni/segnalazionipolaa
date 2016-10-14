@@ -1,65 +1,42 @@
-# jQuery
 
-> jQuery is a fast, small, and feature-rich JavaScript library.
+<!---
 
-For information on how to get started and how to use jQuery, please see [jQuery's documentation](http://api.jquery.com/).
-For source files and issues, please visit the [jQuery repo](https://github.com/jquery/jquery).
+This README is automatically generated from the comments in these files:
+iron-validatable-behavior.html
 
-## Including jQuery
+Edit those files, and our readme bot will duplicate them over here!
+Edit this file, and the bot will squash your changes :)
 
-Below are some of the most common ways to include jQuery.
+The bot does some handling of markdown. Please file a bug if it does the wrong
+thing! https://github.com/PolymerLabs/tedium/issues
 
-### Browser
+-->
 
-#### Script tag
+[![Build status](https://travis-ci.org/PolymerElements/iron-validatable-behavior.svg?branch=master)](https://travis-ci.org/PolymerElements/iron-validatable-behavior)
 
-```html
-<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-```
+_[Demo and API docs](https://elements.polymer-project.org/elements/iron-validatable-behavior)_
 
-#### Babel
 
-[Babel](http://babeljs.io/) is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.
+##Polymer.IronValidatableBehavior
 
-```js
-import $ from "jquery";
-```
+`Use Polymer.IronValidatableBehavior` to implement an element that validates user input.
+Use the related `Polymer.IronValidatorBehavior` to add custom validation logic to an iron-input.
 
-#### Browserify/Webpack
+By default, an `<iron-form>` element validates its fields when the user presses the submit button.
+To validate a form imperatively, call the form's `validate()` method, which in turn will
+call `validate()` on all its children. By using `Polymer.IronValidatableBehavior`, your
+custom element will get a public `validate()`, which
+will return the validity of the element, and a corresponding `invalid` attribute,
+which can be used for styling.
 
-There are several ways to use [Browserify](http://browserify.org/) and [Webpack](https://webpack.github.io/). For more information on using these tools, please refer to the corresponding project's documention. In the script, including jQuery will usually look like this...
+To implement the custom validation logic of your element, you must override
+the protected `_getValidity()` method of this behaviour, rather than `validate()`.
+See [this](https://github.com/PolymerElements/iron-form/blob/master/demo/simple-element.html)
+for an example.
 
-```js
-var $ = require("jquery");
-```
+### Accessibility
 
-#### AMD (Asynchronous Module Definition)
+Changing the `invalid` property, either manually or by calling `validate()` will update the
+`aria-invalid` attribute.
 
-AMD is a module format built for the browser. For more information, we recommend [require.js' documentation](http://requirejs.org/docs/whyamd.html).
 
-```js
-define(["jquery"], function($) {
-
-});
-```
-
-### Node
-
-To include jQuery in [Node](nodejs.org), first install with npm.
-
-```sh
-npm install jquery
-```
-
-For jQuery to work in Node, a window with a document is required. Since no such window exists natively in Node, one can be mocked by tools such as [jsdom](https://github.com/tmpvar/jsdom). This can be useful for testing purposes.
-
-```js
-require("jsdom").env("", function(err, window) {
-	if (err) {
-		console.error(err);
-		return;
-	}
-
-	var $ = require("jquery")(window);
-});
-```

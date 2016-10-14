@@ -1,61 +1,42 @@
 {
-  "name": "neon-animation",
-  "description": "A system for animating Polymer-based web components",
-  "version": "1.2.4",
-  "authors": [
-    "The Polymer Authors"
-  ],
+  "name": "iron-validatable-behavior",
+  "version": "1.1.1",
+  "description": "Provides a behavior for an element that validates user input",
+  "authors": "The Polymer Authors",
   "keywords": [
     "web-components",
-    "web-component",
     "polymer",
-    "web-animations"
+    "iron",
+    "behavior"
   ],
-  "main": [
-    "neon-animated-pages.html",
-    "neon-animatable-behavior.html",
-    "neon-animation-behavior.html",
-    "neon-animation-runner-behavior.html",
-    "neon-shared-element-animatable-behavior.html",
-    "neon-shared-element-animation-behavior.html",
-    "neon-animatable.html",
-    "neon-animations.html"
-  ],
+  "main": "iron-validatable-behavior.html",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/PolymerElements/neon-animation"
+    "url": "git://github.com/PolymerElements/iron-validatable-behavior.git"
   },
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/PolymerElements/neon-animation",
+  "homepage": "https://github.com/PolymerElements/iron-validatable-behavior",
   "ignore": [],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0",
     "iron-meta": "PolymerElements/iron-meta#^1.0.0",
-    "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^1.0.0",
-    "iron-selector": "PolymerElements/iron-selector#^1.0.0",
-    "web-animations-js": "web-animations/web-animations-js#^2.2.0"
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
-    "paper-toolbar": "PolymerElements/paper-toolbar#^1.0.0",
+    "paper-styles": "PolymerElements/paper-styles#^1.0.4",
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-validator-behavior": "PolymerElements/iron-validator-behavior#^1.0.0",
     "test-fixture": "PolymerElements/test-fixture#^1.0.0",
     "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
-    "paper-item": "PolymerElements/paper-item#^1.0.0",
-    "paper-styles": "PolymerElements/paper-styles#^1.0.0",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.0",
-    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
-    "paper-icon-button": "PolymerElements/paper-icon-button#^1.0.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
-  "_release": "1.2.4",
+  "_release": "1.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.4",
-    "commit": "bd4f50c9a84023363e80513e10456a18232b21a7"
+    "tag": "v1.1.1",
+    "commit": "2ecd3f411e298733b29f1660f75cb9b03ea31d77"
   },
-  "_source": "git://github.com/PolymerElements/neon-animation.git",
+  "_source": "git://github.com/PolymerElements/iron-validatable-behavior.git",
   "_target": "^1.0.0",
-  "_originalSource": "PolymerElements/neon-animation"
+  "_originalSource": "PolymerElements/iron-validatable-behavior"
 }

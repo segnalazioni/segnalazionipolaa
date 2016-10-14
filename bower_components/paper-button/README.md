@@ -1,65 +1,45 @@
+paper-button
+============
 
-<!---
+Material Design: <a href="http://www.google.com/design/spec/components/buttons.html">Buttons</a>
 
-This README is automatically generated from the comments in these files:
-paper-card.html
-
-Edit those files, and our readme bot will duplicate them over here!
-Edit this file, and the bot will squash your changes :)
-
-The bot does some handling of markdown. Please file a bug if it does the wrong
-thing! https://github.com/PolymerLabs/tedium/issues
-
--->
-
-[![Build status](https://travis-ci.org/PolymerElements/paper-card.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-card)
-
-_[Demo and API docs](https://elements.polymer-project.org/elements/paper-card)_
-
-
-##&lt;paper-card&gt;
-
-Material design: [Cards](https://www.google.com/design/spec/components/cards.html)
-
-`paper-card` is a container with a drop shadow.
+`paper-button` is a button. When the user touches the button, a ripple effect emanates
+from the point of contact. It may be flat or raised. A raised button is styled with a
+shadow.
 
 Example:
+```html
+    <paper-button>flat button</paper-button>
+    <paper-button raised>raised button</paper-button>
+    <paper-button noink>No ripple effect</paper-button>
+```
+You may use custom DOM in the button body to create a variety of buttons. For example, to
+create a button with an icon and some text:
 
 ```html
-<paper-card heading="Card Title">
-  <div class="card-content">Some content</div>
-  <div class="card-actions">
-    <paper-button>Some action</paper-button>
-  </div>
-</paper-card>
+    <paper-button>
+      <iron-icon icon="favorite"></iron-icon>
+      custom button content
+    </paper-button>
 ```
+## Styling
 
-Example - top card image:
+Style the button with CSS as you would a normal DOM element.
 
-```html
-<paper-card heading="Card Title" image="/path/to/image.png" alt="image">
-  ...
-</paper-card>
+```css
+    /* make #my-button green with yellow text */
+    #my-button {
+        background: green;
+        color: yellow;
+    }
 ```
+By default, the ripple is the same color as the foreground at 25% opacity. You may
+customize the color using this selector:
 
-### Accessibility
-
-By default, the `aria-label` will be set to the value of the `heading` attribute.
-
-### Styling
-
-The following custom properties and mixins are available for styling:
-
-| Custom property | Description | Default |
-| --- | --- | --- |
-| `--paper-card-background-color` | The background color of the card | `--primary-background-color` |
-| `--paper-card-header-color` | The color of the header text | `#000` |
-| `--paper-card-header` | Mixin applied to the card header section | `{}` |
-| `--paper-card-header-text` | Mixin applied to the title in the card header section | `{}` |
-| `--paper-card-header-image` | Mixin applied to the image in the card header section | `{}` |
-| `--paper-card-header-image-text` | Mixin applied to the text overlapping the image in the card header section | `{}` |
-| `--paper-card-content` | Mixin applied to the card content section | `{}` |
-| `--paper-card-actions` | Mixin applied to the card action section | `{}` |
-| `--paper-card` | Mixin applied to the card | `{}` |
-
-
+```css
+    /* make #my-button use a blue ripple instead of foreground color */
+    #my-button::shadow paper-ripple {
+      color: blue;
+    }
+```
+The opacity of the ripple is not customizable via CSS.

@@ -8,67 +8,27 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-
 <html>
-<head>
+  <head>
 
-  <title>iron-pages demo</title>
+    <title>iron-overlay-behavior tests</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
-  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="../../paper-styles/color.html">
-  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-  <link rel="import" href="../iron-pages.html">
+    <script src="../../web-component-tester/browser.js"></script>
 
-  <style is="custom-style" include="demo-pages-shared-styles"></style>
-</head>
-<body unresolved>
-  <div class="vertical-section-container centered">
-    <h3>iron-pages shows only one of its children at a time.</h3>
-    <demo-snippet>
-      <template>
-        <style is="custom-style">
-          iron-pages {
-            width: 100%;
-            height: 200px;
-            font-size: 50px;
-            color: white;
-            text-align: center;
-          }
-          iron-pages div {
-            width: 100%;
-            height: 100%;
-            padding: 80px 0;
-          }
-          iron-pages div:nth-child(1) {
-            background-color: var(--google-blue-500);
-          }
-          iron-pages div:nth-child(2) {
-            background-color: var(--google-red-500);
-          }
-          iron-pages div:nth-child(3) {
-            background-color: var(--google-green-500);
-          }
-        </style>
-        <p>Click on a page to advance to the next one.</p>
-        <iron-pages selected="0">
-          <div>One</div>
-          <div>Two</div>
-          <div>Three</div>
-        </iron-pages>
-        <script>
-          var pages = document.querySelector('iron-pages');
-          pages.addEventListener('click', function(e) {
-            pages.selectNext();
-          });
-        </script>
-      </template>
-    </demo-snippet>
-  </div>
-</body>
+  </head>
+  <body>
+
+    <script>
+
+      WCT.loadSuites([
+        'iron-overlay-behavior.html',
+      ]);
+
+    </script>
+
+  </body>
 </html>

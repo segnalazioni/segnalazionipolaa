@@ -1,49 +1,40 @@
+[![Build status](https://travis-ci.org/PolymerElements/paper-ripple.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-ripple)
+
+##&lt;paper-ripple&gt;
+
+Material design: [Surface reaction](https://www.google.com/design/spec/animation/responsive-interaction.html#responsive-interaction-surface-reaction)
+
+`paper-ripple` provides a visual effect that other paper elements can
+use to simulate a rippling effect emanating from the point of contact.  The
+effect can be visualized as a concentric circle with motion.
 
 <!---
-
-This README is automatically generated from the comments in these files:
-paper-styles.html
-
-Edit those files, and our readme bot will duplicate them over here!
-Edit this file, and the bot will squash your changes :)
-
-The bot does some handling of markdown. Please file a bug if it does the wrong
-thing! https://github.com/PolymerLabs/tedium/issues
-
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="paper-ripple.html">
+    <style is="custom-style">
+      div {
+        height: 100px;
+        width: 100%;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+      }
+      
+      paper-ripple {
+        color: #4285f4;
+      }
+    </style>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
 -->
+```html
+<div style="position: relative">
+  <paper-ripple></paper-ripple>
+</div
+```
 
-[![Build status](https://travis-ci.org/PolymerElements/paper-styles.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-styles)
-
-_[Demo and API docs](https://elements.polymer-project.org/elements/paper-styles)_
-
-
-##&lt;paper-styles&gt;
-
-The `<paper-styles>` component provides simple ways to use Material Design CSS styles
-in your application. The following imports are available:
-
-1. [color.html](https://github.com/PolymerElements/paper-styles/blob/master/color.html):
-a complete list of the colors defined in the Material Design [palette](https://www.google.com/design/spec/style/color.html)
-
-
-1. [default-theme.html](https://github.com/PolymerElements/paper-styles/blob/master/default-theme.html): text,
-background and accent colors that match the default Material Design theme
-
-
-1. [shadow.html](https://github.com/PolymerElements/paper-styles/blob/master/shadow.html): Material Design
-[elevation](https://www.google.com/design/spec/what-is-material/elevation-shadows.html) and shadow styles
-
-
-1. [typography.html](https://github.com/PolymerElements/paper-styles/blob/master/typography.html):
-Material Design [font](http://www.google.com/design/spec/style/typography.html#typography-styles) styles and sizes
-
-
-1. [demo-pages.html](https://github.com/PolymerElements/paper-styles/blob/master/demo-pages.html): generic styles
-used in the PolymerElements demo pages
-
-
-
-We recommend importing each of these individual files, and using the style mixins
-available in each ones, rather than the aggregated `paper-styles.html` as a whole.
 
 

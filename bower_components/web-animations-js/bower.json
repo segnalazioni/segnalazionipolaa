@@ -1,21 +1,31 @@
 {
-  "name": "webcomponentsjs",
-  "main": "webcomponents.js",
-  "version": "0.7.22",
-  "homepage": "http://webcomponents.org",
-  "authors": [
-    "The Polymer Authors"
+  "name": "web-animations-js",
+  "description": "JavaScript implementation of the Web Animations API",
+  "homepage": "https://github.com/web-animations/web-animations-js",
+  "main": "web-animations.min.js",
+  "moduleType": [
+    "globals"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/webcomponents/webcomponentsjs.git"
-  },
   "keywords": [
-    "webcomponents"
+    "animations",
+    "polyfill"
   ],
-  "license": "BSD",
-  "ignore": [],
-  "devDependencies": {
-    "web-component-tester": "^4.0.1"
-  }
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "templates",
+    "test",
+    "src",
+    "Gruntfile.js",
+    "package.json",
+    "target-config.js",
+    "target-loader.js",
+    "web-animations.dev.html",
+    "web-animations.dev.js",
+    "web-animations-next.dev.html",
+    "web-animations-next.dev.js",
+    "web-animations-next-lite.dev.html",
+    "web-animations-next-lite.dev.js"
+  ]
 }

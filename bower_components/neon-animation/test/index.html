@@ -1,5 +1,4 @@
-<!doctype html>
-<!--
+<!DOCTYPE html><!--
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -7,39 +6,23 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+--><html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>neon-animation tests</title>
+  <script src="../../web-component-tester/browser.js"></script>
+</head>
+<body>
+  <script>
+    WCT.loadSuites([
+      'neon-animated-pages.html',
+      'neon-animated-pages.html?dom=shadow',
+      'neon-animated-pages-lazy.html',
+      'neon-animated-pages-lazy.html?dom=shadow',
+      'neon-animated-pages-descendant-selection.html',
+      'neon-animated-pages-descendant-selection.html?dom=shadow',
+    ]);
+  </script>
 
-    <title>paper-behaviors demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-
-    <link href="paper-button.html" rel="import">
-    <link href="paper-radio-button.html" rel="import">
-
-    <style>
-      body {
-        font-family: sans-serif;
-        padding: 24px;
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body unresolved>
-    <h3>Normal</h3>
-    <paper-button tabindex="0">Hello World</paper-button>
-
-    <h3>Toggles</h3>
-    <paper-button toggles tabindex="0">Hello World</paper-button>
-
-    <h3>Disabled</h3>
-    <paper-button disabled tabindex="0">Hello World</paper-button>
-
-    <h3>Radio button with focus state</h3>
-    <paper-radio-button tabindex="0" title="Radio button with focus state"></paper-radio-button>
-  </body>
-</html>
+</body></html>

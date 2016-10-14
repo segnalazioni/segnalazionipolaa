@@ -12,8 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html>
 <head>
 
-  <title>iron-selector-basic</title>
-  <meta charset="utf-8">
+  <title>iron-resizable-behavior tests</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
@@ -21,243 +20,204 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script src="../../test-fixture/test-fixture-mocha.js"></script>
 
   <link rel="import" href="../../test-fixture/test-fixture.html">
-  <link rel="import" href="../iron-selector.html">
-
-  <style>
-    .iron-selected {
-      background: #ccc;
-    }
-
-    .my-selected {
-      background: red;
-    }
-  </style>
+  <link rel="import" href="../iron-resizable-behavior.html">
+  <link rel="import" href="test-elements.html">
 
 </head>
 <body>
 
-  <test-fixture id="defaults">
+<!--
+
+Notes on Polyfill compatibility in tests:
+- Test elements loaded via imports, to ensure load order correctness
+  w.r.t. Polymer.mixin being availbale
+- Resize notifications and asserts are done asynchronously, since
+  there are timing differences w.r.t. when detached callbacks occur
+
+-->
+
+  <test-fixture id="TestElement">
     <template>
-      <iron-selector>
-        <div>Item 0</div>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-      </iron-selector>
+      <test-element></test-element>
     </template>
   </test-fixture>
 
-  <br><br>
-
-  <test-fixture id="basic">
-    <template>
-      <iron-selector selected="item2" attr-for-selected="id">
-        <div id="item0">Item 0</div>
-        <div id="item1">Item 1</div>
-        <div id="item2">Item 2</div>
-        <div id="item3">Item 3</div>
-        <div id="item4">Item 4</div>
-      </iron-selector>
-    </template>
-  </test-fixture>
 
   <script>
 
-    suite('defaults', function() {
+  suite('iron-resizable-behavior', function() {
+    function ListenForResize(el, expectsResize) {
+      var listener = function(event) {
+        var target = event.path ? event.path[0] : event.target;
+        pendingNotifications--;
+      };
 
-      var s1;
+      if (expectsResize !== false) {
+        pendingNotifications++;
+      }
 
-      setup(function () {
-        s1 = fixture('defaults');
+      el.addEventListener('iron-resize', listener);
+
+      return {
+        el: el,
+        remove: function() {
+          el.removeEventListener('iron-resize', listener);
+        }
+      };
+    }
+
+    function RemoveListeners(listeners) {
+      listeners.forEach(function(listener) {
+        listener.remove();
       });
+    }
 
-      test('to nothing selected', function() {
-        assert.equal(s1.selected, null);
-      });
+    var pendingNotifications;
+    var testEl;
 
-      test('to iron-selected as selectedClass', function() {
-        assert.equal(s1.selectedClass, 'iron-selected');
-      });
-
-      test('to false as multi', function() {
-        assert.isFalse(s1.multi);
-      });
-
-      test('to tap as activateEvent', function() {
-        assert.equal(s1.activateEvent, 'tap');
-      });
-
-      test('to nothing as attrForSelected', function() {
-        assert.equal(s1.attrForSelected, null);
-      });
-
-      test('as many items as children', function() {
-        assert.equal(s1.items.length, s1.querySelectorAll('div').length);
-      });
+    setup(function() {
+      pendingNotifications = 0;
+      testEl = fixture('TestElement');
     });
 
-    suite('basic', function() {
+    suite('x-resizer-parent', function() {
 
-      var s2;
+      test('notify resizables from window', function() {
+        var listeners = [
+          ListenForResize(testEl.$.parent),
+          ListenForResize(testEl.$.child1a),
+          ListenForResize(testEl.$.child1b),
+          ListenForResize(testEl.$.shadow1c.$.resizable),
+          ListenForResize(testEl.$.shadow1d.$.resizable)
+        ];
 
-      setup(function () {
-        s2 = fixture('basic');
+        window.dispatchEvent(new CustomEvent('resize', { bubbles: false }));
+        expect(pendingNotifications).to.be.eql(0);
+
+        RemoveListeners(listeners);
       });
 
-      test('honors the attrForSelected attribute', function(done) {
-        Polymer.Base.async(function() {
-          assert.equal(s2.attrForSelected, 'id');
-          assert.equal(s2.selected, 'item2');
-          assert.equal(s2.selectedItem, document.querySelector('#item2'));
-          done();
-        });
+      test('notify resizables from parent', function() {
+        var listeners = [
+          ListenForResize(testEl.$.parent),
+          ListenForResize(testEl.$.child1a),
+          ListenForResize(testEl.$.child1b),
+          ListenForResize(testEl.$.shadow1c.$.resizable),
+          ListenForResize(testEl.$.shadow1d.$.resizable)
+        ];
+
+        testEl.$.parent.notifyResize();
+        expect(pendingNotifications).to.be.eql(0);
+        RemoveListeners(listeners);
       });
 
-      test('allows assignment to selected', function() {
-        // set selected
-        s2.selected = 'item4';
-        // check selected class
-        assert.isTrue(s2.children[4].classList.contains('iron-selected'));
-        // check item
-        assert.equal(s2.selectedItem, s2.children[4]);
+      test('detach resizables then notify parent', function() {
+        sinon.spy(testEl.$.child1a, 'notifyResize');
+        sinon.spy(testEl.$.shadow1c.$.resizable, 'notifyResize');
+        sinon.spy(testEl.$.child1b, 'notifyResize');
+        sinon.spy(testEl.$.shadow1d.$.resizable, 'notifyResize');
+
+        var firstElementToRemove = testEl.$.child1a;
+        var firstElementParent = Polymer.dom(firstElementToRemove).parentNode;
+        var secondElementToRemove = testEl.$.shadow1c.$.resizable;
+        var secondElementParent = Polymer.dom(secondElementToRemove).parentNode;
+
+        Polymer.dom(firstElementParent).removeChild(firstElementToRemove);
+        Polymer.dom(secondElementParent).removeChild(secondElementToRemove);
+
+        Polymer.dom.flush();
+
+        testEl.$.parent.notifyResize();
+
+        expect(testEl.$.child1a.notifyResize.callCount).to.be.equal(0);
+        expect(testEl.$.shadow1c.$.resizable.notifyResize.callCount).to.be.equal(0);
+        expect(testEl.$.child1b.notifyResize.callCount).to.be.equal(1);
+        expect(testEl.$.shadow1d.$.resizable.notifyResize.callCount).to.be.equal(1);
       });
 
-      test('fire iron-select when selected is set', function() {
-        // setup listener for iron-select event
-        var selectedEventCounter = 0;
-        s2.addEventListener('iron-select', function(e) {
-          selectedEventCounter++;
-        });
-        // set selected
-        s2.selected = 'item4';
-        // check iron-select event
-        assert.equal(selectedEventCounter, 1);
-      });
+      test('detach parent then notify window', function(done) {
+        var listeners = [
+          ListenForResize(testEl.$.parent, false),
+          ListenForResize(testEl.$.child1a, false),
+          ListenForResize(testEl.$.child1b, false),
+          ListenForResize(testEl.$.shadow1c.$.resizable, false),
+          ListenForResize(testEl.$.shadow1d.$.resizable, false)
+        ];
 
-      test('set selected to old value', function() {
-        // setup listener for iron-select event
-        var selectedEventCounter = 0;
-        s2.addEventListener('iron-select', function(e) {
-          selectedEventCounter++;
-        });
-        // selecting the same value shouldn't fire iron-select
-        s2.selected = 'item2';
-        assert.equal(selectedEventCounter, 0);
-      });
+        var el = Polymer.dom(testEl.root).querySelector('#parent');
 
-      test('force synchronous item update', function() {
-        expect(s2.items.length).to.be.equal(5);
-        Polymer.dom(s2).appendChild(document.createElement('div'));
-        expect(s2.items.length).to.be.equal(5);
-        s2.forceSynchronousItemUpdate();
-        expect(s2.items.length).to.be.equal(6);
-      });
+        el.parentNode.removeChild(el);
 
-      suite('`select()` and `selectIndex()`', function() {
-        test('`select()` selects an item with the given value', function() {
-          s2.select('item1');
-          assert.equal(s2.selected, 'item1');
-
-          s2.select('item3');
-          assert.equal(s2.selected, 'item3');
-
-          s2.select('item2');
-          assert.equal(s2.selected, 'item2');
-        });
-
-        test('`selectIndex()` selects an item with the given index', function() {
-          assert.equal(s2.selectedItem, undefined);
-
-          s2.selectIndex(1);
-          assert.equal(s2.selected, 'item1');
-          assert.equal(s2.selectedItem, s2.items[1]);
-
-          s2.selectIndex(3);
-          assert.equal(s2.selected, 'item3');
-          assert.equal(s2.selectedItem, s2.items[3]);
-
-          s2.selectIndex(4);
-          assert.equal(s2.selected, 'item4');
-          assert.equal(s2.selectedItem, s2.items[4]);
-        });
-      });
-
-      suite('items changing', function() {
-        var s1;
-
-        setup(function() {
-          s1 = fixture('defaults');
-        });
-
-        test('cause iron-items-changed to fire', function(done) {
-          var newItem = document.createElement('div');
-          var changeCount = 0;
-
-          newItem.id = 'item999';
-
-          s2.addEventListener('iron-items-changed', function(event) {
-            changeCount++;
-            var mutation = event.detail;
-            assert.notEqual(mutation, undefined);
-            assert.notEqual(mutation.addedNodes, undefined);
-            assert.notEqual(mutation.removedNodes, undefined);
-          });
-
-          Polymer.dom(s2).appendChild(newItem);
-
-          Polymer.Base.async(function() {
-            Polymer.dom(s2).removeChild(newItem);
-
-            Polymer.Base.async(function() {
-              expect(changeCount).to.be.equal(2);
-              done();
-            }, 1);
-          }, 1);
-        });
-
-        test('updates selected item', function(done) {
-          s1.addEventListener('iron-items-changed', function firstListener() {
-            s1.removeEventListener('iron-items-changed', firstListener);
-            var firstElementChild = Polymer.dom(s1).firstElementChild;
-            expect(firstElementChild).to.be.equal(s1.selectedItem);
-            expect(firstElementChild.classList.contains('iron-selected'))
-                .to.be.eql(true);
-            Polymer.dom(s1).removeChild(s1.selectedItem);
-
-            s1.addEventListener('iron-items-changed', function() {
-              firstElementChild = Polymer.dom(s1).firstElementChild;
-              expect(firstElementChild).to.be.equal(s1.selectedItem);
-              expect(firstElementChild.classList.contains('iron-selected'))
-                  .to.be.eql(true);
-              done();
-            });
-          });
-          s1.selected = 0;
-        });
-      });
-
-      suite('dynamic selector', function() {
-        test('selects dynamically added child automatically', function(done) {
-          var selector = document.createElement('iron-selector');
-          var child = document.createElement('div');
-
-          selector.selected = '0';
-          child.textContent = 'Item 0';
-
-          Polymer.dom(selector).appendChild(child);
-          document.body.appendChild(selector);
-
-          Polymer.Base.async(function() {
-            assert.equal(child.className, 'iron-selected');
-            document.body.removeChild(selector);
+        setTimeout(function() {
+          try {
+            window.dispatchEvent(new CustomEvent('resize', { bubbles: false }));
+            expect(pendingNotifications).to.be.eql(0);
+            RemoveListeners(listeners);
             done();
-          }, 1);
-        });
+          } catch (e) {
+            done(e);
+          }
+        }, 0);
       });
+
     });
 
-  </script>
+    suite('x-resizer-parent-filtered', function() {
 
+      test('notify resizables from window', function() {
+        var listeners = [
+          ListenForResize(testEl.$.parentFiltered),
+          ListenForResize(testEl.$.child2a),
+          ListenForResize(testEl.$.child2b, false),
+          ListenForResize(testEl.$.shadow2c.$.resizable, false),
+          ListenForResize(testEl.$.shadow2d.$.resizable, false)
+        ];
+
+        testEl.$.parentFiltered.active = testEl.$.child2a;
+
+        window.dispatchEvent(new CustomEvent('resize', { bubbles: false }));
+        expect(pendingNotifications).to.be.eql(0);
+        RemoveListeners(listeners);
+      });
+
+      test('notify resizables from parent', function() {
+        var listeners = [
+          ListenForResize(testEl.$.parentFiltered),
+          ListenForResize(testEl.$.child2a),
+          ListenForResize(testEl.$.child2b, false),
+          ListenForResize(testEl.$.shadow2c.$.resizable, false),
+          ListenForResize(testEl.$.shadow2d.$.resizable, false)
+        ];
+
+        testEl.$.parentFiltered.active = testEl.$.child2a;
+
+        testEl.$.parentFiltered.notifyResize();
+        expect(pendingNotifications).to.be.eql(0);
+        RemoveListeners(listeners);
+      });
+
+      test('detach resizables then notify parent', function() {
+        var listeners = [
+          ListenForResize(testEl.$.parentFiltered),
+          ListenForResize(testEl.$.child2a, false),
+          ListenForResize(testEl.$.child2b, false),
+          ListenForResize(testEl.$.shadow2c.$.resizable, false),
+          ListenForResize(testEl.$.shadow2d.$.resizable)
+        ];
+
+        var el = Polymer.dom(testEl.root).querySelector('#child2a');
+        el.parentNode.removeChild(el);
+        el = Polymer.dom(testEl.root).querySelector('#shadow2c');
+        el.parentNode.removeChild(el);
+
+        testEl.$.parentFiltered.active = testEl.$.shadow2d.$.resizable;
+
+        testEl.$.parentFiltered.notifyResize();
+        expect(pendingNotifications).to.be.eql(0);
+        RemoveListeners(listeners);
+      });
+    });
+  });
+  </script>
 </body>
 </html>

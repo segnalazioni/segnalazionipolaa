@@ -6,8 +6,8 @@ before_script:
   - polylint
 env:
   global:
-    - secure: K2cuhKpShJ9cc0XCnsHbLpw1qCXTRWiJqkn6hFrt3T7L+1bDSsMtzmZvfk7Pp4VbJCgEKmtgMitbr7gdTjxLpIr7qQv7SmErnbcoT+wEyOTfyK96YSkAOCIIafgWHWSHrwiDdqXvFlYe3sP4JPP8yH6kuIjYzphQ2H7k0yXnW04=
-    - secure: Til0DgFyTBk2pkrG5WrQ64g8ckN6Rbdqxm/F+HGbzG/hVXO6/fHqetlNKxvxotoI3LBb/iYFr7GXuNTgIYaH4qGVeV1MsOj7NUnFDYUJVcx/WhZO66CY+dno7UffBDV0wgd4mpsK8iLG4+Eitf1FcMBbY5esX4mFy3fFM8/6LyE=
+    - secure: ieKt2HWOdClqU7OyYA20DFlWduaM0IDk91lO7mWySQL6r55SSB4DnUCgVycQJf0L6S8vyY/fbC/vFP0notyz3MvMAz1NwpRzAI9mKkVWJuaBbm9Ql9PewjanX42chbz3XyqZofXVkfBywmj61NyPM7VRVwhEHmOeYgyFUyV9cls=
+    - secure: g7yrxdFIVMIjkYBKZ29FHUX3noS6u1lvjUmaAaG28rGaEfXK4XR9fhZABR+6ydAjLjdo+WUMvTp4oi6HYrb6ToByprEli/fTexjeGuagDc5r5R84u3CusBuw9YYHDjstHCBFmIZndD+r4PRXkWvYatciF9c0NCHoVrjTH/woe9g=
 node_js: stable
 addons:
   firefox: '46.0'
@@ -18,6 +18,7 @@ addons:
       - google-chrome-stable
   sauce_connect: true
 script:
-  - xvfb-run wct
+  - xvfb-run wct -l chrome
+  - xvfb-run wct -l firefox
   - "if [ \"${TRAVIS_PULL_REQUEST}\" = \"false\" ]; then wct -s 'default'; fi"
 dist: trusty

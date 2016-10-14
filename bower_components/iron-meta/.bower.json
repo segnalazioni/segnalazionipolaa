@@ -1,47 +1,40 @@
 {
-  "name": "iron-overlay-behavior",
-  "version": "1.8.6",
-  "license": "http://polymer.github.io/LICENSE.txt",
-  "description": "Provides a behavior for making an element an overlay",
-  "private": true,
-  "main": "iron-overlay-behavior.html",
+  "name": "iron-meta",
+  "version": "1.1.2",
   "keywords": [
     "web-components",
-    "polymer",
-    "behavior",
-    "overlay"
+    "polymer"
   ],
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "description": "Useful for sharing information across a DOM tree",
+  "private": true,
   "authors": [
     "The Polymer Authors"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/PolymerElements/iron-overlay-behavior.git"
+    "url": "git://github.com/PolymerElements/iron-meta.git"
   },
   "dependencies": {
-    "iron-a11y-keys-behavior": "PolymerElements/iron-a11y-keys-behavior#^1.0.0",
-    "iron-fit-behavior": "PolymerElements/iron-fit-behavior#^1.0.0",
-    "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^1.0.0",
-    "polymer": "Polymer/polymer#^1.1.0"
+    "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
-    "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.0.0",
-    "paper-styles": "PolymerElements/paper-styles#^1.0.2",
+    "paper-styles": "polymerelements/paper-styles#^1.0.4",
+    "iron-component-page": "polymerelements/iron-component-page#^1.0.0",
+    "test-fixture": "polymerelements/test-fixture#^1.0.0",
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
   },
+  "main": "iron-meta.html",
   "ignore": [],
-  "homepage": "https://github.com/PolymerElements/iron-overlay-behavior",
-  "_release": "1.8.6",
+  "homepage": "https://github.com/polymerelements/iron-meta",
+  "_release": "1.1.2",
   "_resolution": {
     "type": "version",
-    "tag": "v1.8.6",
-    "commit": "4b579d7e47a19b3c1e5a65ee631bd432230b3610"
+    "tag": "v1.1.2",
+    "commit": "bae96531b63ea6d4ce982f5592248aea849c0f5a"
   },
-  "_source": "git://github.com/PolymerElements/iron-overlay-behavior.git",
+  "_source": "git://github.com/polymerelements/iron-meta.git",
   "_target": "^1.0.0",
-  "_originalSource": "PolymerElements/iron-overlay-behavior"
+  "_originalSource": "polymerelements/iron-meta"
 }
