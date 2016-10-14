@@ -37,11 +37,17 @@ function login($user, $password, $mysqli){
                     return "succ";
                 } else {
                     // Password is not correct
-                    // We record this attempt in the databas
+                    // We record this attempt in the database
                     
                     $mysqli->query("INSERT INTO login_attempts (user_id, times) VALUES ('$user_id', 1) ON DUPLICATE KEY UPDATE times = times+1;");
-                        
-                    return "pass";
+
+                    $result = $mysqli->query("SELECT user_id, times FROM login_attempts WHERE user_id='$user_id' LIMIT 1;");
+
+                    while ($row = $result->fetch_assoc()) {
+                        $times = $row["times"];
+                    }
+
+                    return "pass,".$times;
                 }
         } else {
             // No user exists.

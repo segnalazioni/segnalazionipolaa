@@ -9,11 +9,11 @@ function formhash(user, password) {
 			type: 'POST',
 			data: {'p': pas, 'user': use},
 			success: function(data){
-			    alert(data+"is here");
                 if(data == "user"){
                     document.getElementById('modal-user').open();
-                }else if(data == "pass"){
+                }else if(data.substring(0,4) == "pass"){
                     document.getElementById('modal-password').open();
+                    document.getElementById('times').innerHTML = "Hai ancora "+String(5-Number(data.substring(5,6)))+" tentativi";
                 }else if(data == "succ"){
                     window.location="protected_page.php";
                 }
