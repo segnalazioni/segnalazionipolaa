@@ -15,11 +15,11 @@
 }
 
 textarea{
-	margin:0 auto, 0 auto;
+	margin:20px auto, 20px auto;
 	resize:none;
 	font-size:20px;
+	width:100%;
 	border:none;
-	width:99%;
 	height:20%
 }
 
