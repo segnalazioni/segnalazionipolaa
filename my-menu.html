@@ -90,7 +90,7 @@ paper-dropdown-menu {
 </style>
 <template>
     <iron-media-query query="max-width: 800px" queryMatches="{{smallScreen}}"></iron-media-query>
-    <template if="{{smallScreen}}">
+    <template is="dom-if" if="{{smallScreen}}">
 
         <div class="smalldropbtna">
             <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
@@ -103,7 +103,7 @@ paper-dropdown-menu {
         </div>
 
     </template>
-    <template if="{{!smallScreen}}">
+    <template is="dom-if" if="{{!smallScreen}}">
         <div class="dropbtna">
             <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
                 <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
