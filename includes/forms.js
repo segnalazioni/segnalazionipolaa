@@ -1,6 +1,5 @@
 function formhash(user, password) {
     // Create a new element input, this will be our hashed password field.
-    alert("passing");
 	if(user.value != "" && password.value != ""){
 		var pas = hex_sha512(password.value);
 		var use = user.value;
