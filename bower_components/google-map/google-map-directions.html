@@ -16,7 +16,8 @@ information on the API.
       <google-map-directions map="{{map}}"
           start-address="San Francisco"
           end-address="Mountain View"
-          travel-mode="TRANSIT"></google-map-directions>
+          travel-mode="BICYCLING"
+          waypoints='[{"location": "Palo Alto"}, {"location": "San Mateo"}]'></google-map-directions>
       <google-map map="{{map}}" latitude="37.779"
                   longitude="-122.3892"></google-map>
     </template>
@@ -30,7 +31,11 @@ information on the API.
     }
   </style>
   <template>
-    <google-maps-api on-api-load="_mapApiLoaded" libraries="{{libraries}}" language="{{language}}"></google-maps-api>
+    <google-maps-api
+      api-key="[[apiKey]]"
+      language="[[language]]"
+      on-api-load="_mapApiLoaded"
+      maps-url="[[mapsUrl]]"></google-maps-api>
   </template>
 </dom-module>
 
@@ -43,10 +48,26 @@ information on the API.
 Fired whenever the directions service returns a result.
 
 @event google-map-response
-@param {Object} detail
-@param {object} detail.response The directions service response.
+@param {{response: Object}} detail
 */
+
+    /**
+     * Polymer properties for the google-map-directions custom element.
+     */
     properties: {
+      /**
+       * A Maps API key. To obtain an API key, see developers.google.com/maps/documentation/javascript/tutorial#api_key.
+       */
+      apiKey: String,
+
+      /**
+       * Overrides the origin the Maps API is loaded from. Defaults to `https://maps.googleapis.com`.
+       */
+      mapsUrl: {
+        type: String
+        // Initial value set in google-maps-api.
+      },
+
       /**
        * The Google map object.
        *
@@ -85,18 +106,19 @@ Fired whenever the directions service returns a result.
       },
 
       /**
-       * A comma separated list (e.g. "places,geometry") of libraries to load
-       * with this map. Defaults to "places". For more information see
-       * https://developers.google.com/maps/documentation/javascript/libraries.
+       * Array of intermediate waypoints. Directions will be calculated
+       * from the origin to the destination by way of each waypoint in this array.
+       * The maximum allowed waypoints is 8, plus the origin, and destination.
+       * Maps API for Business customers are allowed 23 waypoints,
+       * plus the origin, and destination.
+       * Waypoints are not supported for transit directions. Optional.
        *
-       * Note, this needs to be set to the same value as the one used on <google-map>.
-       * If you're overriding that element's `libraries` property, this one also
-       * needs to be set to the Maps API loads the library code.
+       * @type Array<google.maps.DirectionsWaypoint>
        */
-      libraries: {
-        type: String,
-        value: 'places'
-      },
+       waypoints: {
+         type: Array,
+         value: function() { return []; }
+       },
 
       /**
        * The localized language to load the Maps API with. For more information
@@ -111,6 +133,14 @@ Fired whenever the directions service returns a result.
       },
 
       /**
+       * Options for the display of results
+       */
+      rendererOptions: {
+        type: Object,
+        value: function() { return {}; }
+      },
+
+      /**
        * The response from the directions service.
        *
        */
@@ -122,7 +152,7 @@ Fired whenever the directions service returns a result.
     },
 
     observers: [
-      '_route(startAddress endAddress travelMode)'
+      '_route(startAddress, endAddress, travelMode, waypoints.*)'
     ],
 
     _mapApiLoaded: function() {
@@ -138,14 +168,16 @@ Fired whenever the directions service returns a result.
     _mapChanged: function() {
       if (this.map && this.map instanceof google.maps.Map) {
         if (!this.directionsRenderer) {
-          this.directionsRenderer = new google.maps.DirectionsRenderer();
+          this.directionsRenderer = new google.maps.DirectionsRenderer(this.rendererOptions);
         }
         this.directionsRenderer.setMap(this.map);
         this._responseChanged();
       } else {
         // If there is no more map, remove the directionsRenderer from the map and delete it.
-        this.directionsRenderer.setMap(null);
-        this.directionsRenderer = null;
+        if (this.directionsRenderer) {
+          this.directionsRenderer.setMap(null);
+          this.directionsRenderer = null;
+        }
       }
     },
 
@@ -166,7 +198,8 @@ Fired whenever the directions service returns a result.
       var request = {
         origin: this.startAddress,
         destination: this.endAddress,
-        travelMode: this.travelMode
+        travelMode: this.travelMode,
+        waypoints: this.waypoints
       };
       this.directionsService.route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
