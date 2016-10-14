@@ -119,12 +119,15 @@ iron-pages{
 		margin:0;
 		padding:0;
 	}
-
-    iron-pages{
-        top:50px;
-    }
 }
 
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+
+    iron-pages {
+        top: 57px;
+    }
+
+}
 /*@media only screen and (max-width: 400px), only screen and (max-device-width: 400px){
 	.dropbtn{
 		width:120px;
