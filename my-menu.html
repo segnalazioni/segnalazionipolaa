@@ -73,47 +73,35 @@ paper-dropdown-menu {
 	--paper-input-container-input-color:white;
 }
 
-.smalldropbtna{
-    width:200px;
-}
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px){
 
-.smalldropbtna paper-dropdown-menu {
+	.dropbtna{
+		width:200px;
+	}
 
-    margin-left:10px;
-    width:180px;
+	paper-dropdown-menu {
 
-    --paper-input-container:{
-        width:180px;
-    };
+		margin-left:10px;
+		width:180px;
+
+		--paper-input-container:{
+			width:180px;
+		};
+	}
 }
 
 </style>
 <template>
-    <iron-media-query query="max-width: 800px" queryMatches="{{smallScreen}}"></iron-media-query>
-    <template is="dom-if" if="true">
-
-        <div class="smalldropbtna">
-            <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
-                <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
-                    <template is="dom-repeat" items="{{menuItems}}">
-                        <paper-item name="{{item.name}}">{{item.name}}</paper-item>
-                    </template>
-                </paper-listbox>
-            </paper-dropdown-menu>
-        </div>
-
-    </template>
-    <template is="dom-if" if="{{!smallScreen}}">
-        <div class="dropbtna">
-            <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
-                <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
-                    <template is="dom-repeat" items="{{menuItems}}">
-                        <paper-item name="{{item.name}}">{{item.name}}</paper-item>
-                    </template>
-                </paper-listbox>
-            </paper-dropdown-menu>
-        </div>
-    </template>
+    <iron-media-query query="(max-width:800px)" query-matches="{{isMobileNav}}"></iron-media-query>
+	<div class="dropbtna">
+        <paper-dropdown-menu class="dropmenu" label="Scegli il tipo di segnalazione" no-label-float>
+            <paper-listbox id="menu" attr-for-selected="name" class="dropdown-content">
+            	<template is="dom-repeat" items="{{menuItems}}">
+                    <paper-item name="{{item.name}}">{{item.name}}</paper-item>
+                </template>
+            </paper-listbox>
+        </paper-dropdown-menu>
+	</div>
 </template>
 
 </dom-module>
@@ -124,6 +112,14 @@ paper-dropdown-menu {
 		properties:{
 			admin: String
 		},
+
+        observers: [
+            '_isMobileNavChanged(isMobileNav)'
+        ],
+
+        _isMobileNavChanged: function(param) {
+            this.updateStyles();
+        },
 
 		ready: function() {
 			if(this.admin === "is"){
