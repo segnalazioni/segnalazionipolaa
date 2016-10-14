@@ -53,7 +53,7 @@ session_start();
                 </div>
                 <div class="card-actions" style="text-align:end; padding-top:10px; padding-bottom:10px;">
                     <paper-button>Aiuto</paper-button>
-                    <paper-button raised style="background-color:#e1382d; color:white;" onclick="formhash(document.getElementById('user_input'), document.getElementById('pass_input'));">Accedi</paper-button>
+                    <paper-button raised style="background-color:#e1382d; color:white;" onclick="alert('hielp')">Accedi</paper-button>
                 </div>
             </paper-card>
         </div>
