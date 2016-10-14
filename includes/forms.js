@@ -9,7 +9,7 @@ function formhash(user, password) {
 			type: 'POST',
 			data: {'p': pas, 'user': use},
 			success: function(data){
-			    alert('passing-through');
+			    alert(data);
                 if(data == "user"){
                     document.getElementById('modal-user').open();
                 }else if(data == "pass"){
