@@ -69,7 +69,6 @@ session_start();
         </script>-->
         <script>
             (function() {
-                'use strict';
 
                 var onload = function() {
                     // For native Imports, manually fire WebComponentsReady so user code
