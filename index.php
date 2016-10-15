@@ -33,10 +33,10 @@ session_start();
 
         <script>
             // Setup Polymer options
-            window.Polymer = {
+            /*window.Polymer = {
                 dom: 'shadow',
                 lazyRegister: true
-            };
+            };*/
 
             // Load webcomponentsjs polyfill if browser does not support native Web Components
             (function() {
