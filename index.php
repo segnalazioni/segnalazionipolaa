@@ -18,7 +18,7 @@ session_start();
         <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
         <script src="jquery-3.1.0.min.js"></script>
         <script src="main.js"></script>
-        
+
         <link src="bower_components/polymer/polymer.html"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     	<link rel="import" href="bower_components/paper-button/paper-button.html">
@@ -39,7 +39,7 @@ session_start();
                 lazyRegister: true
             };
         </script>
-        <script>
+        <!--<script>
             (function() {
 
                 var onload = function() {
@@ -75,7 +75,7 @@ session_start();
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-        </script>
+        </script>-->
 
     </head>
     <body>
