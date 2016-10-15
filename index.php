@@ -7,10 +7,40 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Secure Login: Log In</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My App</title>
+        <meta name="description" content="My App description">
+
+        <link rel="icon" href="images/favicon.ico">
+
+        <!-- See https://goo.gl/OOhYW5 -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- See https://goo.gl/qRE0vM -->
+        <meta name="theme-color" content="#3f51b5">
+
+        <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="My App">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="My App">
+
+        <!-- Homescreen icons -->
+        <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
+
+        <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+        <meta name="msapplication-TileColor" content="#3f51b5">
+        <meta name="msapplication-tap-highlight" content="no">
 
         <script src="includes/sha512.js"></script>
         <script src="includes/forms.js"></script>
