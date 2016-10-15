@@ -61,12 +61,13 @@ session_start();
         <link rel="import" href="bower_components/iron-icons/social-icons.html">
         <link rel="import" href="bower_components/font-roboto/roboto.html">
 
-        <!--<script>
+        <script>
             window.Polymer = {
                 dom: 'shadow',
                 lazyRegister: true
             };
-
+        </script>
+        <!--<script>
             (function() {
                 'use strict';
 
