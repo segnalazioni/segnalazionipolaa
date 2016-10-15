@@ -12,6 +12,8 @@ session_start();
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+
         <script src="includes/sha512.js"></script>
         <script src="includes/forms.js"></script>
         <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
