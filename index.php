@@ -7,11 +7,10 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+        <title>Secure Login: Log In</title>
 
-        <title>My App</title>
-
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="includes/sha512.js"></script>
         <script src="includes/forms.js"></script>
@@ -19,7 +18,6 @@ session_start();
         <script src="jquery-3.1.0.min.js"></script>
         <script src="main.js"></script>
 
-        <link src="bower_components/polymer/polymer.html"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     	<link rel="import" href="bower_components/paper-button/paper-button.html">
         <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
@@ -32,51 +30,6 @@ session_start();
         <link rel="import" href="bower_components/iron-icons/iron-icons.html">
         <link rel="import" href="bower_components/iron-icons/social-icons.html">
         <link rel="import" href="bower_components/font-roboto/roboto.html">
-
-        <script>
-            window.Polymer = {
-                dom: 'shadow',
-                lazyRegister: true
-            };
-        </script>
-        <!--<script>
-            (function() {
-
-                var onload = function() {
-                    // For native Imports, manually fire WebComponentsReady so user code
-                    // can use the same code path for native and polyfill'd imports.
-                    if (!window.HTMLImports) {
-                        document.dispatchEvent(
-                            new CustomEvent('WebComponentsReady', {bubbles: true})
-                        );
-                    }
-                };
-
-                var webComponentsSupported = (
-                    'registerElement' in document
-                    && 'import' in document.createElement('link')
-                    && 'content' in document.createElement('template')
-                );
-
-                if (!webComponentsSupported) {
-                    var script = document.createElement('script');
-                    script.async = true;
-                    script.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
-                    script.onload = onload;
-                    document.head.appendChild(script);
-                } else {
-                    onload();
-                }
-            })();
-
-            // Load pre-caching Service Worker
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>-->
-
     </head>
     <body>
         <?php
