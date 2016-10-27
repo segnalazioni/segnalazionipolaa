@@ -331,7 +331,7 @@ include_once 'includes/functions.php';
                                         <td height="30%" style="background-color: #0d47a1">TEXTAREA</td>
                                     </tr>
                                 </table>
-                                <div class="buttons" style="height: 60px; bottom:5px; right:15px;">
+                                <div class="buttons" style="height: 70px; bottom:5px; right:15px;">
                                     <paper-button dialog-dismiss>ANNULLA</paper-button>
                                     <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
                                 </div>
