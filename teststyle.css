@@ -20,8 +20,8 @@ textarea{
 	resize:none;
 	width:99.5%;
 	font-size:20px;
+	outline: none;
 	border:none;
-	height:20%
 }
 
 .dropmenu{
@@ -109,8 +109,9 @@ iron-pages{
 		resize:none;
 		font-size:30px;
 		border:none;
-		width:100%;
+		width: auto;
 		height:20%;
+		outline: none;
 	}
 
 	.segdialog{
