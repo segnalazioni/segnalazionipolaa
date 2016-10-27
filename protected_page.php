@@ -328,7 +328,7 @@ include_once 'includes/functions.php';
                                         <td height="70%"><div id="map-dialog" style="width: 100%; height: 100%;"></div></td>
                                     </tr>
                                     <tr>
-                                        <td height="30%" style="background-color: #0d47a1">TEXTAREA</td>
+                                        <td height="30%" style="background-color: #0d47a1"><textarea style="resize:none; width:100%; height:100%;"></textarea></td>
                                     </tr>
                                 </table>
                                 <div class="buttons" style="height: 70px; bottom:5px; right:15px;">
