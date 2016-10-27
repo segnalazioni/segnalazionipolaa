@@ -325,10 +325,10 @@ include_once 'includes/functions.php';
                             <div id="mainDiv" style="margin: 0; padding: 0; height: 100%; width: 100%;">
                                 <table>
                                     <tr>
-                                        <td><div id="map-dialog" style="width: 100%; height: 100%;"></div></td>
+                                        <td height="70%"><div id="map-dialog" style="width: 100%; height: 100%;"></div></td>
                                     </tr>
                                     <tr>
-                                        <td height="100">TEXTAREA</td>
+                                        <td height="30%" style="background-color: #0d47a1">TEXTAREA</td>
                                     </tr>
                                 </table>
                                 <div class="buttons" style="bottom:5px; right:15px;">
