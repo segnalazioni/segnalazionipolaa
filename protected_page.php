@@ -323,7 +323,7 @@ include_once 'includes/functions.php';
         				<paper-fab icon="add" onclick="openDialog();" style="position:absolute; bottom:30px; right:30px; background-color:#e1382d;"></paper-fab>
                         <paper-dialog id="modal-add" class="segdialog" is="custom-style" modal>
                             <div id="mainDiv" style="margin: 0; padding: 0; height: 100%; width: 100%;">
-                                <table class="dialog-content" style="height: 100%; width: 100%;">
+                                <table class="dialog-content" style="width: 100%;">
                                     <tr>
                                         <td height="70%"><div id="map-dialog" style="width: 100%; height: 100%;"></div></td>
                                     </tr>
