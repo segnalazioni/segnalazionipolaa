@@ -329,7 +329,7 @@ include_once 'includes/functions.php';
             					<textarea id="description"></textarea>
         					</div>
 
-                            <div class="buttons" style="position:absolute; bottom:5px; right:15px;">
+                            <div class="buttons" style="bottom:5px; right:15px;">
                                 <paper-button dialog-dismiss>ANNULLA</paper-button>
                                 <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
                             </div>
