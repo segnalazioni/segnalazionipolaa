@@ -322,7 +322,21 @@ include_once 'includes/functions.php';
                     	<div id="map" style="height:100%"></div>
         				<paper-fab icon="add" onclick="openDialog();" style="position:absolute; bottom:30px; right:30px; background-color:#e1382d;"></paper-fab>
                         <paper-dialog id="modal-add" class="segdialog" is="custom-style" modal>
-    						<div style="margin-top:0px; position:relative; padding:0; height:70%;">
+                            <div id="mainDiv" style="margin: 0; padding: 0; height: 100%; width: 100%;">
+                                <table>
+                                    <tr>
+                                        <td><div id="map-dialog" style="width: 100%; height: 100%;"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="100">TEXTAREA</td>
+                                    </tr>
+                                </table>
+                                <div class="buttons" style="bottom:5px; right:15px;">
+                                    <paper-button dialog-dismiss>ANNULLA</paper-button>
+                                    <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
+                                </div>
+                            </div>
+    						<!--<div style="margin-top:0px; position:relative; padding:0; height:70%;">
         						<div id="map-dialog" style="margin:0; padding:0; width:100%; height:100%;"></div>
             					<my-menu admin="is"></my-menu>
             					<paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();" style="position:absolute; right:30px; --paper-fab-mini:true; bottom:-28px; background-color:#e1382d;"></paper-fab>
@@ -332,7 +346,7 @@ include_once 'includes/functions.php';
                             <div class="buttons" style="position:absolute; bottom:5px; right:15px;">
                                 <paper-button dialog-dismiss>ANNULLA</paper-button>
                                 <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
-                            </div>
+                            </div>-->
         				</paper-dialog>
                         <paper-dialog id="aggiorna-stato" modal>
                         	<div><h1>Aggiunta di un nuovo aggiornamento sullo stato</h1></div>
