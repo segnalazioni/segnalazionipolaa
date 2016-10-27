@@ -323,7 +323,7 @@ include_once 'includes/functions.php';
         				<paper-fab icon="add" onclick="openDialog();" style="position:absolute; bottom:30px; right:30px; background-color:#e1382d;"></paper-fab>
                         <paper-dialog id="modal-add" class="segdialog" is="custom-style" modal>
                             <div id="mainDiv" style="margin: 0; padding: 0; height: 100%; width: 100%;">
-                                <table style="height: 100%; width: 100%;">
+                                <table class="dialog-content" style="height: 100%; width: 100%;">
                                     <tr>
                                         <td height="70%"><div id="map-dialog" style="width: 100%; height: 100%;"></div></td>
                                     </tr>
@@ -331,7 +331,7 @@ include_once 'includes/functions.php';
                                         <td height="30%" style="background-color: #0d47a1">TEXTAREA</td>
                                     </tr>
                                 </table>
-                                <div class="buttons" style="bottom:5px; right:15px;">
+                                <div class="buttons" style="position:absolute; height: 100px; bottom:5px; right:15px;">
                                     <paper-button dialog-dismiss>ANNULLA</paper-button>
                                     <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
                                 </div>
