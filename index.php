@@ -12,7 +12,9 @@ session_start();
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+        <script>
+            var dialogOpen = false;
+        </script>
 
         <script src="includes/sha512.js"></script>
         <script src="includes/forms.js"></script>
@@ -32,52 +34,6 @@ session_start();
         <link rel="import" href="bower_components/iron-icons/iron-icons.html">
         <link rel="import" href="bower_components/iron-icons/social-icons.html">
         <link rel="import" href="bower_components/font-roboto/roboto.html">
-
-        <!--<script>
-            // Setup Polymer options
-            /*window.Polymer = {
-                dom: 'shadow',
-                lazyRegister: true
-            };*/
-
-            // Load webcomponentsjs polyfill if browser does not support native Web Components
-            (function() {
-                'use strict';
-
-                var onload = function() {
-                    // For native Imports, manually fire WebComponentsReady so user code
-                    // can use the same code path for native and polyfill'd imports.
-                    if (!window.HTMLImports) {
-                        document.dispatchEvent(
-                            new CustomEvent('WebComponentsReady', {bubbles: true})
-                        );
-                    }
-                };
-
-                var webComponentsSupported = (
-                    'registerElement' in document
-                    && 'import' in document.createElement('link')
-                    && 'content' in document.createElement('template')
-                );
-
-                if (!webComponentsSupported) {
-                    var script = document.createElement('script');
-                    script.async = true;
-                    script.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
-                    script.onload = onload;
-                    document.head.appendChild(script);
-                } else {
-                    onload();
-                }
-            })();
-
-            // Load pre-caching Service Worker
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>-->
 
     </head>
     <body>
@@ -113,7 +69,7 @@ session_start();
         <h2>Spiacente</h2>
   			<p>Il nome utente da lei inserito non è presente nel nostro database, ne controlli la correttezza e in caso di problemi clicchi il pulsante AIUTO</p>
   			<div class="buttons">
-    			<paper-button dialog-confirm autofocus>OK</paper-button>
+    			<paper-button dialog-confirm autofocus onclick="dialogOpen = false;">OK</paper-button>
   			</div>
 		</paper-dialog>
         <paper-dialog id="modal-password" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
@@ -122,21 +78,21 @@ session_start();
             <br/>
             <p id="tries"></p>
   			<div class="buttons">
-    			<paper-button dialog-confirm autofocus>OK</paper-button>
+    			<paper-button dialog-confirm autofocus onclick="dialogOpen = false;">OK</paper-button>
   			</div>
 		</paper-dialog>
         <paper-dialog id="modal-compile" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>Spiacente</h2>
   			<p>Devi compilare tutti i campi prima di poter effettuare il login!</p>
   			<div class="buttons">
-    			<paper-button dialog-confirm autofocus>OK</paper-button>
+    			<paper-button dialog-confirm autofocus onclick="dialogOpen = false;">OK</paper-button>
   			</div>
 		</paper-dialog>
         <paper-dialog id="modal-over" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
             <h2>Spiacente</h2>
             <p>Hai esaurito i tentativi di accesso, contatta l'amministratore per la riattivazione!</p>
             <div class="buttons">
-                <paper-button dialog-confirm autofocus>OK</paper-button>
+                <paper-button dialog-confirm autofocus onclick="dialogOpen = false;">OK</paper-button>
             </div>
         </paper-dialog>
     </body>

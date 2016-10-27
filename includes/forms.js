@@ -11,18 +11,22 @@ function formhash(user, password) {
 			success: function(data){
                 if(data == "user"){
                     document.getElementById('modal-user').open();
+                    dialogOpen = true;
                 }else if(data.substring(0,4) == "pass"){
                     document.getElementById('modal-password').open();
+                    dialogOpen = true;
                     document.getElementById('tries').innerHTML = "Hai ancora "+String(5-Number(data.substring(5,6)))+" tentativi";
                 }else if(data == "succ"){
                     window.location="protected_page.php";
                 }else if(data == "over"){
                     document.getElementById('modal-over').open();
+                    dialogOpen = true;
                 }
             }
         });
 	}else{
 		document.getElementById('modal-compile').open();
+        dialogOpen = true;
 	}
 }
 

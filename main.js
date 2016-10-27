@@ -9,17 +9,19 @@ $( document ).ready(function() {
 
     //Register key listeners for login page
 
-    $( document ).keyup(function(event) {
-        var keynum;
+    $( document ).keydown(function(event) {
+        if(!dialogOpen) {
+            var keynum;
 
-        if(window.event) { // IE
-            keynum = event.keyCode;
-        } else if(event.which){ // Netscape/Firefox/Opera
-            keynum = event.which;
-        }
+            if (window.event) { // IE
+                keynum = event.keyCode;
+            } else if (event.which) { // Netscape/Firefox/Opera
+                keynum = event.which;
+            }
 
-        if(keynum == 13){
-            formhash(document.getElementById('user_input'), document.getElementById('pass_input'));
+            if (keynum == 13) {
+                formhash(document.getElementById('user_input'), document.getElementById('pass_input'));
+            }
         }
     });
 
