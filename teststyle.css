@@ -158,7 +158,7 @@ iron-pages{
 @media only screen and (max-width: 410px), only screen and (max-device-width: 410px) {
 
     my-menu{
-        left: 40%;
+        left: 20%;
     }
 
     .camerafab{
