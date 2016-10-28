@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my-menu.html" afterPath="$PROJECT_DIR$/my-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected_page.php" afterPath="$PROJECT_DIR$/protected_page.php" />
     </list>
     <ignored path="segnalazionipolaa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,8 +111,8 @@
       <file leaf-file-name="my-menu.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="91" column="2" selection-start-line="91" selection-start-column="0" selection-end-line="106" selection-end-column="3" />
+            <state relative-caret-position="328">
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -199,8 +198,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-51" />
-    <option name="y" value="299" />
+    <option name="x" value="-31" />
+    <option name="y" value="13" />
     <option name="width" value="1692" />
     <option name="height" value="1026" />
   </component>
@@ -340,15 +339,15 @@
       <workItem from="1476527260291" duration="637000" />
       <workItem from="1476535658479" duration="6635000" />
       <workItem from="1477528255495" duration="9682000" />
-      <workItem from="1477580864297" duration="25440000" />
+      <workItem from="1477580864297" duration="26848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68103000" />
+    <option name="totallyTimeSpent" value="69511000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-51" y="299" width="1692" height="1026" extended-state="0" />
+    <frame x="-31" y="13" width="1692" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17156863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -802,8 +801,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="91" column="2" selection-start-line="91" selection-start-column="0" selection-end-line="106" selection-end-column="3" />
+        <state relative-caret-position="328">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding />
         </state>
       </provider>
