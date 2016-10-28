@@ -211,6 +211,8 @@ include_once 'includes/functions.php';
 
 				function addToDatabase(){
 					var tipo = document.querySelector('my-menu').getSelectedElement();
+                    var files = document.getElementById('getPhoto').files;
+                    alert(files[0]+"");
 					var descrizione =  $('textarea').val();
 					if(latitude != null && longitude != null){
 						$.ajax ( {
