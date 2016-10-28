@@ -12,7 +12,7 @@ include_once 'includes/functions.php';
         <title>Secure Login: Protected Page</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="jquery-3.1.0.min.js"></script>
         <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
         <link rel="stylesheet" type="text/css" href="teststyle.css"/>
         <script>
@@ -332,7 +332,7 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu admin="is"></my-menu>
-                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="var link = document.getElementById( 'getPhoto' ); var event = document.createEvent( 'HTMLEvents' ); event.initEvent( 'click', true, true ); link.dispatchEvent( event );"></paper-fab>
+                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="$('#getPhoto').trigger('click');"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
                                                 <input id="getPhoto" type="file" accept="image/*" capture="camera">
                                             </div>

@@ -72,6 +72,7 @@ textarea{
     margin-left:0;
     --paper-fab-mini:true;
     bottom:-28px;
+	cursor: pointer;
     background-color:#e1382d;
 }
 
