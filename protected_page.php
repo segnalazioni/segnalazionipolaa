@@ -328,9 +328,10 @@ include_once 'includes/functions.php';
                                         <td height="70%"><div id="map-dialog" style="width: 100%; height: 100%;"></div></td>
                                     </tr>
                                     <tr>
-                                        <td height="30%" style="background-color: #0d47a1"><textarea style="resize:none; box-sizing: border-box; vertical-align: top; width:100%; height:100%;"></textarea></td>
+                                        <td height="30%"><textarea style="resize:none; box-sizing: border-box; vertical-align: top; width:100%; height:100%;"></textarea></td>
                                     </tr>
                                 </table>
+                                <my-menu admin="is"></my-menu>
                                 <div class="buttons" style="height: 70px; bottom:5px; right:15px;">
                                     <paper-button dialog-dismiss>ANNULLA</paper-button>
                                     <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
