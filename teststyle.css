@@ -158,7 +158,7 @@ iron-pages{
 @media only screen and (max-width: 410px), only screen and (max-device-width: 410px) {
 
     my-menu{
-        left: 20%;
+        left: 40%;
     }
 
     .camerafab{
@@ -166,7 +166,7 @@ iron-pages{
     }
 
     .gpsfab{
-        left: 5%;
+        left: 3%;
     }
 
 
