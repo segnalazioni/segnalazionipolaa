@@ -330,8 +330,8 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu style="background-color:black;" admin="is"></my-menu>
-                                                <paper-fab class="gpsfab" icon="image:camera-alt" style="position:absolute; float: right; right:100px; margin-left:0; --paper-fab-mini:true; bottom:-28px; background-color:#e1382d;"></paper-fab>
-                                                <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();" style="position:absolute; float: right; right:30px; --paper-fab-mini:true; bottom:-28px; background-color:#e1382d;"></paper-fab>
+                                                <paper-fab class="gpsfab" icon="image:camera-alt" style="position:absolute; right:30px; margin-left:0; --paper-fab-mini:true; bottom:-28px; background-color:#e1382d;"></paper-fab>
+                                                <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();" style="position:absolute; left:30px; --paper-fab-mini:true; bottom:-28px; background-color:#e1382d;"></paper-fab>
                                             </div>
                                         </td>
                                     </tr>
