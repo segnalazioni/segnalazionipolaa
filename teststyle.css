@@ -133,6 +133,14 @@ iron-pages{
     }
 
 }
+
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px) {
+
+    my-menu{
+        left: 10px;
+    }
+
+}
 /*@media only screen and (max-width: 400px), only screen and (max-device-width: 400px){
 	.dropbtn{
 		width:120px;
