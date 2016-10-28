@@ -6,9 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected_page.php" afterPath="$PROJECT_DIR$/protected_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teststyle.css" afterPath="$PROJECT_DIR$/teststyle.css" />
     </list>
     <ignored path="segnalazionipolaa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,13 +85,13 @@
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="346">
-              <caret line="334" column="142" selection-start-line="334" selection-start-column="142" selection-end-line="334" selection-end-column="142" />
+              <caret line="334" column="154" selection-start-line="334" selection-start-column="154" selection-end-line="334" selection-end-column="154" />
               <folding>
-                <marker date="1477698697158" expanded="true" signature="3795:3814" ph="..." />
-                <marker date="1477698697158" expanded="true" signature="4745:4782" ph="..." />
-                <marker date="1477698697158" expanded="true" signature="8484:8503" ph="..." />
-                <marker date="1477698697158" expanded="true" signature="8565:8602" ph="..." />
-                <marker date="1477698697158" expanded="false" signature="14007:14049" ph="..." />
+                <marker date="1477698935843" expanded="true" signature="3795:3814" ph="..." />
+                <marker date="1477698935843" expanded="true" signature="4745:4782" ph="..." />
+                <marker date="1477698935843" expanded="true" signature="8484:8503" ph="..." />
+                <marker date="1477698935843" expanded="true" signature="8565:8602" ph="..." />
+                <marker date="1477698935843" expanded="false" signature="14019:14061" ph="..." />
               </folding>
             </state>
           </provider>
@@ -331,12 +329,12 @@
       <workItem from="1476535658479" duration="6635000" />
       <workItem from="1477528255495" duration="9682000" />
       <workItem from="1477580864297" duration="34978000" />
-      <workItem from="1477698132543" duration="567000" />
+      <workItem from="1477698132543" duration="809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78208000" />
+    <option name="totallyTimeSpent" value="78450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-31" y="13" width="1684" height="1026" extended-state="0" />
@@ -400,11 +398,11 @@
         <state relative-caret-position="10527">
           <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
           <folding>
-            <marker date="1477698697158" expanded="true" signature="3795:3814" ph="..." />
-            <marker date="1477698697158" expanded="true" signature="4745:4782" ph="..." />
-            <marker date="1477698697158" expanded="true" signature="8484:8503" ph="..." />
-            <marker date="1477698697158" expanded="true" signature="8565:8602" ph="..." />
-            <marker date="1477698697158" expanded="false" signature="14007:14049" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="3795:3814" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="4745:4782" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="8484:8503" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="8565:8602" ph="..." />
+            <marker date="1477698935843" expanded="false" signature="14019:14061" ph="..." />
           </folding>
         </state>
       </provider>
@@ -769,13 +767,13 @@
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
-          <caret line="334" column="142" selection-start-line="334" selection-start-column="142" selection-end-line="334" selection-end-column="142" />
+          <caret line="334" column="154" selection-start-line="334" selection-start-column="154" selection-end-line="334" selection-end-column="154" />
           <folding>
-            <marker date="1477698697158" expanded="true" signature="3795:3814" ph="..." />
-            <marker date="1477698697158" expanded="true" signature="4745:4782" ph="..." />
-            <marker date="1477698697158" expanded="true" signature="8484:8503" ph="..." />
-            <marker date="1477698697158" expanded="true" signature="8565:8602" ph="..." />
-            <marker date="1477698697158" expanded="false" signature="14007:14049" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="3795:3814" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="4745:4782" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="8484:8503" ph="..." />
+            <marker date="1477698935843" expanded="true" signature="8565:8602" ph="..." />
+            <marker date="1477698935843" expanded="false" signature="14019:14061" ph="..." />
           </folding>
         </state>
       </provider>
