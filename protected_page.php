@@ -334,7 +334,7 @@ include_once 'includes/functions.php';
                                                 <my-menu admin="is"></my-menu>
                                                 <paper-fab class="camerafab" icon="image:camera-alt" onclick="document.getElementById('getPhoto').click();"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
-                                                <input id="getPhoto" type="file" accept="image/*" capture="camera" hidden>
+                                                <input id="getPhoto" type="file" accept="image/*" capture="camera">
                                             </div>
                                         </td>
                                     </tr>
