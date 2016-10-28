@@ -89,6 +89,23 @@ paper-dropdown-menu {
 	}
 }
 
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px){
+
+    .dropbtna{
+        width:180px;
+    }
+
+    paper-dropdown-menu {
+
+        margin-left:5px;
+        width:160px;
+
+        --paper-input-container:{
+            width:160px;
+        };
+    }
+}
+
 </style>
 <template>
     <iron-media-query query="(max-width:800px)" query-matches="{{isMobileNav}}"></iron-media-query>
