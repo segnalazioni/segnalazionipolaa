@@ -333,7 +333,7 @@ include_once 'includes/functions.php';
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td height="30%"><textarea style="resize:none; overflow: hidden; margin-top:10px; box-sizing: border-box; vertical-align: top; width:100%; height:100%;"></textarea></td>
+                                        <td height="30%"><textarea style="resize:none; overflow: hidden; margin-top:40px; box-sizing: border-box; vertical-align: top; width:100%; height:100%;"></textarea></td>
                                     </tr>
                                 </table>
 
