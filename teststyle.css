@@ -58,8 +58,10 @@ textarea{
     outline: none;
 }
 
-.dropbtna {
-
+my-menu{
+    position:absolute;
+    bottom:-30px;
+    left: 20px;
 }
 
 iron-pages{
