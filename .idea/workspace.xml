@@ -88,8 +88,8 @@
       <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="342" column="155" selection-start-line="342" selection-start-column="155" selection-end-line="342" selection-end-column="155" />
+            <state relative-caret-position="378">
+              <caret line="344" column="114" selection-start-line="344" selection-start-column="114" selection-end-line="344" selection-end-column="114" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -99,11 +99,11 @@
                 <element signature="n#style#0;n#paper-fab#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1477630594786" expanded="true" signature="4224:4243" ph="..." />
-                <marker date="1477630594786" expanded="true" signature="5174:5211" ph="..." />
-                <marker date="1477630594786" expanded="true" signature="8798:8817" ph="..." />
-                <marker date="1477630594786" expanded="true" signature="8879:8916" ph="..." />
-                <marker date="1477630594786" expanded="false" signature="14487:14529" ph="..." />
+                <marker date="1477630959921" expanded="true" signature="4224:4243" ph="..." />
+                <marker date="1477630959921" expanded="true" signature="5174:5211" ph="..." />
+                <marker date="1477630959921" expanded="true" signature="8798:8817" ph="..." />
+                <marker date="1477630959921" expanded="true" signature="8879:8916" ph="..." />
+                <marker date="1477630959921" expanded="false" signature="14478:14520" ph="..." />
               </folding>
             </state>
           </provider>
@@ -340,12 +340,12 @@
       <workItem from="1476527260291" duration="637000" />
       <workItem from="1476535658479" duration="6635000" />
       <workItem from="1477528255495" duration="9682000" />
-      <workItem from="1477580864297" duration="23294000" />
+      <workItem from="1477580864297" duration="23659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65957000" />
+    <option name="totallyTimeSpent" value="66322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -417,11 +417,11 @@
             <element signature="n#style#0;n#paper-fab#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477630594786" expanded="true" signature="4224:4243" ph="..." />
-            <marker date="1477630594786" expanded="true" signature="5174:5211" ph="..." />
-            <marker date="1477630594786" expanded="true" signature="8798:8817" ph="..." />
-            <marker date="1477630594786" expanded="true" signature="8879:8916" ph="..." />
-            <marker date="1477630594786" expanded="false" signature="14487:14529" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="4224:4243" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="5174:5211" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="8798:8817" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="8879:8916" ph="..." />
+            <marker date="1477630959921" expanded="false" signature="14478:14520" ph="..." />
           </folding>
         </state>
       </provider>
@@ -790,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="342" column="155" selection-start-line="342" selection-start-column="155" selection-end-line="342" selection-end-column="155" />
+        <state relative-caret-position="378">
+          <caret line="344" column="114" selection-start-line="344" selection-start-column="114" selection-end-line="344" selection-end-column="114" />
           <folding>
             <element signature="n#style#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -801,11 +801,11 @@
             <element signature="n#style#0;n#paper-fab#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477630594786" expanded="true" signature="4224:4243" ph="..." />
-            <marker date="1477630594786" expanded="true" signature="5174:5211" ph="..." />
-            <marker date="1477630594786" expanded="true" signature="8798:8817" ph="..." />
-            <marker date="1477630594786" expanded="true" signature="8879:8916" ph="..." />
-            <marker date="1477630594786" expanded="false" signature="14487:14529" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="4224:4243" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="5174:5211" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="8798:8817" ph="..." />
+            <marker date="1477630959921" expanded="true" signature="8879:8916" ph="..." />
+            <marker date="1477630959921" expanded="false" signature="14478:14520" ph="..." />
           </folding>
         </state>
       </provider>
