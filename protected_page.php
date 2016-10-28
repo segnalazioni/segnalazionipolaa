@@ -332,7 +332,7 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu admin="is"></my-menu>
-                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="var link = document.getElementById( 'link_to_click' ); event = document.createEvent( 'HTMLEvents' ); event.initEvent( 'click', true, true ); link.dispatchEvent( event );"></paper-fab>
+                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="var link = document.getElementById( 'link_to_click' ); var event = document.createEvent( 'HTMLEvents' ); event.initEvent( 'click', true, true ); link.dispatchEvent( event );"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
                                                 <input id="getPhoto" type="file" accept="image/*" capture="camera">
                                             </div>
