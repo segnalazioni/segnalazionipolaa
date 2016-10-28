@@ -340,9 +340,9 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu style="background-color:black;" admin="is"></my-menu>
-                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="eventFire(document.getElementById('getPhoto'), 'click');"></paper-fab>
+                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="document.getElementById('getPhoto').submit();"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();" style="position:absolute; left:20px; --paper-fab-mini:true; bottom:-28px; background-color:#e1382d;"></paper-fab>
-                                                <input id="getPhoto" type="file" accept="image/*" capture="camera" hidden>
+                                                <form id="getPhoto"><input type="file" accept="image/*" capture="camera" hidden></form>
                                             </div>
                                         </td>
                                     </tr>
