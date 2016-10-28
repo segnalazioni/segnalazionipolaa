@@ -328,7 +328,7 @@ include_once 'includes/functions.php';
                                         <td height="70%">
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
-                                                <my-menu style="position:absolute; bottom:0; left: 20px;" admin="is"></my-menu>
+                                                <my-menu style="position:absolute; bottom:-24px; left: 20px;" admin="is"></my-menu>
                                             </div>
                                         </td>
                                     </tr>
