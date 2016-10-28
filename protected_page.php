@@ -328,12 +328,12 @@ include_once 'includes/functions.php';
                                         <td height="70%">
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
-                                                <my-menu style="position:absolute; bottom:-24px; left: 20px;" admin="is"></my-menu>
+                                                <my-menu style="position:absolute; bottom:-30px; left: 20px;" admin="is"></my-menu>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td height="30%"><textarea style="resize:none; box-sizing: border-box; vertical-align: top; width:100%; height:100%;"></textarea></td>
+                                        <td height="30%"><textarea style="resize:none; overflow: hidden; box-sizing: border-box; vertical-align: top; width:100%; height:100%;"></textarea></td>
                                     </tr>
                                 </table>
 
