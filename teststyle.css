@@ -58,6 +58,14 @@ textarea{
     outline: none;
 }
 
+.gpsfab{
+    position:absolute;
+    left:20px;
+    --paper-fab-mini:true;
+    bottom:-28px;
+    background-color:#e1382d;
+}
+
 .camerafab{
     position:absolute;
     right:20px;
@@ -150,11 +158,15 @@ iron-pages{
 @media only screen and (max-width: 410px), only screen and (max-device-width: 410px) {
 
     my-menu{
-        left: 140px;
+        left: 40%;
     }
 
     .camerafab{
-        left: 90px;
+        left: 20%;
+    }
+
+    .gpsfab{
+        left: 5%;
     }
 
 
