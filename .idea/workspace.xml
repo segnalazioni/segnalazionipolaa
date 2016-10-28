@@ -2,11 +2,11 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/style.css" line="31" />
-    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="338" />
+    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="349" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teststyle.css" afterPath="$PROJECT_DIR$/teststyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected_page.php" afterPath="$PROJECT_DIR$/protected_page.php" />
     </list>
     <ignored path="segnalazionipolaa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teststyle.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teststyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teststyle.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="332" column="108" selection-start-line="332" selection-start-column="108" selection-end-line="332" selection-end-column="108" />
+            <state relative-caret-position="344">
+              <caret line="342" column="166" selection-start-line="342" selection-start-column="166" selection-end-line="342" selection-end-column="166" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -99,11 +99,11 @@
                 <element signature="n#style#0;n#paper-fab#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1477628545180" expanded="true" signature="3837:3856" ph="..." />
-                <marker date="1477628545180" expanded="true" signature="4787:4824" ph="..." />
-                <marker date="1477628545180" expanded="true" signature="8411:8430" ph="..." />
-                <marker date="1477628545180" expanded="true" signature="8492:8529" ph="..." />
-                <marker date="1477628545180" expanded="false" signature="13917:13959" ph="..." />
+                <marker date="1477630420917" expanded="true" signature="4224:4243" ph="..." />
+                <marker date="1477630420917" expanded="true" signature="5174:5211" ph="..." />
+                <marker date="1477630420917" expanded="true" signature="8798:8817" ph="..." />
+                <marker date="1477630420917" expanded="true" signature="8879:8916" ph="..." />
+                <marker date="1477630420917" expanded="false" signature="14485:14527" ph="..." />
               </folding>
             </state>
           </provider>
@@ -186,8 +186,8 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/my-menu.html" />
-        <option value="$PROJECT_DIR$/protected_page.php" />
         <option value="$PROJECT_DIR$/teststyle.css" />
+        <option value="$PROJECT_DIR$/protected_page.php" />
       </list>
     </option>
   </component>
@@ -340,12 +340,12 @@
       <workItem from="1476527260291" duration="637000" />
       <workItem from="1476535658479" duration="6635000" />
       <workItem from="1477528255495" duration="9682000" />
-      <workItem from="1477580864297" duration="22331000" />
+      <workItem from="1477580864297" duration="23120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64994000" />
+    <option name="totallyTimeSpent" value="65783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -417,11 +417,11 @@
             <element signature="n#style#0;n#paper-fab#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477628545180" expanded="true" signature="3837:3856" ph="..." />
-            <marker date="1477628545180" expanded="true" signature="4787:4824" ph="..." />
-            <marker date="1477628545180" expanded="true" signature="8411:8430" ph="..." />
-            <marker date="1477628545180" expanded="true" signature="8492:8529" ph="..." />
-            <marker date="1477628545180" expanded="false" signature="13917:13959" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="4224:4243" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="5174:5211" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="8798:8817" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="8879:8916" ph="..." />
+            <marker date="1477630420917" expanded="false" signature="14485:14527" ph="..." />
           </folding>
         </state>
       </provider>
@@ -780,10 +780,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/teststyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="332" column="108" selection-start-line="332" selection-start-column="108" selection-end-line="332" selection-end-column="108" />
+        <state relative-caret-position="344">
+          <caret line="342" column="166" selection-start-line="342" selection-start-column="166" selection-end-line="342" selection-end-column="166" />
           <folding>
             <element signature="n#style#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -793,20 +801,12 @@
             <element signature="n#style#0;n#paper-fab#1;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477628545180" expanded="true" signature="3837:3856" ph="..." />
-            <marker date="1477628545180" expanded="true" signature="4787:4824" ph="..." />
-            <marker date="1477628545180" expanded="true" signature="8411:8430" ph="..." />
-            <marker date="1477628545180" expanded="true" signature="8492:8529" ph="..." />
-            <marker date="1477628545180" expanded="false" signature="13917:13959" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="4224:4243" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="5174:5211" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="8798:8817" ph="..." />
+            <marker date="1477630420917" expanded="true" signature="8879:8916" ph="..." />
+            <marker date="1477630420917" expanded="false" signature="14485:14527" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teststyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -55,6 +55,16 @@ include_once 'includes/functions.php';
 				var oldMarker;
 				var markers = [];
 
+                function eventFire(el, etype){
+                    if (el.fireEvent) {
+                        el.fireEvent('on' + etype);
+                    } else {
+                        var evObj = document.createEvent('Events');
+                        evObj.initEvent(etype, true, false);
+                        el.dispatchEvent(evObj);
+                    }
+                }
+
 				function addAllMarkers(){
 					$.ajax ( {
 						url: 'get-markers.php',
@@ -330,8 +340,9 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu style="background-color:black;" admin="is"></my-menu>
-                                                <paper-fab class="camerafab" icon="image:camera-alt" style=""></paper-fab>
+                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="eventFire(document.getElementById('getPhoto'), 'click');"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();" style="position:absolute; left:20px; --paper-fab-mini:true; bottom:-28px; background-color:#e1382d;"></paper-fab>
+                                                <input id="getPhoto" type="file" accept="image/*" capture="camera" hidden>
                                             </div>
                                         </td>
                                     </tr>
