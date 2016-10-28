@@ -61,7 +61,7 @@ textarea{
 my-menu{
     position:absolute;
     bottom:-30px;
-    left: 90px;
+    left: 70px;
     margin-left: 0;
     margin-right: 0;
 }
@@ -141,7 +141,7 @@ iron-pages{
 @media only screen and (max-width: 410px), only screen and (max-device-width: 410px) {
 
     my-menu{
-        left: 40px;
+        left: 70px;
     }
 
 }
