@@ -58,6 +58,15 @@ textarea{
     outline: none;
 }
 
+.camerafab{
+    position:absolute;
+    right:20px;
+    margin-left:0;
+    --paper-fab-mini:true;
+    bottom:-28px;
+    background-color:#e1382d;
+}
+
 my-menu{
     position:absolute;
     bottom:-30px;
@@ -141,8 +150,9 @@ iron-pages{
 @media only screen and (max-width: 410px), only screen and (max-device-width: 410px) {
 
     my-menu{
-        left: 70px;
+        left: 90px;
     }
+
 
 }
 /*@media only screen and (max-width: 400px), only screen and (max-device-width: 400px){
