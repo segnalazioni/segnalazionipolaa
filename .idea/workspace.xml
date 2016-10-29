@@ -84,14 +84,14 @@
       <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="336" column="92" selection-start-line="336" selection-start-column="92" selection-end-line="336" selection-end-column="92" />
+            <state relative-caret-position="278">
+              <caret line="334" column="133" selection-start-line="334" selection-start-column="133" selection-end-line="334" selection-end-column="133" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1477700404011" expanded="true" signature="3795:3814" ph="..." />
-                <marker date="1477700404011" expanded="true" signature="4745:4782" ph="..." />
-                <marker date="1477700404011" expanded="true" signature="8484:8503" ph="..." />
-                <marker date="1477700404011" expanded="true" signature="8565:8602" ph="..." />
+                <marker date="1477700492540" expanded="true" signature="3795:3814" ph="..." />
+                <marker date="1477700492540" expanded="true" signature="4745:4782" ph="..." />
+                <marker date="1477700492540" expanded="true" signature="8484:8503" ph="..." />
+                <marker date="1477700492540" expanded="true" signature="8565:8602" ph="..." />
               </folding>
             </state>
           </provider>
@@ -329,12 +329,12 @@
       <workItem from="1476535658479" duration="6635000" />
       <workItem from="1477528255495" duration="9682000" />
       <workItem from="1477580864297" duration="34978000" />
-      <workItem from="1477698132543" duration="1746000" />
+      <workItem from="1477698132543" duration="1834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79387000" />
+    <option name="totallyTimeSpent" value="79475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-31" y="13" width="1684" height="1026" extended-state="0" />
@@ -399,10 +399,10 @@
           <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477700404011" expanded="true" signature="3795:3814" ph="..." />
-            <marker date="1477700404011" expanded="true" signature="4745:4782" ph="..." />
-            <marker date="1477700404011" expanded="true" signature="8484:8503" ph="..." />
-            <marker date="1477700404011" expanded="true" signature="8565:8602" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="3795:3814" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="4745:4782" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="8484:8503" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="8565:8602" ph="..." />
           </folding>
         </state>
       </provider>
@@ -766,14 +766,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="336" column="92" selection-start-line="336" selection-start-column="92" selection-end-line="336" selection-end-column="92" />
+        <state relative-caret-position="278">
+          <caret line="334" column="133" selection-start-line="334" selection-start-column="133" selection-end-line="334" selection-end-column="133" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477700404011" expanded="true" signature="3795:3814" ph="..." />
-            <marker date="1477700404011" expanded="true" signature="4745:4782" ph="..." />
-            <marker date="1477700404011" expanded="true" signature="8484:8503" ph="..." />
-            <marker date="1477700404011" expanded="true" signature="8565:8602" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="3795:3814" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="4745:4782" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="8484:8503" ph="..." />
+            <marker date="1477700492540" expanded="true" signature="8565:8602" ph="..." />
           </folding>
         </state>
       </provider>

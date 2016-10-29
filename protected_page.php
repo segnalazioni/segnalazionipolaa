@@ -332,7 +332,7 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu admin="is"></my-menu>
-                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="$('#getPhoto').click();"></paper-fab>
+                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="document.getElementById('getPhoto').click();"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
                                                 <input id="getPhoto" style="cursor: pointer;" type="file" accept="image/*" capture="camera">
                                             </div>
