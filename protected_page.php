@@ -41,20 +41,9 @@ include_once 'includes/functions.php';
         <link rel="import" href="my-menu.html">
         <link rel="import" href="photo-fab.html">
         <link rel="stylesheet" href="teststyle.css" />
-
-        <script>
-            $(document).ready(function(){
-                $(".submit").click(function() {
-                    $(".getaphoto").trigger('click');
-                });
-            });
-        </script>
-
     </head>
     <body style="margin:0; padding:0; width:100%; height:100%;">
         <?php/* if (login_check($mysqli) == true) : */?>
-        <input class="getaphoto" type="file" style="display: none;" accept="image/*"/>
-        <input type="button" class="submit" value="hell"/>
         <template is="dom-bind" id="scope">
         	<script>
 
@@ -66,6 +55,12 @@ include_once 'includes/functions.php';
 				var openDialogId;
 				var oldMarker;
 				var markers = [];
+
+                $(document).ready(function(){
+                    $(".camerafab").click(function() {
+                        $(".getphoto").trigger('click');
+                    });
+                });
 
 				function addAllMarkers(){
 					$.ajax ( {
@@ -222,9 +217,11 @@ include_once 'includes/functions.php';
 				}
 
 				function addToDatabase(){
+                    alert("started");
 					var tipo = document.querySelector('my-menu').getSelectedElement();
-                    var files = document.getElementById('getPhoto').files;
-                    alert(files[0]+"");
+                    var mfiles = document.getElementById('getphoto').files;
+                    alert("getting there");
+                    alert(mfiles[0].name+" named");
 					var descrizione =  $('textarea').val();
 					if(latitude != null && longitude != null){
 						$.ajax ( {
@@ -346,7 +343,6 @@ include_once 'includes/functions.php';
                                                 <my-menu admin="is"></my-menu>
                                                 <photo-fab class="camerafab"></photo-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
-
                                             </div>
                                         </td>
                                     </tr>
@@ -357,7 +353,7 @@ include_once 'includes/functions.php';
 
                                 <div class="buttons" style="height: 70px; bottom:5px; right:15px;">
                                     <paper-button dialog-dismiss>ANNULLA</paper-button>
-                                    <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
+                                    <paper-button dialog-confirm autofocus onclick="alert('onclick');addToDatabase();">SEGNALA</paper-button>
                                 </div>
                             </div>
         				</paper-dialog>
@@ -369,12 +365,10 @@ include_once 'includes/functions.php';
                                 <paper-button dialog-confirm autofocus onclick="aggiungiUpdate()">CONFERMA</paper-button>
                             </div>
                         </paper-dialog>
-
                     </div>
                     <div>Pagina 2</div>
                     <div>Pagina 3</div>
                 </iron-pages>
-
             <script>
   				document.addEventListener('WebComponentsReady', function () {
     				var template = document.querySelector('template[is="dom-bind"]');
