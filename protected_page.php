@@ -353,7 +353,7 @@ include_once 'includes/functions.php';
 
                                 <div class="buttons" style="height: 70px; bottom:5px; right:15px;">
                                     <paper-button dialog-dismiss>ANNULLA</paper-button>
-                                    <paper-button dialog-confirm autofocus onclick="addToDatabase();">SEGNALA</paper-button>
+                                    <paper-button dialog-confirm autofocus onclick="alert('onclick');addToDatabase();">SEGNALA</paper-button>
                                 </div>
                             </div>
         				</paper-dialog>
