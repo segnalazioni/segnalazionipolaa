@@ -2,7 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/style.css" line="31" />
-    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="347" />
+    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="348" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
@@ -102,13 +102,13 @@
       <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="220" column="41" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
+            <state relative-caret-position="-986">
+              <caret line="220" column="43" selection-start-line="220" selection-start-column="43" selection-end-line="220" selection-end-column="43" />
               <folding>
-                <marker date="1477711050683" expanded="true" signature="3998:4017" ph="..." />
-                <marker date="1477711050683" expanded="true" signature="4948:4985" ph="..." />
-                <marker date="1477711050683" expanded="true" signature="8692:8711" ph="..." />
-                <marker date="1477711050683" expanded="true" signature="8773:8810" ph="..." />
+                <marker date="1477711339892" expanded="true" signature="3998:4017" ph="..." />
+                <marker date="1477711339892" expanded="true" signature="4948:4985" ph="..." />
+                <marker date="1477711339892" expanded="true" signature="8736:8755" ph="..." />
+                <marker date="1477711339892" expanded="true" signature="8817:8854" ph="..." />
               </folding>
             </state>
           </provider>
@@ -354,12 +354,12 @@
       <workItem from="1477580864297" duration="34978000" />
       <workItem from="1477698132543" duration="7534000" />
       <workItem from="1477710036084" duration="20000" />
-      <workItem from="1477710187154" duration="875000" />
+      <workItem from="1477710187154" duration="1144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86070000" />
+    <option name="totallyTimeSpent" value="86339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -415,10 +415,10 @@
         <state relative-caret-position="10527">
           <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
           <folding>
-            <marker date="1477711050683" expanded="true" signature="3998:4017" ph="..." />
-            <marker date="1477711050683" expanded="true" signature="4948:4985" ph="..." />
-            <marker date="1477711050683" expanded="true" signature="8692:8711" ph="..." />
-            <marker date="1477711050683" expanded="true" signature="8773:8810" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="3998:4017" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="4948:4985" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="8736:8755" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="8817:8854" ph="..." />
           </folding>
         </state>
       </provider>
@@ -781,13 +781,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="220" column="41" selection-start-line="220" selection-start-column="41" selection-end-line="220" selection-end-column="41" />
+        <state relative-caret-position="-986">
+          <caret line="220" column="43" selection-start-line="220" selection-start-column="43" selection-end-line="220" selection-end-column="43" />
           <folding>
-            <marker date="1477711050683" expanded="true" signature="3998:4017" ph="..." />
-            <marker date="1477711050683" expanded="true" signature="4948:4985" ph="..." />
-            <marker date="1477711050683" expanded="true" signature="8692:8711" ph="..." />
-            <marker date="1477711050683" expanded="true" signature="8773:8810" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="3998:4017" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="4948:4985" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="8736:8755" ph="..." />
+            <marker date="1477711339892" expanded="true" signature="8817:8854" ph="..." />
           </folding>
         </state>
       </provider>
