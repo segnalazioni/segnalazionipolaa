@@ -40,20 +40,9 @@ include_once 'includes/functions.php';
         <link rel="import" href="bower_components/paper-datatable-api/paper-datatable-api.html">
         <link rel="import" href="my-menu.html">
         <link rel="stylesheet" href="teststyle.css" />
-
-        <script>
-            $(document).ready(function(){
-                $(".submit").click(function() {
-                    $(".getphoto").trigger('click');
-                });
-            });
-        </script>
-
     </head>
     <body style="margin:0; padding:0; width:100%; height:100%;">
         <?php/* if (login_check($mysqli) == true) : */?>
-        <input class="getphoto" type="file" style="display: none;" accept="image/*"/>
-        <input type="button" class="submit" value="hell"/>
         <template is="dom-bind" id="scope">
         	<script>
 
@@ -65,6 +54,12 @@ include_once 'includes/functions.php';
 				var openDialogId;
 				var oldMarker;
 				var markers = [];
+
+                $(document).ready(function(){
+                    $(".submit").click(function() {
+                        $(".getphoto").trigger('click');
+                    });
+                });
 
 				function addAllMarkers(){
 					$.ajax ( {
@@ -223,7 +218,7 @@ include_once 'includes/functions.php';
 				function addToDatabase(){
 					var tipo = document.querySelector('my-menu').getSelectedElement();
                     var files = document.getElementById('getPhoto').files;
-                    alert(files[0]+"");
+                    alert(files[0]+" file");
 					var descrizione =  $('textarea').val();
 					if(latitude != null && longitude != null){
 						$.ajax ( {
@@ -345,7 +340,7 @@ include_once 'includes/functions.php';
                                                 <my-menu admin="is"></my-menu>
                                                 <paper-fab class="camerafab" icon="image:camera-alt"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
-
+                                                <input class="getphoto" type="file" accept="image/*" hidden/>
                                             </div>
                                         </td>
                                     </tr>
