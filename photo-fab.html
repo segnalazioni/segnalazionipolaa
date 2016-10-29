@@ -33,8 +33,16 @@
 	Polymer({
 		is: 'photo-fab',
 
+        properties:{
+          file: File
+        },
+
 		handleTap: function(){
             this.$.hidden.click();
+        },
+
+        ready: function () {
+          alert('ready');
         }
 	});
 </script>
