@@ -2,7 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/style.css" line="31" />
-    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="341" />
+    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="347" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
@@ -84,15 +84,25 @@
       <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="334" column="133" selection-start-line="334" selection-start-column="133" selection-end-line="334" selection-end-column="133" />
+            <state relative-caret-position="-4471">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1477700492540" expanded="true" signature="3795:3814" ph="..." />
-                <marker date="1477700492540" expanded="true" signature="4745:4782" ph="..." />
-                <marker date="1477700492540" expanded="true" signature="8484:8503" ph="..." />
-                <marker date="1477700492540" expanded="true" signature="8565:8602" ph="..." />
+                <marker date="1477704259736" expanded="true" signature="3976:3995" ph="..." />
+                <marker date="1477704259736" expanded="true" signature="4926:4963" ph="..." />
+                <marker date="1477704259736" expanded="true" signature="8665:8684" ph="..." />
+                <marker date="1477704259736" expanded="true" signature="8746:8783" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photo-fab.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photo-fab.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,16 +112,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1649">
               <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -175,6 +175,7 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/my-menu.html" />
         <option value="$PROJECT_DIR$/teststyle.css" />
+        <option value="$PROJECT_DIR$/photo-fab.html" />
         <option value="$PROJECT_DIR$/protected_page.php" />
       </list>
     </option>
@@ -249,6 +250,11 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Desktop/index.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documenti\GitHub\segnalazionipolaa" />
+    </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.php">
     <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/segnalazionipolaa/index.php">
@@ -329,12 +335,12 @@
       <workItem from="1476535658479" duration="6635000" />
       <workItem from="1477528255495" duration="9682000" />
       <workItem from="1477580864297" duration="34978000" />
-      <workItem from="1477698132543" duration="1834000" />
+      <workItem from="1477698132543" duration="4314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79475000" />
+    <option name="totallyTimeSpent" value="81955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-31" y="13" width="1684" height="1026" extended-state="0" />
@@ -377,14 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/process_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
@@ -399,10 +397,10 @@
           <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477700492540" expanded="true" signature="3795:3814" ph="..." />
-            <marker date="1477700492540" expanded="true" signature="4745:4782" ph="..." />
-            <marker date="1477700492540" expanded="true" signature="8484:8503" ph="..." />
-            <marker date="1477700492540" expanded="true" signature="8565:8602" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="3976:3995" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="4926:4963" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="8665:8684" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="8746:8783" ph="..." />
           </folding>
         </state>
       </provider>
@@ -764,16 +762,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/photo-fab.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="334" column="133" selection-start-line="334" selection-start-column="133" selection-end-line="334" selection-end-column="133" />
+        <state relative-caret-position="-4471">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#paper-dialog#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477700492540" expanded="true" signature="3795:3814" ph="..." />
-            <marker date="1477700492540" expanded="true" signature="4745:4782" ph="..." />
-            <marker date="1477700492540" expanded="true" signature="8484:8503" ph="..." />
-            <marker date="1477700492540" expanded="true" signature="8565:8602" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="3976:3995" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="4926:4963" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="8665:8684" ph="..." />
+            <marker date="1477704259736" expanded="true" signature="8746:8783" ph="..." />
           </folding>
         </state>
       </provider>
