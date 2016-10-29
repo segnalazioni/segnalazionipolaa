@@ -44,7 +44,7 @@ include_once 'includes/functions.php';
         <script>
             $(document).ready(function(){
                 $(".submit").click(function() {
-                    $(".getphoto").trigger('click').trigger('touchdown');
+                    $(".getphoto").trigger('click');
                 });
             });
         </script>
