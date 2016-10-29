@@ -57,7 +57,7 @@ include_once 'includes/functions.php';
 
                 $(document).ready(function(){
                     $(".camerafab").click(function() {
-                        $("#getPhoto").click();
+                        $("#getPhoto").trigger('click').trigger('touchdown');
                     });
                 });
 
