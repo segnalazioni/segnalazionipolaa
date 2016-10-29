@@ -367,7 +367,7 @@ include_once 'includes/functions.php';
                             </div>
                         </paper-dialog>
                         <input class="getphoto" type="file" accept="image/*"/>
-                        <input type="button" class="submit"/>
+                        <input type="button" class="submit" value="hell"/>
                     </div>
                     <div>Pagina 2</div>
                     <div>Pagina 3</div>
