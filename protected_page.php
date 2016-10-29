@@ -57,16 +57,11 @@ include_once 'includes/functions.php';
 
                 $(document).ready(function(){
                     alert('before');
-                    $('#camerafab').on('click touchstart', function(e){
-                        e.stopPropagation();
-                        $('#getPhoto').trigger('click');
-                    });
-
-                });
-                /*$("#camerafab").click(function() {
+                    $(".camerafab").click(function() {
                         alert("here");
                         $("#getPhoto").click();
-                });*/
+                    });
+                });
 
 				function addAllMarkers(){
 					$.ajax ( {
