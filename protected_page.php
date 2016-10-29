@@ -216,6 +216,7 @@ include_once 'includes/functions.php';
 				}
 
 				function addToDatabase(){
+                    alert("started");
 					var tipo = document.querySelector('my-menu').getSelectedElement();
                     var files = document.getElementById('getphoto').files;
                     alert("getting there");
