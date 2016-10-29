@@ -57,6 +57,7 @@ include_once 'includes/functions.php';
 
                 function clickit(){
                     $("#camerafab").click(function() {
+                        alert("here");
                         $("#getPhoto").click();
                     })
                 }
