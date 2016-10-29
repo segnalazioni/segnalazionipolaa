@@ -44,7 +44,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4032">
+            <state relative-caret-position="0">
               <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
               <folding />
             </state>
@@ -54,7 +54,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4088">
+            <state relative-caret-position="0">
               <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
               <folding />
             </state>
@@ -64,7 +64,7 @@
       <file leaf-file-name="manifest.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
+            <state relative-caret-position="0">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
@@ -74,7 +74,7 @@
       <file leaf-file-name="teststyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teststyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4144">
+            <state relative-caret-position="0">
               <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
               <folding />
             </state>
@@ -84,13 +84,13 @@
       <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+            <state relative-caret-position="532">
+              <caret line="219" column="74" selection-start-line="219" selection-start-column="74" selection-end-line="219" selection-end-column="74" />
               <folding>
-                <marker date="1477710531874" expanded="true" signature="3998:4017" ph="..." />
-                <marker date="1477710531874" expanded="true" signature="4948:4985" ph="..." />
-                <marker date="1477710531874" expanded="true" signature="8692:8711" ph="..." />
-                <marker date="1477710531874" expanded="true" signature="8773:8810" ph="..." />
+                <marker date="1477710745454" expanded="true" signature="3998:4017" ph="..." />
+                <marker date="1477710745454" expanded="true" signature="4948:4985" ph="..." />
+                <marker date="1477710745454" expanded="true" signature="8692:8711" ph="..." />
+                <marker date="1477710745454" expanded="true" signature="8773:8810" ph="..." />
               </folding>
             </state>
           </provider>
@@ -99,7 +99,7 @@
       <file leaf-file-name="photo-fab.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/photo-fab.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
+            <state relative-caret-position="0">
               <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
               <folding />
             </state>
@@ -109,7 +109,7 @@
       <file leaf-file-name="my-menu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5432">
+            <state relative-caret-position="0">
               <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
               <folding />
             </state>
@@ -119,7 +119,7 @@
       <file leaf-file-name="forms.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/forms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="0">
               <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
               <folding />
             </state>
@@ -129,7 +129,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
+            <state relative-caret-position="0">
               <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
@@ -141,7 +141,7 @@
       <file leaf-file-name="process_login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/process_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
+            <state relative-caret-position="0">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
@@ -245,7 +245,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/index.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Desktop/index.php" />
@@ -336,12 +336,12 @@
       <workItem from="1477580864297" duration="34978000" />
       <workItem from="1477698132543" duration="7534000" />
       <workItem from="1477710036084" duration="20000" />
-      <workItem from="1477710187154" duration="351000" />
+      <workItem from="1477710187154" duration="611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85546000" />
+    <option name="totallyTimeSpent" value="85806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -397,10 +397,10 @@
         <state relative-caret-position="10527">
           <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
           <folding>
-            <marker date="1477710531874" expanded="true" signature="3998:4017" ph="..." />
-            <marker date="1477710531874" expanded="true" signature="4948:4985" ph="..." />
-            <marker date="1477710531874" expanded="true" signature="8692:8711" ph="..." />
-            <marker date="1477710531874" expanded="true" signature="8773:8810" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="3998:4017" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="4948:4985" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="8692:8711" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="8773:8810" ph="..." />
           </folding>
         </state>
       </provider>
@@ -675,7 +675,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/process_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
+        <state relative-caret-position="0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
@@ -697,7 +697,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
+        <state relative-caret-position="0">
           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
@@ -707,7 +707,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/forms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="0">
           <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
           <folding />
         </state>
@@ -715,7 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4032">
+        <state relative-caret-position="0">
           <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
           <folding />
         </state>
@@ -723,7 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
+        <state relative-caret-position="0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
@@ -731,7 +731,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4088">
+        <state relative-caret-position="0">
           <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="10" />
           <folding />
         </state>
@@ -739,7 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5432">
+        <state relative-caret-position="0">
           <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
           <folding />
         </state>
@@ -747,7 +747,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/teststyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4144">
+        <state relative-caret-position="0">
           <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
           <folding />
         </state>
@@ -755,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/photo-fab.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
+        <state relative-caret-position="0">
           <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
           <folding />
         </state>
@@ -763,13 +763,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+        <state relative-caret-position="532">
+          <caret line="219" column="74" selection-start-line="219" selection-start-column="74" selection-end-line="219" selection-end-column="74" />
           <folding>
-            <marker date="1477710531874" expanded="true" signature="3998:4017" ph="..." />
-            <marker date="1477710531874" expanded="true" signature="4948:4985" ph="..." />
-            <marker date="1477710531874" expanded="true" signature="8692:8711" ph="..." />
-            <marker date="1477710531874" expanded="true" signature="8773:8810" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="3998:4017" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="4948:4985" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="8692:8711" ph="..." />
+            <marker date="1477710745454" expanded="true" signature="8773:8810" ph="..." />
           </folding>
         </state>
       </provider>
