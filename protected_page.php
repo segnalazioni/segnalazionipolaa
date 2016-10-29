@@ -335,7 +335,7 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu admin="is"></my-menu>
-                                                <photo-fab class="camerafab"></photo-fab>
+                                                <photo-fab class="camerafab" style="background-color: #0b8043;"></photo-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
                                             </div>
                                         </td>
