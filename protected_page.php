@@ -40,6 +40,15 @@ include_once 'includes/functions.php';
         <link rel="import" href="bower_components/paper-datatable-api/paper-datatable-api.html">
         <link rel="import" href="my-menu.html">
         <link rel="stylesheet" href="teststyle.css" />
+
+        <script>
+            $(document).ready(function(){
+                $(".submit").click(function() {
+                    $(".getphoto").trigger('click').trigger('touchdown');
+                });
+            });
+        </script>
+
     </head>
     <body style="margin:0; padding:0; width:100%; height:100%;">
         <?php/* if (login_check($mysqli) == true) : */?>
@@ -54,12 +63,6 @@ include_once 'includes/functions.php';
 				var openDialogId;
 				var oldMarker;
 				var markers = [];
-
-                $(document).ready(function(){
-                    $(".submit").click(function() {
-                        $(".getphoto").trigger('click').trigger('touchdown');
-                    });
-                });
 
 				function addAllMarkers(){
 					$.ajax ( {
