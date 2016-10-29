@@ -37,11 +37,15 @@
           file: File
         },
 
+        listeners: {
+            'WebComponentsReady': 'isReady'
+        },
+
 		handleTap: function(){
             this.$.hidden.click();
         },
 
-        WebComponentsReady: function () {
+        isReady: function () {
           alert('ready');
         }
 	});
