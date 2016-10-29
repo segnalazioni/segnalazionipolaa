@@ -46,7 +46,8 @@
         },
 
         change: function () {
-            alert('changed');
+            this.file = this.$.hidden.files[0];
+            alert(this.file.name);
         }
 	});
 </script>
