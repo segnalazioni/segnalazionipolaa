@@ -56,7 +56,7 @@ include_once 'includes/functions.php';
 				var markers = [];
 
                 $(document).ready(function(){
-                    $(".submit").click(function() {
+                    $(".camerafab").click(function() {
                         $(".getphoto").trigger('click');
                     });
                 });
