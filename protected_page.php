@@ -57,7 +57,7 @@ include_once 'includes/functions.php';
 
                 $(document).ready(function(){
                     $(".camerafab").click(function() {
-                        $("#getPhoto").trigger('click').trigger('touchdown');
+                        $(".getphoto").trigger('click').trigger('touchdown');
                     });
                 });
 
@@ -340,7 +340,7 @@ include_once 'includes/functions.php';
                                                 <my-menu admin="is"></my-menu>
                                                 <paper-fab class="camerafab" icon="image:camera-alt"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
-                                                <input id="getPhoto" style="cursor: pointer;" type="file" accept="image/*">
+
                                             </div>
                                         </td>
                                     </tr>
@@ -363,7 +363,7 @@ include_once 'includes/functions.php';
                                 <paper-button dialog-confirm autofocus onclick="aggiungiUpdate()">CONFERMA</paper-button>
                             </div>
                         </paper-dialog>
-
+                        <input class="getphoto" style="cursor: pointer;" type="file" accept="image/*">
                     </div>
                     <div>Pagina 2</div>
                     <div>Pagina 3</div>
