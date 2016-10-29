@@ -366,7 +366,7 @@ include_once 'includes/functions.php';
                                 <paper-button dialog-confirm autofocus onclick="aggiungiUpdate()">CONFERMA</paper-button>
                             </div>
                         </paper-dialog>
-                        <input class="getphoto" type="file" accept="image/*"/>
+                        <input class="getphoto" type="file" style="display: none;" accept="image/*"/>
                         <input type="button" class="submit" value="hell"/>
                     </div>
                     <div>Pagina 2</div>
