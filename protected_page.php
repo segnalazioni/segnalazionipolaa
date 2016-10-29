@@ -55,11 +55,18 @@ include_once 'includes/functions.php';
 				var oldMarker;
 				var markers = [];
 
-                alert("before");
-                $("#camerafab").click(function() {
+                $(document).ready(function(){
+                    alert('before');
+                    $('#camerafab').on('click touchstart', function(e){
+                        e.stopPropagation();
+                        $('#getPhoto').trigger('click');
+                    });
+
+                });
+                /*$("#camerafab").click(function() {
                         alert("here");
                         $("#getPhoto").click();
-                });
+                });*/
 
 				function addAllMarkers(){
 					$.ajax ( {
