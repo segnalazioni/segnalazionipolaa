@@ -52,6 +52,8 @@ include_once 'includes/functions.php';
     </head>
     <body style="margin:0; padding:0; width:100%; height:100%;">
         <?php/* if (login_check($mysqli) == true) : */?>
+        <input class="getphoto" type="file" style="display: none;" accept="image/*"/>
+        <input type="button" class="submit" value="hell"/>
         <template is="dom-bind" id="scope">
         	<script>
 
@@ -366,8 +368,7 @@ include_once 'includes/functions.php';
                                 <paper-button dialog-confirm autofocus onclick="aggiungiUpdate()">CONFERMA</paper-button>
                             </div>
                         </paper-dialog>
-                        <input class="getphoto" type="file" style="display: none;" accept="image/*"/>
-                        <input type="button" class="submit" value="hell"/>
+
                     </div>
                     <div>Pagina 2</div>
                     <div>Pagina 3</div>

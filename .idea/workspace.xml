@@ -2,8 +2,7 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/style.css" line="31" />
-    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="350" />
-    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="368" />
+    <bookmark url="file://$PROJECT_DIR$/protected_page.php" line="352" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3760ee1e-a1f7-426c-89a9-8a55df471f6f" name="Default" comment="">
@@ -85,15 +84,15 @@
       <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="373" column="29" selection-start-line="373" selection-start-column="29" selection-end-line="373" selection-end-column="29" />
+            <state relative-caret-position="604">
+              <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1477707346052" expanded="true" signature="4011:4030" ph="..." />
-                <marker date="1477707346052" expanded="true" signature="4961:4998" ph="..." />
-                <marker date="1477707346052" expanded="true" signature="8700:8719" ph="..." />
-                <marker date="1477707346052" expanded="true" signature="8781:8818" ph="..." />
+                <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1477707482626" expanded="true" signature="4156:4175" ph="..." />
+                <marker date="1477707482626" expanded="true" signature="5106:5143" ph="..." />
+                <marker date="1477707482626" expanded="true" signature="8845:8864" ph="..." />
+                <marker date="1477707482626" expanded="true" signature="8926:8963" ph="..." />
               </folding>
             </state>
           </provider>
@@ -337,12 +336,12 @@
       <workItem from="1476535658479" duration="6635000" />
       <workItem from="1477528255495" duration="9682000" />
       <workItem from="1477580864297" duration="34978000" />
-      <workItem from="1477698132543" duration="7452000" />
+      <workItem from="1477698132543" duration="7534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85093000" />
+    <option name="totallyTimeSpent" value="85175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-31" y="13" width="1684" height="1026" extended-state="0" />
@@ -399,11 +398,11 @@
           <caret line="319" column="77" selection-start-line="319" selection-start-column="77" selection-end-line="319" selection-end-column="77" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477707346052" expanded="true" signature="4011:4030" ph="..." />
-            <marker date="1477707346052" expanded="true" signature="4961:4998" ph="..." />
-            <marker date="1477707346052" expanded="true" signature="8700:8719" ph="..." />
-            <marker date="1477707346052" expanded="true" signature="8781:8818" ph="..." />
+            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1477707482626" expanded="true" signature="4156:4175" ph="..." />
+            <marker date="1477707482626" expanded="true" signature="5106:5143" ph="..." />
+            <marker date="1477707482626" expanded="true" signature="8845:8864" ph="..." />
+            <marker date="1477707482626" expanded="true" signature="8926:8963" ph="..." />
           </folding>
         </state>
       </provider>
@@ -775,15 +774,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="373" column="29" selection-start-line="373" selection-start-column="29" selection-end-line="373" selection-end-column="29" />
+        <state relative-caret-position="604">
+          <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#iron-pages#0;n#template#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477707346052" expanded="true" signature="4011:4030" ph="..." />
-            <marker date="1477707346052" expanded="true" signature="4961:4998" ph="..." />
-            <marker date="1477707346052" expanded="true" signature="8700:8719" ph="..." />
-            <marker date="1477707346052" expanded="true" signature="8781:8818" ph="..." />
+            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1477707482626" expanded="true" signature="4156:4175" ph="..." />
+            <marker date="1477707482626" expanded="true" signature="5106:5143" ph="..." />
+            <marker date="1477707482626" expanded="true" signature="8845:8864" ph="..." />
+            <marker date="1477707482626" expanded="true" signature="8926:8963" ph="..." />
           </folding>
         </state>
       </provider>
