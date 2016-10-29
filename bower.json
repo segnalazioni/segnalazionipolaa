@@ -42,6 +42,14 @@
     "paper-item": "PolymerElements/paper-item#1.0.0",
     "paper-listbox": "polymerelements/paper-listbox#1.0.0",
     "paper-menu": "PolymerElements/paper-menu#1.0.0",
-    "iron-media-query": "PolymerElements/iron-media-query#^1.0.8"
+    "iron-media-query": "PolymerElements/iron-media-query#^1.0.8",
+    "paper-datatable": "^0.9.8"
+  },
+  "resolutions": {
+    "polymer": "^1.5.0",
+    "iron-form": "^1.1.4",
+    "paper-styles": "^1.1.4",
+    "paper-icon-button": "1.1.2",
+    "paper-item": "~1.0.5"
   }
 }

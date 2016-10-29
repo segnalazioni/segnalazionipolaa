@@ -37,7 +37,10 @@ include_once 'includes/functions.php';
         <link rel="import" href="bower_components/iron-list/iron-list.html">
         <link rel="import" href="bower_components/iron-pages/iron-pages.html">
         <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
-        <link rel="import" href="bower_components/paper-datatable-api/paper-datatable-api.html">
+        <link rel="import" href="bower_components/paper-datatable/paper-datatable.html">
+        <link rel="import" href="bower_components/paper-datatable/paper-datatable-column.html">
+        <link rel="import" href="bower_components/paper-datatable/paper-datatable-card.html">
+        <link rel="import" href="bower_components/paper-datatable/paper-datatable-styles.html">
         <link rel="import" href="my-menu.html">
         <link rel="import" href="photo-fab.html">
         <link rel="stylesheet" href="teststyle.css" />
@@ -98,18 +101,10 @@ include_once 'includes/functions.php';
 													'last-response="{{data}}"'+
 													'debounce-duration="300">'+
 											  '</iron-ajax>'+
-											  '<paper-datatable-api data="[[data]]">'+
-												  '<paper-datatable-api-column header="Fruit" property="fruit">'+
-													'<template>'+
-													  '<span>{{value}}</span>'+
-													'</template>'+
-												  '</paper-datatable-api-column>'+
-												  '<paper-datatable-api-column header="Color" property="color">'+
-													'<template>'+
-													  '<span>{{value}}</span>'+
-													'</template>'+
-												  '</paper-datatable-api-column>'+
-												'</paper-datatable-api></template>'+
+											  '<paper-datatable data="{{data}}" selectable multi-selection>'+
+                                                '<paper-datatable-column header="Title" property="title" sortable></paper-datatable-column>'+
+                                                '</paper-datatable>'+
+                                                '</template>'+
 												'<div style="position:absolute; right:0; bottom:0;"><paper-button onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
 											  '<paper-button onclick="clickedclose('+id+', this)">'+button+'</paper-button>'+
 											  '</div></div>'+
