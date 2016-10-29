@@ -55,12 +55,10 @@ include_once 'includes/functions.php';
 				var oldMarker;
 				var markers = [];
 
-                function clickit(){
-                    $("#camerafab").click(function() {
+                $("#camerafab").click(function() {
                         alert("here");
                         $("#getPhoto").click();
-                    })
-                }
+                });
 
 				function addAllMarkers(){
 					$.ajax ( {
@@ -339,7 +337,7 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu admin="is"></my-menu>
-                                                <paper-fab class="camerafab" icon="image:camera-alt" onclick="clickit()"></paper-fab>
+                                                <paper-fab class="camerafab" icon="image:camera-alt"></paper-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
                                                 <input id="getPhoto" style="cursor: pointer;" type="file" accept="image/*">
                                             </div>
