@@ -39,12 +39,13 @@ include_once 'includes/functions.php';
         <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
         <link rel="import" href="bower_components/paper-datatable-api/paper-datatable-api.html">
         <link rel="import" href="my-menu.html">
+        <link rel="import" href="photo-fab.html">
         <link rel="stylesheet" href="teststyle.css" />
 
         <script>
             $(document).ready(function(){
                 $(".submit").click(function() {
-                    $(".getphoto").trigger('click');
+                    $(".getaphoto").trigger('click');
                 });
             });
         </script>
@@ -52,7 +53,7 @@ include_once 'includes/functions.php';
     </head>
     <body style="margin:0; padding:0; width:100%; height:100%;">
         <?php/* if (login_check($mysqli) == true) : */?>
-        <input class="getphoto" type="file" style="display: none;" accept="image/*"/>
+        <input class="getaphoto" type="file" style="display: none;" accept="image/*"/>
         <input type="button" class="submit" value="hell"/>
         <template is="dom-bind" id="scope">
         	<script>
@@ -343,7 +344,7 @@ include_once 'includes/functions.php';
                                             <div style="width: 100%; height: 100%; position: relative;">
                                                 <div id="map-dialog" style="width: 100%; height: 100%;"></div>
                                                 <my-menu admin="is"></my-menu>
-                                                <paper-fab class="camerafab" icon="image:camera-alt"></paper-fab>
+                                                <photo-fab class="camerafab"></photo-fab>
                                                 <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
 
                                             </div>
