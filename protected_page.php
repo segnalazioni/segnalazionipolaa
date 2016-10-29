@@ -56,12 +56,6 @@ include_once 'includes/functions.php';
 				var oldMarker;
 				var markers = [];
 
-                $(document).ready(function(){
-                    $(".camerafab").click(function() {
-                        $(".getphoto").trigger('click');
-                    });
-                });
-
 				function addAllMarkers(){
 					$.ajax ( {
 						url: 'get-markers.php',
