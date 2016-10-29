@@ -55,6 +55,7 @@ include_once 'includes/functions.php';
 				var oldMarker;
 				var markers = [];
 
+                alert("before");
                 $("#camerafab").click(function() {
                         alert("here");
                         $("#getPhoto").click();
