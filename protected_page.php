@@ -101,9 +101,9 @@ include_once 'includes/functions.php';
 													'last-response="{{data}}"'+
 													'debounce-duration="300">'+
 											  '</iron-ajax>'+
-											  '<paper-datatable data="{{data}}" selectable multi-selection>'+
+											  '<paper-datatable-card><paper-datatable data="{{data}}" selectable multi-selection>'+
                                                 '<paper-datatable-column header="Title" property="title" sortable></paper-datatable-column>'+
-                                                '</paper-datatable>'+
+                                                '</paper-datatable></paper-datatable-card>'+
                                                 '</template>'+
 												'<div style="position:absolute; right:0; bottom:0;"><paper-button onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
 											  '<paper-button onclick="clickedclose('+id+', this)">'+button+'</paper-button>'+
