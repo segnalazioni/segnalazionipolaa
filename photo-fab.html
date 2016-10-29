@@ -18,24 +18,25 @@
 
 <dom-module id="photo-fab">
 <style>
-    .camerafab{
+    #camera{
         --paper-fab-mini:true;
         cursor: pointer;
         background-color:#e1382d;
     }
-    .upload{
+    #hidden{
         display: none;
     }
 </style>
 <template>
-    <paper-fab id="camera" class="camerafab" icon="image:camera-alt" on-tap="handleTap"></paper-fab>
-    <input id="hidden" class="upload" type="file" accept="image/*"/>
+    <paper-fab id="camera" icon="image:camera-alt" on-tap="handleTap"></paper-fab>
+    <input id="hidden" type="file" accept="image/*"/>
 </template>
 <script>
 	Polymer({
 		is: 'photo-fab',
 
 		handleTap: function(){
+            alert('handling');
             this.$.hidden.click();
         }
 	});
