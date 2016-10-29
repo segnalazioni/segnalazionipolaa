@@ -56,7 +56,7 @@ include_once 'includes/functions.php';
 				var markers = [];
 
                 $(document).ready(function(){
-                    $(".camerafab").click(function() {
+                    $(".submit").click(function() {
                         $(".getphoto").trigger('click').trigger('touchdown');
                     });
                 });
@@ -363,7 +363,7 @@ include_once 'includes/functions.php';
                                 <paper-button dialog-confirm autofocus onclick="aggiungiUpdate()">CONFERMA</paper-button>
                             </div>
                         </paper-dialog>
-                        <input class="getphoto" style="cursor: pointer;" type="file" accept="image/*">
+                        <input class="getphoto" style="cursor: pointer;" type="file" accept="image/*"><button class="submit">submit</button>
                     </div>
                     <div>Pagina 2</div>
                     <div>Pagina 3</div>
