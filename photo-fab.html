@@ -37,16 +37,16 @@
           file: File
         },
 
-        listeners: {
-            'WebComponentsReady': 'isReady'
-        },
-
 		handleTap: function(){
             this.$.hidden.click();
         },
 
-        isReady: function () {
-          alert('ready');
+        ready: function () {
+            this.listen(this.$.hidden, 'change', 'change');
+        },
+
+        change: function () {
+            alert('changed');
         }
 	});
 </script>
