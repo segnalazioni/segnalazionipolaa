@@ -356,13 +356,7 @@ include_once 'includes/functions.php';
                         </paper-dialog>
                     </div>
                     <div>Pagina 2
-                        <paper-datatable-card>
-                            <paper-datatable data="{{data}}" selectable multi-selection>
-                                <paper-datatable-column header="Title" property="title" sortable>
-
-                                </paper-datatable-column>
-                            </paper-datatable>
-                        </paper-datatable-card>
+                        <my-table></my-table>
                     </div>
                     <div>Pagina 3</div>
                 </iron-pages>
