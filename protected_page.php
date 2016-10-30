@@ -356,6 +356,7 @@ include_once 'includes/functions.php';
                         </paper-dialog>
                     </div>
                     <div>Pagina 2
+                        <my-table></my-table>
                     </div>
                     <div>Pagina 3</div>
                 </iron-pages>
