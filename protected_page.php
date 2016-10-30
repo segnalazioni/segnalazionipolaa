@@ -101,14 +101,18 @@ include_once 'includes/functions.php';
 													'last-response="{{data}}"'+
 													'debounce-duration="300">'+
 											  '</iron-ajax>'+
+                                                '<table>'+
+                                                '<tr class="first-row">'+
 											  '<paper-datatable-card header="'+result[i].tipo+"  "+result[i].quando+'"><paper-datatable data="{{data}}" selectable multi-selection>'+
                                                 '<paper-datatable-column header="Data" property="data" sortable></paper-datatable-column>'+
                                                 '<paper-datatable-column header="Commento" property="commento" sortable></paper-datatable-column>'+
                                                 '</paper-datatable></paper-datatable-card>'+
+                                                '</tr>'+
                                                 '</template>'+
-												'<div style="position:absolute; right:0; bottom:0;"><paper-button onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
+                                                '<tr class="second-row">'+
+												'<div><paper-button onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
 											  '<paper-button onclick="clickedclose('+id+', this)">'+button+'</paper-button>'+
-											  '</div></div>'+
+											  '</div></tr></div>'+
 											  '</div>';
 									var infowindow = new google.maps.InfoWindow({
 										content: contentString
