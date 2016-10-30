@@ -89,10 +89,10 @@ include_once 'includes/functions.php';
 									var contentString = '<div id="content">'+
 											'<div id="siteNotice">'+
 											  '</div>'+
-											  '<h1 id="firstHeading" class="firstHeading">'+result[i].tipo+"  "+result[i].quando+'</h1>'+
+											  /*'<h1 id="firstHeading" class="firstHeading">'+result[i].tipo+"  "+result[i].quando+'</h1>'+
 											  '<div id="bodyContent" style="margin-bottom:40px;">'+
 											  result[i].descrizione+
-											  '<br/>'+
+											  '<br/>'+*/
 											  '<template is="dom-bind"><iron-ajax'+
 													'auto'+
 													'url="get-status.php"'+
@@ -101,7 +101,7 @@ include_once 'includes/functions.php';
 													'last-response="{{data}}"'+
 													'debounce-duration="300">'+
 											  '</iron-ajax>'+
-											  '<paper-datatable-card><paper-datatable data="{{data}}" selectable multi-selection>'+
+											  '<paper-datatable-card header="'+result[i].tipo+"  "+result[i].quando+'"><paper-datatable data="{{data}}" selectable multi-selection>'+
                                                 '<paper-datatable-column header="Data" property="data" sortable></paper-datatable-column>'+
                                                 '<paper-datatable-column header="Commento" property="commento" sortable></paper-datatable-column>'+
                                                 '</paper-datatable></paper-datatable-card>'+
