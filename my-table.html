@@ -26,8 +26,8 @@
 
 </style>
 <template>
-    <paper-datatable-card page-size="2" header="{{mHeader}}">
-        <paper-datatable data="{{data}}">
+    <paper-datatable-card page-size="2" id-property="id" header="{{mHeader}}">
+        <paper-datatable data="{{data}}" selectable multi-selection>
             <paper-datatable-column header="Data" property="data" sortable>
             </paper-datatable-column>
             <paper-datatable-column header="Commento" property="commento" sortable>
