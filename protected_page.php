@@ -120,7 +120,7 @@ include_once 'includes/functions.php';
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
-												'<div><paper-button onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
+												'<div style="right: 0;"><paper-button onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
 											  '<paper-button onclick="clickedclose('+id+', this)">'+button+'</paper-button>'+
 											  '</div></tr></div>'+
 											  '</div>';
