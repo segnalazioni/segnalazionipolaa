@@ -40,6 +40,7 @@ include_once 'includes/functions.php';
         <link rel="import" href="bower_components/paper-datatable/paper-datatable.html">
         <link rel="import" href="bower_components/paper-datatable/paper-datatable-column.html">
         <link rel="import" href="bower_components/paper-datatable/paper-datatable-card.html">
+        <link rel="import" href="bower_components/paper-datatable/my-datatable-card.html">
         <link rel="import" href="bower_components/paper-datatable/paper-datatable-styles.html">
         <link rel="import" href="my-menu.html">
         <link rel="import" href="photo-fab.html">
@@ -103,10 +104,10 @@ include_once 'includes/functions.php';
 											  '</iron-ajax>'+
                                                 '<table>'+
                                                 '<tr class="first-row">'+
-											  '<paper-datatable-card header="'+result[i].tipo+"  "+result[i].quando+'"><paper-datatable data="{{data}}" selectable multi-selection>'+
+											  '<my-datatable-card header="'+result[i].tipo+"  "+result[i].quando+'"><paper-datatable data="{{data}}" selectable multi-selection>'+
                                                 '<paper-datatable-column header="Data" property="data" sortable></paper-datatable-column>'+
                                                 '<paper-datatable-column header="Commento" property="commento" sortable></paper-datatable-column>'+
-                                                '</paper-datatable></paper-datatable-card>'+
+                                                '</paper-datatable></my-datatable-card>'+
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
