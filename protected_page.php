@@ -43,6 +43,7 @@ include_once 'includes/functions.php';
         <link rel="import" href="bower_components/paper-datatable/my-datatable-card.html">
         <link rel="import" href="bower_components/paper-datatable/paper-datatable-styles.html">
         <link rel="import" href="my-menu.html">
+        <link rel="import" href="my-table.html">
         <link rel="import" href="photo-fab.html">
         <link rel="stylesheet" href="teststyle.css" />
     </head>
@@ -90,10 +91,6 @@ include_once 'includes/functions.php';
 									var contentString = '<div id="content">'+
 											'<div id="siteNotice">'+
 											  '</div>'+
-											  /*'<h1 id="firstHeading" class="firstHeading">'+result[i].tipo+"  "+result[i].quando+'</h1>'+
-											  '<div id="bodyContent" style="margin-bottom:40px;">'+
-											  result[i].descrizione+
-											  '<br/>'+*/
 											  '<template is="dom-bind"><iron-ajax'+
 													'auto'+
 													'url="get-status.php"'+
@@ -104,10 +101,7 @@ include_once 'includes/functions.php';
 											  '</iron-ajax>'+
                                                 '<table>'+
                                                 '<tr class="first-row">'+
-											  '<my-datatable-card header="'+result[i].tipo+"  "+result[i].quando+'"><paper-datatable data="{{data}}" selectable multi-selection>'+
-                                                '<paper-datatable-column header="Data" property="data" sortable></paper-datatable-column>'+
-                                                '<paper-datatable-column header="Commento" property="commento" sortable></paper-datatable-column>'+
-                                                '</paper-datatable></my-datatable-card>'+
+											        '<my-table></my-table>'+
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
@@ -380,17 +374,6 @@ include_once 'includes/functions.php';
 			</script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnZ5kvHIKRf_01L41sB9lCdv_xijlwHSs&callback=initMap" async defer></script>
         </template>
-        <script>
-            var app = document.querySelector('#scope');
-            app.data = [
-                {data: 20-08-1994, commento: 'Frozen yogurt'},
-                {data: 20-09-1940, commento: 'Ice cream sandwich'},
-                {data: 24-03-2015, commento: 'Eclair'},
-                {data: 10-01-2090, commento: 'Cupcake'},
-                {data: 01-12-2019, commento: 'Gingerbread'},
-                {data: 05-05-2005, commento: 'Jelly bean'}
-            ];
-        </script>
         <?php /*else : */?><!--
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
