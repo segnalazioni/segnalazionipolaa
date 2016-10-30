@@ -15,13 +15,13 @@
 }
 
 .first-row{
-	height: -webkit-calc(100% - 60pt);
-	height:    -moz-calc(100% - 60pt);
-	height:         calc(100% - 60pt);
+	height: -webkit-calc(100% - 70pt);
+	height:    -moz-calc(100% - 70pt);
+	height:         calc(100% - 70pt);
 }
 
 .second-row{
-	height: 60pt;
+	height: 70pt;
 }
 
 .dialog-content{
