@@ -11,6 +11,7 @@
 <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="bower_components/paper-datatable/paper-datatable.html">
 <link rel="import" href="bower_components/paper-datatable/my-datatable-card.html">
+<link rel="import" href="bower_components/paper-datatable/paper-datatable-card.html">
 <link rel="import" href="bower_components/paper-datatable/paper-datatable-column.html">
 <link rel="import" href="bower_components/paper-item/paper-item.html">
 <link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
@@ -22,14 +23,14 @@
 
 </style>
 <template>
-    <my-datatable-card header="{{mHeader}}">
+    <paper-datatable-card pageSize="2" header="{{mHeader}}">
         <paper-datatable data="{{data}}" selectable multi-selection>
             <paper-datatable-column header="Data" property="data" sortable>
             </paper-datatable-column>
             <paper-datatable-column header="Commento" property="commento" sortable>
             </paper-datatable-column>
         </paper-datatable>
-    </my-datatable-card>
+    </paper-datatable-card>
 </template>
 
 </dom-module>
