@@ -49,24 +49,11 @@
 
 		ready: function() {
             this.mHeader = "test header";
-            this.data = [
-                {id:0, data: '20-08-1994', commento: 'Frozen yogurt'},
-                {id:1, data: '20-09-1940', commento: 'Ice cream sandwich'},
-                {id:2, data: '24-03-2015', commento: 'Eclair'},
-                {id:3, data: '10-01-2090', commento: 'Cupcake'},
-                {id:4, data: '01-12-2019', commento: 'Gingerbread'},
-                {id:5, data: '20-08-1994', commento: 'Frozen yogurt'},
-                {id:6, data: '20-09-1940', commento: 'Ice cream sandwich'},
-                {id:7, data: '24-03-2015', commento: 'Eclair'},
-                {id:8, data: '10-01-2090', commento: 'Cupcake'},
-                {id:9, data: '01-12-2019', commento: 'Gingerbread'},
-                {id:10, data: '20-08-1994', commento: 'Frozen yogurt'},
-                {id:11, data: '20-09-1940', commento: 'Ice cream sandwich'},
-                {id:12, data: '24-03-2015', commento: 'Eclair'},
-                {id:13, data: '10-01-2090', commento: 'Cupcake'},
-                {id:14, data: '01-12-2019', commento: 'Gingerbread'},
-                {id:15, data: '05-05-2005', commento: 'Jelly bean'}
-            ];
+            this.data = {
+                queryForIds: 16,
+                getByIds: [1, "data", "testo"],
+                length: 16
+            };
       	}
 	});
 </script>
