@@ -87,15 +87,6 @@ include_once 'includes/functions.php';
 										title: result[i].tipo+"  "+result[i].quando
 									});
 									markers[id] = marker;
-                                    var app = document.querySelector('#scope');
-                                    app.data = [
-                                        {data: 20-08-1994, commento: 'Frozen yogurt'},
-                                        {data: 20-09-1940, commento: 'Ice cream sandwich'},
-                                        {data: 24-03-2015, commento: 'Eclair'},
-                                        {data: 10-01-2090, commento: 'Cupcake'},
-                                        {data: 01-12-2019, commento: 'Gingerbread'},
-                                        {data: 05-05-2005, commento: 'Jelly bean'}
-                                    ];
 									var contentString = '<div id="content">'+
 											'<div id="siteNotice">'+
 											  '</div>'+
@@ -389,6 +380,17 @@ include_once 'includes/functions.php';
 			</script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnZ5kvHIKRf_01L41sB9lCdv_xijlwHSs&callback=initMap" async defer></script>
         </template>
+        <script>
+            var app = document.querySelector('#scope');
+            app.data = [
+                {data: 20-08-1994, commento: 'Frozen yogurt'},
+                {data: 20-09-1940, commento: 'Ice cream sandwich'},
+                {data: 24-03-2015, commento: 'Eclair'},
+                {data: 10-01-2090, commento: 'Cupcake'},
+                {data: 01-12-2019, commento: 'Gingerbread'},
+                {data: 05-05-2005, commento: 'Jelly bean'}
+            ];
+        </script>
         <?php /*else : */?><!--
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
