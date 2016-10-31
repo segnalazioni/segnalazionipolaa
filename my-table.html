@@ -55,7 +55,6 @@
                 data: {'id': this.mid},
                 success: function(data){
                     var result = JSON.parse(data);
-                    alert(result[0]['data']+" "+result[0]['commento']);
                     var myData = [];
                     for (var i=0; i<result.length; i++) {
                         myData.push({
