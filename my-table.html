@@ -81,20 +81,6 @@
                                 resolve(myData.slice((page-1)*pageSize, page*pageSize));
                             });
                         },
-                        set: function(item, property, value){
-                            return new Promise(function(resolve, reject){
-                                console.info("a save was triggered", [item, property, value]);
-                                if(item.id === '__new__'){
-                                }else{
-                                    var myItem = myData.find(function(thisItem){
-                                        return thisItem.id == item.id;
-                                    });
-                                    myItem[property] = value;
-                                    resolve(true);
-                                }
-                            });
-
-                        },
                         length:2
                     };
                     alert(this.data.length);
