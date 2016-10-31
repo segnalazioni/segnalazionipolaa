@@ -43,13 +43,11 @@
 		properties:{
 			data: Object,
             mHeader: String,
-            mid: Number,
-            app: this
+            mid: Number
 		},
 
 		ready: function() {
             this.mHeader = "test header";
-            this.app = this;
 
             $.ajax ( {
                 url: 'get-update.php',
@@ -60,13 +58,14 @@
                     var myData = [];
                     for (var i=0; i<result.length; i++) {
                         myData.push({
+                            id: i,
                             data: result[i]['data'],
                             commento: result[i]['commento']
                         });
                     }
                     window.myData = myData;
 
-                    this.app.data = {
+                    this.data = {
                         get: function(sort, page, pageSize){
                             console.log('just once? :/');
                             return new Promise(function(resolve, reject){
@@ -99,7 +98,6 @@
                         },
                         length:2
                     };
-                    alert(this.data.length);
                 }
             });
       	}
