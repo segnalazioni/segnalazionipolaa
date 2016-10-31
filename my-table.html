@@ -50,30 +50,84 @@
 		ready: function() {
             this.mHeader = "test header";
             this.data = {
-                get: function(sort, page, pageSize){
-                    return new Promise(function(resolve, reject){
-                        var httpRequest = new XMLHttpRequest();
-                        httpRequest.onreadystatechange = function() {
-                            if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                                if (httpRequest.status === 200) {
-                                    var result = JSON.parse(httpRequest.responseText);
-                                    var users = result.results.map(function(resultItem){
-                                        return resultItem.user;
-                                    });
-                                    resolve(users);
-                                }
-                            }
-                        };
-                        httpRequest.open('GET', 'http://api.randomuser.me/?nat=US&results='+pageSize);
-                        httpRequest.send();
-                    });
-                },
-                // none of the <templates> bind in an editable way right now, but if they would this is the function
-                // that's triggered after an edit
-                set: function(id, property, value){
-                    console.info("a save was triggered", arguments);
-                },
-                length:100
+                get: [
+                    {
+                        "id": 0,
+                        "commento": "Culpa exercitation eu laborum velit eiusmod aute. Laboris nisi reprehenderit labore reprehenderit ea anim sit non aliquip non. Dolor commodo reprehenderit amet quis velit exercitation nostrud culpa labore Lorem et dolore. Laboris voluptate et occaecat magna commodo irure deserunt ea ut reprehenderit.\r\n",
+                        "data": "2016-06-03T06:33:48 -02:00"
+                    },
+                    {
+                        "id": 1,
+                        "commento": "Culpa exercitation ullamco officia ex reprehenderit irure. Sit veniam mollit ullamco minim nisi incididunt cillum irure in laborum. Adipisicing irure nostrud proident minim sint aliquip eu ea tempor. Id veniam adipisicing in sunt aliquip in officia esse fugiat est. Aliqua sit ut irure officia irure nisi amet mollit Lorem nisi ullamco est magna. Irure qui do dolor occaecat anim enim.\r\n",
+                        "data": "2015-04-20T06:40:50 -02:00"
+                    },
+                    {
+                        "id": 2,
+                        "commento": "Quis sint dolor id consectetur laborum quis nisi Lorem in ad aute reprehenderit consequat. Id tempor enim voluptate minim laboris nisi reprehenderit est elit cillum eu. Dolore esse cillum mollit adipisicing deserunt dolore dolor irure ut elit. In enim nulla incididunt ex elit adipisicing dolore proident dolore excepteur. Excepteur officia sunt dolore quis. Id sunt officia dolor aliquip incididunt irure consectetur elit consequat. Occaecat consequat consequat et laborum do ea veniam officia nostrud culpa cillum enim sit.\r\n",
+                        "data": "2015-11-26T12:36:36 -01:00"
+                    },
+                    {
+                        "id": 3,
+                        "commento": "Eiusmod do ut Lorem elit reprehenderit dolor. Cillum commodo excepteur eu cillum minim quis ullamco. Deserunt aute reprehenderit laborum velit laboris culpa ex nulla nulla incididunt. Occaecat laborum Lorem incididunt ullamco reprehenderit excepteur non esse eiusmod officia veniam et. Velit laborum qui elit magna ut in ad reprehenderit cupidatat id aliqua quis et occaecat. In voluptate ea adipisicing enim est reprehenderit duis. Culpa ut proident culpa velit ea sunt quis ex ad eiusmod minim quis.\r\n",
+                        "data": "2016-05-20T04:02:11 -02:00"
+                    },
+                    {
+                        "id": 4,
+                        "commento": "Elit mollit consequat veniam sit tempor laboris Lorem dolor excepteur mollit nostrud sit. Labore minim minim eiusmod tempor sint nisi anim veniam dolore minim deserunt ex. Lorem nisi consectetur id reprehenderit. Lorem sunt sunt culpa quis do sunt culpa culpa laboris sunt veniam quis eu.\r\n",
+                        "data": "2014-01-03T01:48:16 -01:00"
+                    },
+                    {
+                        "id": 5,
+                        "commento": "Consectetur qui ipsum et est laborum anim. Eiusmod occaecat ea dolore eiusmod esse minim ut commodo duis non. Magna ea est magna elit qui deserunt magna. Veniam et proident magna reprehenderit excepteur commodo.\r\n",
+                        "data": "2015-09-10T07:29:56 -02:00"
+                    },
+                    {
+                        "id": 6,
+                        "commento": "Quis est pariatur qui mollit cillum qui cillum reprehenderit in id veniam occaecat magna. Ad consectetur incididunt ea eiusmod sint. Aliqua quis cupidatat aute culpa tempor. Velit officia non nulla nostrud ad reprehenderit aliqua et anim fugiat tempor. Laborum duis ullamco ullamco anim ad dolor ipsum tempor elit adipisicing.\r\n",
+                        "data": "2014-07-13T01:36:43 -02:00"
+                    },
+                    {
+                        "id": 7,
+                        "commento": "Magna et nulla eu proident occaecat occaecat aliqua. Exercitation voluptate dolore ex eiusmod. Esse aliquip magna laborum id cupidatat velit sint adipisicing proident sunt aliqua nulla sint tempor. Mollit minim consequat ex eu officia tempor ea nulla qui mollit ut cillum magna. Tempor aute et cillum aliquip fugiat eu culpa aute fugiat quis. Qui do velit duis Lorem ex.\r\n",
+                        "data": "2014-07-24T10:31:05 -02:00"
+                    },
+                    {
+                        "id": 8,
+                        "commento": "Aute adipisicing ex aute deserunt reprehenderit irure aliquip exercitation nisi enim. Cillum consequat aliqua cupidatat sint eu incididunt ex labore. Sunt sint esse pariatur quis anim aute ipsum aliqua anim.\r\n",
+                        "data": "2015-09-13T11:43:23 -02:00"
+                    },
+                    {
+                        "id": 9,
+                        "commento": "Occaecat nostrud Lorem velit in voluptate duis fugiat tempor. Enim cillum elit eiusmod dolore minim enim do proident fugiat. Tempor consequat laborum ex aute exercitation excepteur pariatur.\r\n",
+                        "data": "2016-03-05T08:02:21 -01:00"
+                    },
+                    {
+                        "id": 10,
+                        "commento": "Elit ex excepteur pariatur eu eiusmod. Sint Lorem aute officia commodo do ad excepteur esse in commodo labore et laborum. Aliquip adipisicing minim aliquip voluptate. Incididunt ut dolore adipisicing esse amet excepteur nulla consectetur. Culpa elit esse non excepteur commodo aliquip nostrud consequat nulla velit cillum nostrud Lorem. Adipisicing commodo commodo minim labore eiusmod ex culpa.\r\n",
+                        "data": "2015-01-23T09:25:14 -01:00"
+                    },
+                    {
+                        "id": 11,
+                        "commento": "Ad et nostrud cillum laborum duis occaecat cillum. Fugiat cupidatat ad consectetur enim officia veniam anim officia eu amet laboris enim qui ullamco. Amet ad ipsum ex cupidatat proident. Consequat aliquip exercitation incididunt sit.\r\n",
+                        "data": "2016-09-19T12:57:28 -02:00"
+                    },
+                    {
+                        "id": 12,
+                        "commento": "Incididunt eu exercitation culpa amet nulla voluptate aute ut ut reprehenderit cupidatat fugiat irure. Magna ad excepteur est excepteur tempor dolor ullamco minim veniam dolor excepteur. Reprehenderit ad amet officia minim officia commodo. Voluptate consequat in nostrud irure occaecat culpa.\r\n",
+                        "data": "2015-09-25T06:35:35 -02:00"
+                    },
+                    {
+                        "id": 13,
+                        "commento": "Dolore pariatur labore amet duis. Sit excepteur excepteur mollit nulla ad dolore non. Cillum excepteur esse nisi eu est aliquip. Sunt laboris occaecat irure consequat quis.\r\n",
+                        "data": "2015-10-13T11:11:46 -02:00"
+                    },
+                    {
+                        "id": 14,
+                        "commento": "Elit voluptate elit labore Lorem ea amet non Lorem occaecat. Nisi eiusmod incididunt tempor cupidatat aliqua proident duis occaecat fugiat officia laborum non. Voluptate nostrud adipisicing incididunt elit exercitation ad quis. Duis eu est culpa enim. Laborum dolore ut aute et officia est duis. In deserunt elit dolore veniam aute anim ut nostrud consectetur magna.\r\n",
+                        "data": "2015-09-21T11:55:02 -02:00"
+                    }
+                ],
+                length:15
             };
       	}
 	});
