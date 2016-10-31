@@ -64,42 +64,44 @@
                     }
                     window.myData = myData;
 
-                    this.data = {
-                        get: function(sort, page, pageSize){
-                            console.log('just once? :/');
-                            return new Promise(function(resolve, reject){
-                                myData.sort(function(a,b){
-                                    if(sort.direction == "desc"){
-                                        var c = a;
-                                        a = b;
-                                        b = c;
-                                    }
-                                    if(a[sort.property] > b[sort.property]) return 1;
-                                    if(a[sort.property] < b[sort.property]) return -1;
-                                    return 0;
-                                });
-                                resolve(myData.slice((page-1)*pageSize, page*pageSize));
-                            });
-                        },
-                        set: function(item, property, value){
-                            return new Promise(function(resolve, reject){
-                                console.info("a save was triggered", [item, property, value]);
-                                if(item.id === '__new__'){
-                                }else{
-                                    var myItem = myData.find(function(thisItem){
-                                        return thisItem.id == item.id;
-                                    });
-                                    myItem[property] = value;
-                                    resolve(true);
-                                }
-                            });
 
-                        },
-                        length:myData.length
-                    };
                     alert(this.data.length);
                 }
             });
+
+            this.data = {
+                get: function(sort, page, pageSize){
+                    console.log('just once? :/');
+                    return new Promise(function(resolve, reject){
+                        myData.sort(function(a,b){
+                            if(sort.direction == "desc"){
+                                var c = a;
+                                a = b;
+                                b = c;
+                            }
+                            if(a[sort.property] > b[sort.property]) return 1;
+                            if(a[sort.property] < b[sort.property]) return -1;
+                            return 0;
+                        });
+                        resolve(myData.slice((page-1)*pageSize, page*pageSize));
+                    });
+                },
+                set: function(item, property, value){
+                    return new Promise(function(resolve, reject){
+                        console.info("a save was triggered", [item, property, value]);
+                        if(item.id === '__new__'){
+                        }else{
+                            var myItem = myData.find(function(thisItem){
+                                return thisItem.id == item.id;
+                            });
+                            myItem[property] = value;
+                            resolve(true);
+                        }
+                    });
+
+                },
+                length:myData.length
+            };
       	}
 	});
 </script>
