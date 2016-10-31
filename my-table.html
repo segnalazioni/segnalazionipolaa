@@ -56,7 +56,7 @@
                 data: {'id': this.id},
                 success: function(data){
                     var result = JSON.parse(data);
-                    alert(result);
+                    alert(result[0]['data']+" "+result[0]['commento']);
                 }
             });
 
