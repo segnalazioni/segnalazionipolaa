@@ -56,11 +56,11 @@
                 success: function(data){
                     var result = JSON.parse(data);
                     var myData = [];
-                    for (var i=0; i<result.length; i++) {
+                    for (var i=0; i<15; i++) {
                         myData.push({
                             id: i,
-                            data: result[i]['data'],
-                            commento: result[i]['commento']
+                            data: "data",
+                            commento: "commento"
                         });
                     }
                     window.myData = myData;
