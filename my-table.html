@@ -27,11 +27,9 @@
 <template>
     <my-datatable-card page-size="2" data-source="{{data}}" id-property="id" header="{{mHeader}}">
         <paper-datatable resize-behavior="dynamic-columns">
-            <paper-datatable-column header="ID" property="id" sortable>
+            <paper-datatable-column resize-priority="-1" width="80pt" header="Data" property="data" sortable>
             </paper-datatable-column>
-            <paper-datatable-column header="Data" property="data" sortable>
-            </paper-datatable-column>
-            <paper-datatable-column header="Commento" property="commento" sortable>
+            <paper-datatable-column resize-priority="-1" header="Commento" property="commento" sortable>
             </paper-datatable-column>
         </paper-datatable>
     </my-datatable-card>
