@@ -32,6 +32,28 @@
 	width: 100%;
 }
 
+paper-button.custom:hover {
+	background-color: var(--paper-indigo-100);
+}
+
+paper-button.white {
+	background-color: white;
+	color: #555555;
+	--paper-button-raised-keyboard-focus: {
+		background-color: var(--paper-pink-a200) !important;
+		color: white !important;
+	};
+}
+
+paper-button.indigo {
+	background-color: var(--paper-indigo-500);
+	color: white;
+	--paper-button-raised-keyboard-focus: {
+		background-color: var(--paper-pink-a200) !important;
+		color: white !important;
+	};
+}
+
 .dialog-content{
 	height: -webkit-calc(100% - 70px);
 	height:    -moz-calc(100% - 70px);
