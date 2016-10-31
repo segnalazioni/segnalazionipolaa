@@ -43,11 +43,13 @@
 		properties:{
 			data: Object,
             mHeader: String,
-            mid: Number
+            mid: Number,
+            app: this
 		},
 
 		ready: function() {
             this.mHeader = "test header";
+            this.app = this;
 
             $.ajax ( {
                 url: 'get-update.php',
@@ -64,7 +66,7 @@
                     }
                     window.myData = myData;
 
-                    this.data = {
+                    app.data = {
                         get: function(sort, page, pageSize){
                             console.log('just once? :/');
                             return new Promise(function(resolve, reject){
@@ -80,6 +82,20 @@
                                 });
                                 resolve(myData.slice((page-1)*pageSize, page*pageSize));
                             });
+                        },
+                        set: function(item, property, value){
+                            return new Promise(function(resolve, reject){
+                                console.info("a save was triggered", [item, property, value]);
+                                if(item.id === '__new__'){
+                                }else{
+                                    var myItem = myData.find(function(thisItem){
+                                        return thisItem.id == item.id;
+                                    });
+                                    myItem[property] = value;
+                                    resolve(true);
+                                }
+                            });
+
                         },
                         length:2
                     };
