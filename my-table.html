@@ -49,7 +49,6 @@
 
 		ready: function() {
             this.mHeader = "test header";
-            var app = document.querySelector('#app');
 
             var myData = [];
             for (var i=0; i<142; i++) {
@@ -63,7 +62,7 @@
             }
             window.myData = myData;
 
-            app.data = {
+            this.data = {
                 get: function(sort, page, pageSize){
                     console.log('just once? :/');
                     return new Promise(function(resolve, reject){
