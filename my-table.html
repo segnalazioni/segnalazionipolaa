@@ -57,7 +57,6 @@
                     var result = JSON.parse(data);
                     var myData = [];
                     for (var i=0; i<result.length; i++) {
-                        alert(result[i]['data']+"  "+result[i]['commento']);
                         myData.push({
                             data: result[i]['data'],
                             commento: result[i]['commento']
@@ -98,6 +97,7 @@
                         },
                         length:myData.length
                     };
+                    alert(this.data.length);
                 }
             });
       	}
