@@ -52,12 +52,12 @@
 
             var myData = [];
             for (var i=0; i<142; i++) {
-                var id = i*10000+Math.round(Math.random() * 500);
+                var id = Math.random() * 24;
                 var rating = Math.round(Math.random() * 2000)+1000;
                 myData.push({
                     id: i,
-                    data: "title"+id,
-                    commento: "Mulder "+ i
+                    data: "20-08-2016 "+id+":00",
+                    commento: "Segnalazione confermata "+ i
                 });
             }
             window.myData = myData;
