@@ -50,8 +50,30 @@
 		ready: function() {
             this.mHeader = "test header";
             this.data = {
-                get: [1, "data", "testo"],
-                length: 8
+                get: function(sort, page, pageSize){
+                    return new Promise(function(resolve, reject){
+                        var httpRequest = new XMLHttpRequest();
+                        httpRequest.onreadystatechange = function() {
+                            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                                if (httpRequest.status === 200) {
+                                    var result = JSON.parse(httpRequest.responseText);
+                                    var users = result.results.map(function(resultItem){
+                                        return resultItem.user;
+                                    });
+                                    resolve(users);
+                                }
+                            }
+                        };
+                        httpRequest.open('GET', 'http://api.randomuser.me/?nat=US&results='+pageSize);
+                        httpRequest.send();
+                    });
+                },
+                // none of the <templates> bind in an editable way right now, but if they would this is the function
+                // that's triggered after an edit
+                set: function(id, property, value){
+                    console.info("a save was triggered", arguments);
+                },
+                length:100
             };
       	}
 	});
