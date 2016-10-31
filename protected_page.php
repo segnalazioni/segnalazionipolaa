@@ -101,7 +101,7 @@ include_once 'includes/functions.php';
 											  '</iron-ajax>'+
                                                 '<table class="m-table">'+
                                                 '<tr class="first-row">'+
-											        '<my-table style="width:100%;"></my-table>'+
+											        '<my-table mid="'+id+'" style="width:100%;"></my-table>'+
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
