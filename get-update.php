@@ -12,13 +12,13 @@
 
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()) {
-				$output[$i]['latitudine'] = $row["latitudine"];
-				$output[$i]['longitudine'] = $row["longitudine"];
+				$output[$i]['data'] = $row["update_time"];
+				$output[$i]['commento'] = $row["update_text"];
 				$i++;
 			}
 			echo json_encode($output);
 		} else {
-			echo "0 results";
+			echo "0";
 		}
 	}
 ?>

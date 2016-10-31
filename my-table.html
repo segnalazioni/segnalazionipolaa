@@ -42,11 +42,22 @@
 
 		properties:{
 			data: Object,
-            mHeader: String
+            mHeader: String,
+            id: Number
 		},
 
 		ready: function() {
             this.mHeader = "test header";
+
+            $.ajax ( {
+                url: 'get-update.php',
+                type: 'POST',
+                data: {'id': this.id},
+                success: function(data){
+                    var result = JSON.parse(data);
+                    alert(result);
+                }
+            });
 
             var myData = [];
             for (var i=0; i<142; i++) {
