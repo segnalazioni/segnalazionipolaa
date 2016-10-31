@@ -105,7 +105,7 @@ include_once 'includes/functions.php';
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
-												'<div style="float: right; right: 0;"><paper-button raised class="custom white" onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
+												'<div style="float: right; margin-top:10pt; margin-bottom:5pt; padding:5pt;"><paper-button raised class="custom white" onclick="openUpdateDialog('+id+')">AGGIORNA STATO</paper-button>'+
 											  '<paper-button raised class="custom indigo" onclick="clickedclose('+id+', this)">'+button+'</paper-button>'+
 											  '</div></tr></div>'+
 											  '</div>';
