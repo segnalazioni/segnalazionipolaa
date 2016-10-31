@@ -57,6 +57,7 @@
                     var result = JSON.parse(data);
                     var myData = [];
                     for (var i=0; i<result.length; i++) {
+                        alert(this.mid+"  "+i);
                         myData.push({
                             data: result[i]['data'],
                             commento: result[i]['commento']
