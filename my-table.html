@@ -52,7 +52,7 @@
             $.ajax ( {
                 url: 'get-update.php',
                 type: 'POST',
-                data: {'id': this.id},
+                data: {'id': this.mid},
                 success: function(data){
                     var result = JSON.parse(data);
                     alert(result[0]['data']+" "+result[0]['commento']);
