@@ -46,7 +46,7 @@ paper-button.white {
 }
 
 paper-button.indigo {
-	background-color: var(--paper-indigo-500);
+	background-color: #1e88e5;
 	color: white;
 	--paper-button-raised-keyboard-focus: {
 		background-color: var(--paper-pink-a200) !important;
