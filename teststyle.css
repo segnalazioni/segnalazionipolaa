@@ -18,12 +18,18 @@
 	height: -webkit-calc(100% - 70pt);
 	height:    -moz-calc(100% - 70pt);
 	height:         calc(100% - 70pt);
+	width: 100%;
 }
 
 .second-row{
 	height: 70pt;
     right:0px;
     bottom:0px;
+	width: 100%;
+}
+
+.m-table{
+	width: 100%;
 }
 
 .dialog-content{

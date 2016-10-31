@@ -99,9 +99,9 @@ include_once 'includes/functions.php';
 													'last-response="{{data}}"'+
 													'debounce-duration="300">'+
 											  '</iron-ajax>'+
-                                                '<table>'+
+                                                '<table class="m-table">'+
                                                 '<tr class="first-row">'+
-											        '<my-table></my-table>'+
+											        '<my-table style="width:100%;"></my-table>'+
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
