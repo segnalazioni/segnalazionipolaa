@@ -33,7 +33,7 @@
 }
 
 paper-button.custom:hover {
-	background-color: var(--paper-indigo-100);
+	background-color: #00b0ff;
 }
 
 paper-button.white {
