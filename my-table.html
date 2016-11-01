@@ -102,11 +102,12 @@
                 length: function(){
                     return new Promise(function(resolve, reject){
                         var httpRequest = new XMLHttpRequest();
+                        console.log("before request");
                         httpRequest.onreadystatechange = function() {
                             if (httpRequest.readyState === XMLHttpRequest.DONE) {
                                 if (httpRequest.status === 200) {
                                     var result = httpRequest.responseText;
-                                    alert(Number(result));
+                                    console.log(Number(result));
                                     resolve(Number(result));
                                 }
                             }
