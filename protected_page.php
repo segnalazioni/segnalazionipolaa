@@ -101,7 +101,7 @@ include_once 'includes/functions.php';
 											  '</iron-ajax>'+
                                                 '<table class="m-table">'+
                                                 '<tr class="first-row">'+
-											        '<my-table mid="'+id+'" style="width:100%;"></my-table>'+
+											        '<my-table id="mtable" mid="'+id+'" style="width:100%;"></my-table>'+
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
@@ -114,6 +114,8 @@ include_once 'includes/functions.php';
 									});
 									marker.addListener('click', function(infowindow, marker) {
 										return function () {
+                                            var app = document.querySelector('#scope');
+                                            app.$.mtable.data.get();
 											infowindow.open(map, marker);
 										};
 									}(infowindow, marker));
