@@ -249,17 +249,20 @@ include_once 'includes/functions.php';
 				}
 
 				function aggiungiUpdate(){
-					alert("working");
 					var text = document.getElementById('testo').value;
 
 					if(text != ""){
-						alert("still working");
 						$.ajax ( {
 							url: 'add-status.php',
 							type: 'POST',
 							data: {'text': text, 'id': openDialogId},
 							success: function(data){
-								alert(data);
+                                var app = document.querySelector('#scope');
+                                var element = {};
+                                element.data = "test";
+                                element.commento = "commento test";
+                                app.$.mtable.data.push(element);
+                                app.$.mtable.set('data.length', app.$.mtable.data.length + 1);
 							}
 						});
 					}
