@@ -57,7 +57,7 @@
                                 if (httpRequest.status === 200) {
                                     var result = JSON.parse(httpRequest.responseText);
                                     var myData = [];
-                                    for (var i = 0; i < 15; i++) {
+                                    for (var i = 0; i < result.length; i++) {
                                         myData.push({
                                             id: i,
                                             data: result[i]['data'],
@@ -65,6 +65,7 @@
                                         });
                                     }
                                     window.myData = myData;
+                                    this.set('data.length', myData.length);
                                     console.log('just once? :/');
                                     myData.sort(function (a, b) {
                                         if (sort.direction == "desc") {
