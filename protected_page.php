@@ -114,8 +114,6 @@ include_once 'includes/functions.php';
 									});
 									marker.addListener('click', function(infowindow, marker) {
 										return function () {
-                                            var app = document.querySelector('#scope');
-                                            app.$.mtable.data.get();
 											infowindow.open(map, marker);
 										};
 									}(infowindow, marker));
