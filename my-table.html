@@ -65,7 +65,7 @@
                                         });
                                     }
                                     window.myData = myData;
-                                    this.data.set('length', myData.length);
+                                    this.data._setLength(myData.length);
                                     console.log('just once? :/');
                                     myData.sort(function (a, b) {
                                         if (sort.direction == "desc") {
