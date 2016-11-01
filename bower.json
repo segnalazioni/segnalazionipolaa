@@ -43,7 +43,8 @@
     "paper-listbox": "polymerelements/paper-listbox#1.0.0",
     "paper-menu": "PolymerElements/paper-menu#1.0.0",
     "iron-media-query": "PolymerElements/iron-media-query#^1.0.8",
-    "paper-datatable": "^0.9.8"
+    "paper-datatable": "^0.9.8",
+    "paper-progress": "PolymerElements/paper-progress#^1.0.11"
   },
   "resolutions": {
     "polymer": "^1.5.0",
