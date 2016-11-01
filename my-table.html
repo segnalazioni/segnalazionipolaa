@@ -49,7 +49,7 @@
 		ready: function() {
             this.mHeader = "test header";
             this.data = {
-                get: function(sort, page, pageSize){
+                /*get: function(sort, page, pageSize){
                     $.ajax ({
                         url: 'get-update.php',
                         type: 'POST',
@@ -81,6 +81,43 @@
                             });
                         }
                     });
+                },*/
+                get: function(sort, page, pageSize){
+                    return new Promise(function(resolve, reject){
+                        var httpRequest = new XMLHttpRequest();
+                        httpRequest.onreadystatechange = function() {
+                            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                                if (httpRequest.status === 200) {
+                                    var result = JSON.parse(httpRequest.responseText);
+                                    var myData = [];
+                                    for (var i = 0; i < 15; i++) {
+                                        myData.push({
+                                            id: i,
+                                            data: "data",
+                                            commento: "commento"
+                                        });
+                                    }
+                                    window.myData = myData;
+                                    console.log('just once? :/');
+                                    return new Promise(function (resolve, reject) {
+                                        myData.sort(function (a, b) {
+                                            if (sort.direction == "desc") {
+                                                var c = a;
+                                                a = b;
+                                                b = c;
+                                            }
+                                            if (a[sort.property] > b[sort.property]) return 1;
+                                            if (a[sort.property] < b[sort.property]) return -1;
+                                            return 0;
+                                        });
+                                        resolve(myData.slice((page - 1) * pageSize, page * pageSize));
+                                    });
+                                }
+                            }
+                        };
+                        httpRequest.open('GET', 'http://api.randomuser.me/?nat=US&results='+pageSize);
+                        httpRequest.send();
+                    });
                 },
                 set: function(item, property, value){
                     return new Promise(function(resolve, reject){
@@ -96,7 +133,7 @@
                     });
 
                 },
-                length:2
+                length:15
             };
       	}
 	});
