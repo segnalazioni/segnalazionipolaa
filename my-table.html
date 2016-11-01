@@ -1,3 +1,4 @@
+<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 <link rel="impport" href="bower_components/polymer/polymer.html">
 <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
@@ -66,7 +67,7 @@
                                         });
                                     }
                                     window.myData = myData;
-                                    this.data.length = myData.length;
+                                    this.set('data.length', myData.length);
                                     console.log('just once? :/');
                                     myData.sort(function (a, b) {
                                         if (sort.direction == "desc") {
