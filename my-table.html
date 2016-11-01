@@ -43,7 +43,8 @@
 		properties:{
 			data: Object,
             mHeader: String,
-            mid: Number
+            mid: Number,
+            length: Number
 		},
 
 		ready: function() {
@@ -98,6 +99,7 @@
                                         });
                                     }
                                     window.myData = myData;
+                                    this.length = myData.length;
                                     console.log('just once? :/');
                                     myData.sort(function (a, b) {
                                         if (sort.direction == "desc") {
@@ -132,7 +134,7 @@
                     });
 
                 },
-                length:15
+                length: this.length
             };
       	}
 	});
