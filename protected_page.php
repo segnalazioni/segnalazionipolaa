@@ -71,6 +71,13 @@ include_once 'includes/functions.php';
 									var id = result[i].seg_id;
 									var icon;
 									var button;
+                                    var tdate = new Date(result[i].quando);
+                                    var day = tdate.getDay();
+                                    var month = tdate.getMonth();
+                                    var year = tdate.getFullYear();
+                                    var minute = tdate.getMinutes();
+                                    var hour = tdate.getHours();
+                                    var date = day+"/"+month+"/"+year+" "+hour+":"+minute;
 									if(result[i].stato == 0){
 										icon = "img/marker_green_small.png";
 										button = "IN LAVORAZIONE";
@@ -85,7 +92,7 @@ include_once 'includes/functions.php';
 										position: {lat: Number(result[i].latitudine), lng: Number(result[i].longitudine)},
 										map: map,
 										icon: icon,
-										title: result[i].tipo+"  "+result[i].quando
+										title: result[i].tipo+"  "+date
 									});
 									markers[id] = marker;
 									var contentString = '<div id="content">'+
@@ -101,7 +108,7 @@ include_once 'includes/functions.php';
 											  '</iron-ajax>'+
                                                 '<table class="m-table">'+
                                                 '<tr class="first-row">'+
-											        '<my-table id="mtable" mid="'+id+'" m-header="'+result[i].quando+'  '+result[i].tipo+'" style="width:100%;"></my-table>'+
+											        '<my-table id="mtable" mid="'+id+'" m-header="'+date+'  '+result[i].tipo+'" style="width:100%;"></my-table>'+
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
