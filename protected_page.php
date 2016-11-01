@@ -255,12 +255,7 @@ include_once 'includes/functions.php';
 							type: 'POST',
 							data: {'text': text, 'id': openDialogId},
 							success: function(data){
-                                /*var app = document.querySelector('#scope');
-                                var element = {};
-                                element.data = "test";
-                                element.commento = "commento test";
-                                app.$.mtable.data.push(element);
-                                app.$.mtable.set('data.length', app.$.mtable.data.length + 1);*/
+                                document.querySelector('#mtable').update();
 							}
 						});
 					}
