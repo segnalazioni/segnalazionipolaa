@@ -101,20 +101,6 @@
                 },
                 length: function(){
                     return new Promise(function(resolve, reject){
-                        /*var httpRequest = new XMLHttpRequest();
-                        console.log("before request");
-                        httpRequest.onreadystatechange = function() {
-                            if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                                if (httpRequest.status === 200) {
-                                    var result = httpRequest.responseText;
-                                    console.log(Number(result));
-                                    resolve(Number(result));
-                                }
-                            }
-                        };
-                        httpRequest.open('POST', 'get-size.php');
-                        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                        httpRequest.send('id='+this.mid);*/
                         resolve(2);
                     });
                 }
