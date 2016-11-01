@@ -25,7 +25,7 @@
 
 </style>
 <template>
-    <my-datatable-card page-size="2" data-source="{{data}}" id-property="id" header="{{mHeader}}">
+    <my-datatable-card id="card" page-size="2" data-source="{{data}}" id-property="id" header="{{mHeader}}">
         <paper-datatable resize-behavior="dynamic-columns">
             <paper-datatable-column resize-priority="-1" width="130pt" header="Data" property="data" sortable>
             </paper-datatable-column>
@@ -65,7 +65,7 @@
                                         });
                                     }
                                     window.myData = myData;
-                                    this.data._setLength(myData.length);
+                                    this.$.card.set('dataSource.length', myData.length);
                                     console.log('just once? :/');
                                     myData.sort(function (a, b) {
                                         if (sort.direction == "desc") {
