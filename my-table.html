@@ -99,19 +99,17 @@
                                     }
                                     window.myData = myData;
                                     console.log('just once? :/');
-                                    return new Promise(function (resolve, reject) {
-                                        myData.sort(function (a, b) {
-                                            if (sort.direction == "desc") {
-                                                var c = a;
-                                                a = b;
-                                                b = c;
-                                            }
-                                            if (a[sort.property] > b[sort.property]) return 1;
-                                            if (a[sort.property] < b[sort.property]) return -1;
-                                            return 0;
-                                        });
-                                        resolve(myData.slice((page - 1) * pageSize, page * pageSize));
+                                    myData.sort(function (a, b) {
+                                        if (sort.direction == "desc") {
+                                            var c = a;
+                                            a = b;
+                                            b = c;
+                                        }
+                                        if (a[sort.property] > b[sort.property]) return 1;
+                                        if (a[sort.property] < b[sort.property]) return -1;
+                                        return 0;
                                     });
+                                    resolve(myData.slice((page - 1) * pageSize, page * pageSize));
                                 }
                             }
                         };
