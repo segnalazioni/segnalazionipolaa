@@ -65,6 +65,7 @@
                                         });
                                     }
                                     window.myData = myData;
+                                    this.data.length = myData.length;
                                     console.log('just once? :/');
                                     myData.sort(function (a, b) {
                                         if (sort.direction == "desc") {
@@ -99,11 +100,7 @@
                     });
 
                 },
-                length: function(){
-                    return new Promise(function(resolve, reject){
-                        resolve(2);
-                    });
-                }
+                length: 0
             };
       	}
 	});
