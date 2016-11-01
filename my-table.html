@@ -49,6 +49,7 @@
 
 		ready: function() {
             this.mHeader = "test header";
+            var myApp = this;
             this.data = {length:0};
             this.data = {
                 get: function(sort, page, pageSize){
@@ -67,8 +68,8 @@
                                         });
                                     }
                                     window.myData = myData;
-                                    alert(this.mid);
-                                    this.set('data.length', myData.length);
+                                    alert(myApp.mid);
+                                    myApp.set('data.length', myData.length);
                                     console.log('just once? :/');
                                     myData.sort(function (a, b) {
                                         if (sort.direction == "desc") {
@@ -86,7 +87,7 @@
                         };
                         httpRequest.open('POST', 'get-update.php');
                         httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                        httpRequest.send('id='+this.mid);
+                        httpRequest.send('id='+myApp.mid);
                     });
                 },
                 set: function(item, property, value){
