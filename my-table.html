@@ -106,8 +106,8 @@
                             if (httpRequest.readyState === XMLHttpRequest.DONE) {
                                 if (httpRequest.status === 200) {
                                     var result = httpRequest.responseText;
-                                    alert(result);
-                                    resolve(result);
+                                    alert(Number(result));
+                                    resolve(Number(result));
                                 }
                             }
                         };
