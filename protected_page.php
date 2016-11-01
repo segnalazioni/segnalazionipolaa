@@ -101,7 +101,7 @@ include_once 'includes/functions.php';
 											  '</iron-ajax>'+
                                                 '<table class="m-table">'+
                                                 '<tr class="first-row">'+
-											        '<my-table id="mtable" mid="'+id+'" m-header="'+result[i].data+'  '+result[i].type+'" style="width:100%;"></my-table>'+
+											        '<my-table id="mtable" mid="'+id+'" m-header="'+result[i].quando+'  '+result[i].tipo+'" style="width:100%;"></my-table>'+
                                                 '</tr>'+
                                                 '</template>'+
                                                 '<tr class="second-row">'+
