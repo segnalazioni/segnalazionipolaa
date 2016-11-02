@@ -10,17 +10,15 @@ include_once 'includes/functions.php';
     <head>
         <meta charset="UTF-8">
         <title>Secure Login: Protected Page</title>
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script src="jquery-3.1.0.min.js"></script>
         <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="teststyle.css"/>
-        <script>
-			window.Polymer = {
-      			dom: 'shady'
-    		};
-		</script>
-        <link rel="impport" href="bower_components/polymer/polymer.html">
+
+        <link rel="import" href="bower_components/polymer/polymer.html">
+        <link rel="import" href="bower_components/polymer/polymer.html">
 		<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
         <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
         <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
@@ -45,7 +43,7 @@ include_once 'includes/functions.php';
         <link rel="import" href="my-menu.html">
         <link rel="import" href="my-table.html">
         <link rel="import" href="photo-fab.html">
-        <link rel="stylesheet" href="teststyle.css" />
+        <link rel="stylesheet" href="teststyle.css"/>
     </head>
     <body style="margin:0; padding:0; width:100%; height:100%;">
         <?php/* if (login_check($mysqli) == true) : */?>
