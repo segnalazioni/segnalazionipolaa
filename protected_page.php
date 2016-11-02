@@ -324,6 +324,10 @@ include_once 'includes/functions.php';
                     background-color: #3F51B5;
                     --paper-tabs-selection-bar-color: #F44336;
                 }
+
+                paper-tab{
+                    --paper-tab-ink: white;
+                }
             </style>
 
 
