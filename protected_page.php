@@ -318,7 +318,7 @@ include_once 'includes/functions.php';
                 }
             </style>
 
-            <paper-toolbar>
+            <paper-toolbar style="padding: 0;">
                 <paper-tabs selected="{{selected}}" style="margin:0; width:100%; height:100%;">
                     <paper-tab>MAPPA</paper-tab>
                     <paper-tab>ELENCO</paper-tab>
