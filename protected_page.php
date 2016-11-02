@@ -319,11 +319,11 @@ include_once 'includes/functions.php';
             </style>
 
 
-            <paper-tabs selected="{{selected}}" style="margin:0px; width: 100%; height:48pt; color: white; background-color: #3F51B5;">
-                <paper-tab style="margin: 0;">MAPPA</paper-tab>
+            <my-tabs selected="{{selected}}">
+                <paper-tab>MAPPA</paper-tab>
                 <paper-tab>ELENCO</paper-tab>
-                <paper-tab style="margin: 0;">REGISTRAZIONE</paper-tab>
-            </paper-tabs>
+                <paper-tab>REGISTRAZIONE</paper-tab>
+            </my-tabs>
 
             <iron-pages selected="{{selected}}" style="position:absolute; left:0px; right:0px; bottom:0px;">
                 <div style="height:100%">
