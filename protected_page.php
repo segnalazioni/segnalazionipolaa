@@ -318,13 +318,12 @@ include_once 'includes/functions.php';
                 }
             </style>
 
-            <paper-toolbar style="padding: 0; margin: 0; border: none;">
-                <paper-tabs selected="{{selected}}" style="margin:0px; width: 100%; height:100%; background-color: #0b8043;">
-                    <paper-tab style="margin: 0;">MAPPA</paper-tab>
-                    <paper-tab>ELENCO</paper-tab>
-                    <paper-tab style="margin: 0;">REGISTRAZIONE</paper-tab>
-                </paper-tabs>
-            </paper-toolbar>
+
+            <paper-tabs selected="{{selected}}" style="margin:0px; width: 100%; height:100%;">
+                <paper-tab style="margin: 0;">MAPPA</paper-tab>
+                <paper-tab>ELENCO</paper-tab>
+                <paper-tab style="margin: 0;">REGISTRAZIONE</paper-tab>
+            </paper-tabs>
 
             <iron-pages selected="{{selected}}" style="position:absolute; left:0px; right:0px; bottom:0px;">
                 <div style="height:100%">
