@@ -318,12 +318,16 @@ include_once 'includes/functions.php';
                 }
             </style>
 
+            <style is="custom-style">
+                --paper-tabs-selection-bar-color: #F44336;
+            </style>
 
-            <my-tabs selected="{{selected}}" style="width: 100%; height: 48pt;">
+
+            <paper-tabs selected="{{selected}}" style="width: 100%; height: 48pt;">
                 <paper-tab>MAPPA</paper-tab>
                 <paper-tab>ELENCO</paper-tab>
                 <paper-tab>REGISTRAZIONE</paper-tab>
-            </my-tabs>
+            </paper-tabs>
 
             <iron-pages selected="{{selected}}" style="position:absolute; left:0px; right:0px; bottom:0px;">
                 <div style="height:100%">
