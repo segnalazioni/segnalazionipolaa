@@ -45,6 +45,10 @@ paper-button.white {
 	};
 }
 
+paper-tabs{
+	--paper-tabs-selection-bar-color: #F44336;
+}
+
 paper-button.indigo {
 	background-color: #1e88e5;
 	color: white;
