@@ -51,7 +51,7 @@ include_once 'includes/functions.php';
         <link rel="stylesheet" href="teststyle.css"/>
     </head>
     <body style="margin:0; padding:0; width:100%; height:100%;">
-        <?php/* if (login_check($mysqli) == true) : */?>
+        <?php if (login_check($mysqli) == true) : ?>
         <template is="dom-bind" id="scope">
         	<script>
 
@@ -309,65 +309,65 @@ include_once 'includes/functions.php';
             </script>
 
 
-            	<style>
-					.gmnoprint a, .gmnoprint span {
-						display:none;
-					}
-					.gm-style-cc{
-						display:none;
-					}
-				</style>
+            <style>
+                .gmnoprint a, .gmnoprint span {
+                    display:none;
+                }
+                .gm-style-cc{
+                    display:none;
+                }
+            </style>
 
-            	<paper-toolbar>
-					<paper-tabs selected="{{selected}}" style="margin:0; width:100%; height:100%;">
-                		<paper-tab>MAPPA</paper-tab>
-                		<paper-tab>ELENCO</paper-tab>
-                		<paper-tab>REGISTRAZIONE</paper-tab>
-            		</paper-tabs>
-        		</paper-toolbar>
+            <paper-toolbar>
+                <paper-tabs selected="{{selected}}" style="margin:0; width:100%; height:100%;">
+                    <paper-tab>MAPPA</paper-tab>
+                    <paper-tab>ELENCO</paper-tab>
+                    <paper-tab>REGISTRAZIONE</paper-tab>
+                </paper-tabs>
+            </paper-toolbar>
 
-                <iron-pages selected="{{selected}}" style="position:absolute; left:0px; right:0px; bottom:0px;">
-                	<div style="height:100%">
-                    	<div id="map" style="height:100%"></div>
-        				<paper-fab icon="add" onclick="openDialog();" style="position:absolute; bottom:30px; right:30px; background-color:#e1382d;"></paper-fab>
-                        <paper-dialog id="modal-add" class="segdialog" is="custom-style" modal>
-                            <div id="mainDiv" style="margin: 0; padding: 0; height: 100%; width: 100%;">
-                                <table class="dialog-content" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
-                                    <tr>
-                                        <td height="70%">
-                                            <div style="width: 100%; height: 100%; position: relative;">
-                                                <div id="map-dialog" style="width: 100%; height: 100%;"></div>
-                                                <my-menu admin="is"></my-menu>
-                                                <photo-fab class="camerafab" style="width: 46pt;"></photo-fab>
-                                                <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td height="30%"><textarea style="resize:none; overflow: hidden; margin-top:45px; margin-left: 30px; margin-right: 30px; box-sizing: border-box; vertical-align: top; height:100%;"></textarea></td>
-                                    </tr>
-                                </table>
+            <iron-pages selected="{{selected}}" style="position:absolute; left:0px; right:0px; bottom:0px;">
+                <div style="height:100%">
+                    <div id="map" style="height:100%"></div>
+                    <paper-fab icon="add" onclick="openDialog();" style="position:absolute; bottom:30px; right:30px; background-color:#e1382d;"></paper-fab>
+                    <paper-dialog id="modal-add" class="segdialog" is="custom-style" modal>
+                        <div id="mainDiv" style="margin: 0; padding: 0; height: 100%; width: 100%;">
+                            <table class="dialog-content" border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                <tr>
+                                    <td height="70%">
+                                        <div style="width: 100%; height: 100%; position: relative;">
+                                            <div id="map-dialog" style="width: 100%; height: 100%;"></div>
+                                            <my-menu admin="is"></my-menu>
+                                            <photo-fab class="camerafab" style="width: 46pt;"></photo-fab>
+                                            <paper-fab class="gpsfab" icon="device:gps-fixed" onclick="getShowLocation();"></paper-fab>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="30%"><textarea style="resize:none; overflow: hidden; margin-top:45px; margin-left: 30px; margin-right: 30px; box-sizing: border-box; vertical-align: top; height:100%;"></textarea></td>
+                                </tr>
+                            </table>
 
-                                <div class="buttons" style="height: 70px; bottom:5px; right:15px;">
-                                    <paper-button dialog-dismiss>ANNULLA</paper-button>
-                                    <paper-button dialog-confirm autofocus onclick="alert('onclick');addToDatabase();">SEGNALA</paper-button>
-                                </div>
-                            </div>
-        				</paper-dialog>
-                        <paper-dialog id="aggiorna-stato" modal>
-                        	<div><h1>Aggiunta di un nuovo aggiornamento sullo stato</h1></div>
-                            <div style="margin-bottom:60px;"><paper-input id="testo" label="STATO SEGNALAZIONE"></paper-input></div>
-                            <div class="buttons" style="position:absolute; bottom:5px; right:15px;">
+                            <div class="buttons" style="height: 70px; bottom:5px; right:15px;">
                                 <paper-button dialog-dismiss>ANNULLA</paper-button>
-                                <paper-button dialog-confirm autofocus onclick="aggiungiUpdate()">CONFERMA</paper-button>
+                                <paper-button dialog-confirm autofocus onclick="alert('onclick');addToDatabase();">SEGNALA</paper-button>
                             </div>
-                        </paper-dialog>
-                    </div>
-                    <div>Pagina 2
-                        <my-table></my-table>
-                    </div>
-                    <div>Pagina 3</div>
-                </iron-pages>
+                        </div>
+                    </paper-dialog>
+                    <paper-dialog id="aggiorna-stato" modal>
+                        <div><h1>Aggiunta di un nuovo aggiornamento sullo stato</h1></div>
+                        <div style="margin-bottom:60px;"><paper-input id="testo" label="STATO SEGNALAZIONE"></paper-input></div>
+                        <div class="buttons" style="position:absolute; bottom:5px; right:15px;">
+                            <paper-button dialog-dismiss>ANNULLA</paper-button>
+                            <paper-button dialog-confirm autofocus onclick="aggiungiUpdate()">CONFERMA</paper-button>
+                        </div>
+                    </paper-dialog>
+                </div>
+                <div>Pagina 2
+                    <my-table></my-table>
+                </div>
+                <div>Pagina 3</div>
+            </iron-pages>
             <script>
   				document.addEventListener('WebComponentsReady', function () {
     				var template = document.querySelector('template[is="dom-bind"]');
@@ -376,10 +376,10 @@ include_once 'includes/functions.php';
 			</script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnZ5kvHIKRf_01L41sB9lCdv_xijlwHSs&callback=initMap" async defer></script>
         </template>
-        <?php /*else : */?><!--
+        <?php else : ?>
             <p>
                 <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
             </p>
-        --><?php /*endif; */?>
+        <?php endif; ?>
     </body>
 </html>
