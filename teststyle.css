@@ -47,7 +47,8 @@ paper-button.white {
 
 paper-tabs{
     --paper-tabs-selection-bar: {
-        --paper-tabs-selection-bar-color: #F44336;
+        color: #F44336;
+        background-color: #F44336;
     }
 }
 
