@@ -319,7 +319,10 @@ include_once 'includes/functions.php';
             </style>
 
             <style is="custom-style">
-                --paper-tabs-selection-bar-color: #F44336;
+                paper-tabs {
+                    background-color: #3F51B5;
+                    --paper-tabs-selection-bar-color: #F44336;
+                }
             </style>
 
 
