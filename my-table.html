@@ -64,9 +64,16 @@
                                     var result = JSON.parse(httpRequest.responseText);
                                     var myData = [];
                                     for (var i = 0; i < result.length; i++) {
+                                        var tdate = new Date(result[i]['data']);
+                                        var day = tdate.getDay();
+                                        var month = tdate.getMonth();
+                                        var year = tdate.getFullYear();
+                                        var minute = tdate.getMinutes();
+                                        var hour = tdate.getHours();
+                                        var date = day+"/"+month+"/"+year+" "+hour+":"+minute;
                                         myData.push({
                                             id: i,
-                                            data: result[i]['data'],
+                                            data: date,
                                             commento: result[i]['commento']
                                         });
                                     }
