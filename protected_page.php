@@ -50,7 +50,7 @@ include_once 'includes/functions.php';
         <link rel="import" href="photo-fab.html">
         <link rel="stylesheet" href="teststyle.css"/>
     </head>
-    <body style="margin:0; padding:0; width:100%; height:100%;">
+    <body style="margin:0; padding:0; width:100%; height:100%; background-color: #3F51B5;">
         <?php if (login_check($mysqli) == true) : ?>
         <template is="dom-bind" id="scope">
         	<script>
