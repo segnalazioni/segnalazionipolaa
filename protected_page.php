@@ -319,7 +319,7 @@ include_once 'includes/functions.php';
             </style>
 
 
-            <paper-tabs selected="{{selected}}" style="margin:0px; width: 100%; height:100%;">
+            <paper-tabs selected="{{selected}}" style="margin:0px; width: 100%;">
                 <paper-tab style="margin: 0;">MAPPA</paper-tab>
                 <paper-tab>ELENCO</paper-tab>
                 <paper-tab style="margin: 0;">REGISTRAZIONE</paper-tab>
