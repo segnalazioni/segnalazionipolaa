@@ -78,8 +78,10 @@ include_once 'includes/functions.php';
                                     var day = tdate.getDay();
                                     var month = tdate.getMonth();
                                     var year = tdate.getFullYear();
-                                    var minute = tdate.getMinutes();
-                                    var hour = tdate.getHours();
+                                    var tminute = tdate.getMinutes();
+                                    var minute = ('0' + tminute).slice(-2);
+                                    var thour = tdate.getHours();
+                                    var hour = ('0' + thour).slice(-2);
                                     var date = day+"/"+month+"/"+year+" "+hour+":"+minute;
 									if(result[i].stato == 0){
 										icon = "img/marker_green_small.png";
