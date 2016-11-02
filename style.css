@@ -66,10 +66,6 @@ paper-dialog {
 
 @media only screen and (max-width: 650px), only screen and (max-device-width: 650px){
 
-	body{
-		background-color:#EEEEEE;
-	}
-
 	paper-card.dark{
 		margin:0 auto;
 		width:100%;
