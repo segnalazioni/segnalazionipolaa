@@ -17,7 +17,12 @@ include_once 'includes/functions.php';
         <script src="jquery-3.1.0.min.js"></script>
         <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
-        <link rel="import" href="bower_components/polymer/polymer.html">
+        <script>
+			window.Polymer = {
+      			dom: 'shady'
+    		};
+		</script>
+
         <link rel="import" href="bower_components/polymer/polymer.html">
 		<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
         <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
