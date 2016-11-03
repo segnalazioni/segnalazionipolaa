@@ -228,7 +228,7 @@ include_once 'includes/functions.php';
 						$.ajax ( {
 						url: 'agg-segn.php',
 						type: 'POST',
-						data: {'tipo': tipo, 'descr': descrizione, 'lat': latitude, 'lng': longitude, 'user': <?php echo "'".htmlentities($_SESSION['username'])."'"; ?>},
+						data: {'tipo': tipo, 'descr': descrizione, 'lat': latitude, 'lng': longitude, 'user': <?php /*echo "'".htmlentities($_SESSION['username'])."'"; */?>},
 						success: function(data){
 								var contentString = '<div id="content">'+
 											'<div id="siteNotice">'+
@@ -339,7 +339,7 @@ include_once 'includes/functions.php';
                 <paper-tab>REGISTRAZIONE</paper-tab>
             </paper-tabs>
 
-            <iron-pages selected="{{selected}}" style="position:absolute; left:0px; right:0px; bottom:0px;">
+            <!--<iron-pages selected="{{selected}}" style="position:absolute; left:0px; right:0px; bottom:0px;">
                 <div style="height:100%">
                     <div id="map" style="height:100%"></div>
                     <paper-fab icon="add" onclick="openDialog();" style="position:absolute; bottom:30px; right:30px; background-color:#e1382d;"></paper-fab>
@@ -379,14 +379,14 @@ include_once 'includes/functions.php';
                 <div>Pagina 2
                 </div>
                 <div>Pagina 3</div>
-            </iron-pages>
+            </iron-pages>-->
             <script>
   				document.addEventListener('WebComponentsReady', function () {
     				var template = document.querySelector('template[is="dom-bind"]');
     				template.selected = 0; // selected is an index by default
   				});
 			</script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnZ5kvHIKRf_01L41sB9lCdv_xijlwHSs&callback=initMap" async defer></script>
+            <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnZ5kvHIKRf_01L41sB9lCdv_xijlwHSs&callback=initMap" async defer></script>-->
         </template>
         <?php /*else : */?><!--
             <p>
