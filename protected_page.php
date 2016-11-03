@@ -55,7 +55,7 @@ include_once 'includes/functions.php';
         <template is="dom-bind" id="scope">
         	<script>
 
-				var map;
+				/*var map;
 				var mapdialog;
 				var latitude;
 				var longitude;
@@ -306,7 +306,7 @@ include_once 'includes/functions.php';
 					});
 
 					addAllMarkers();
-				}
+				}*/
 
             </script>
 
