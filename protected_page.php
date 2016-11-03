@@ -228,7 +228,7 @@ include_once 'includes/functions.php';
 						$.ajax ( {
 						url: 'agg-segn.php',
 						type: 'POST',
-						data: {'tipo': tipo, 'descr': descrizione, 'lat': latitude, 'lng': longitude, 'user': <?php /!*echo "'".htmlentities($_SESSION['username'])."'"; *!/?>},
+						data: {'tipo': tipo, 'descr': descrizione, 'lat': latitude, 'lng': longitude, 'user': <?php echo "'".htmlentities($_SESSION['username'])."'";?>},
 						success: function(data){
 								var contentString = '<div id="content">'+
 											'<div id="siteNotice">'+
