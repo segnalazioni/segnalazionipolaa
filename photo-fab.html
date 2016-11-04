@@ -1,53 +1,55 @@
-<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
-<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
-<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
-<link rel="import" href="bower_components/google-map/google-map.html">
-<link rel="import" href="bower_components/paper-button/paper-button.html">
-<link rel="import" href="bower_components/paper-fab/paper-fab.html">
-<link rel="import" href="bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="bower_components/iron-icons/image-icons.html">
-<link rel="import" href="bower_components/iron-media-query/iron-media-query.html">
-<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
-<link rel="import" href="bower_components/paper-item/paper-item.html">
-<link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
-<link rel="import" href="bower_components/paper-menu/paper-menu.html">
-<link rel="import" href="bower_components/iron-list/iron-list.html">
-
-<script src="jquery-3.1.0.min.js"></script>
+<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/google-map/google-map.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icons/image-icons.html">
+<link rel="import" href="../../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../../bower_components/iron-list/iron-list.html">
 
 <dom-module id="photo-fab">
-<style>
-    #camera{
-        background-color:#e1382d;
-    }
-    #hidden{
-        display: none;
-    }
-</style>
-<template>
-    <paper-fab id="camera" icon="image:camera-alt" on-tap="handleTap"></paper-fab>
-    <input id="hidden" type="file" accept="image/*"/>
-</template>
-<script>
-	Polymer({
-		is: 'photo-fab',
+    <template>
+        <style>
+            #fileFab{
+                background-color:#e1382d;
+            }
+        </style>
+        <paper-fab id="fileFab" icon="image:camera-alt" on-tap="_pickFile"></paper-fab>
+        <input id="filePicker" type="file" accept="image/*" hidden/>
+    </template>
 
-        properties:{
-          file: File
-        },
+    <script>
+        Polymer({
 
-		handleTap: function(){
-            this.$.hidden.click();
-        },
+            is: 'photo-fab',
 
-        ready: function () {
-            this.listen(this.$.hidden, 'change', 'change');
-        },
+            properties:{
+                file: File
+            },
 
-        change: function () {
-            this.file = this.$.hidden.files[0];
-            alert(this.file.name);
-        }
-	});
-</script>
+            _pickFile: function(e) {
+                e.preventDefault();
+                this.$.fileFab.blur();
+
+                // cancelable is true, not work on ios simulator
+                // this.$.filePicker.click();
+
+                // default cancelable is false, work on ios simulator
+                var evt = new MouseEvent("click");
+                this.$.filePicker.dispatchEvent(evt);
+            },
+
+            change: function () {
+                this.file = this.$.hidden.files[0];
+                alert(this.file.name);
+            }
+
+        });
+    </script>
 </dom-module>
